@@ -10,12 +10,12 @@ import Settings from './components/Settings';
 export default (
     <Router>
         <Switch>
-            <Route exact path='/' component={UserLanding}/>
-            <Route path='/home' component={GuestLanding}/>
-            <Route path='profile' component={UserProfile}/>
-            <Route path='auth' component={Auth}/>
+            <Route exact path='/' component={GuestLanding}/>
+            <Route path='/user' component={UserLanding}/>
+            <Route path='/profile' component={UserProfile}/>
+            <Route path='/auth' component={Auth}/>
             <Route path='/about' component={About}/>
-            <Route path='settings' component={Settings}/>
+            <Route path='/settings' component={Settings}/>
         </Switch>
     </Router>
 )
