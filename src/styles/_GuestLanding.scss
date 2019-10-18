@@ -1,0 +1,43 @@
+@import './Utilities';
+
+#gl-bg {
+    display: flex;
+    justify-content: center;
+    position: static;
+    height: 100vh;
+
+    #guest-landing {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80vw;
+        height: 100vh;
+
+        #gl-title {
+            font-size: 20ch;
+            width: 720px;
+            text-align: center;
+            font-family: 'Modak', cursive;
+            color: color(cool-black);
+        }
+
+        .gl-banner {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-around;
+            figure {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                img {
+                    padding-bottom: 10px;
+                    height: 200px;
+                    width: 200px;
+                }
+            }
+        }
+    }
+}
