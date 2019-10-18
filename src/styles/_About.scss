@@ -1,0 +1,43 @@
+.theTeamContainer{
+    display:flex;
+    justify-content: center;
+}
+.theTeam{
+    font-size: 13ch;
+    font-family: 'Montserrat', sans-serif;
+    color:#676767
+
+}
+.teamContainer{
+    background-color:white;
+    height:90ch;
+    width:173ch;
+    display:flex;
+    justify-content: space-around;
+}
+
+.madelynAboutPic, .noelAboutPic, .treyAboutPic{
+    width: auto;
+    max-width: 60ch;
+    height: auto;
+    max-height:40ch;
+    border-radius: 50%;
+    position: relative;
+    left:39px;
+}
+
+.madelynTitle, .treyTitle, .noelTitle{
+    color:#025D86;
+    font-size: 5.5ch;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+.noelParagraph, .madelynParagraph, .treyParagraph{
+    text-align: center;
+    width:20vw;
+    line-height: 3ch;
+    font-size: 2.5ch;
+    font-family: 'Forum', cursive;
+}
