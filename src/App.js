@@ -10,6 +10,7 @@ function App() {
       <Nav />
       {routes}
     </div>
+    
   );
 }
 
