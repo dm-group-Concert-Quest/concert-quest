@@ -47,6 +47,7 @@ export function logoutUser() {
 };
 
 //reducer
+
 export default function reducer(state = initialState, action) {
     const { type, payload } = action;
     switch (type) {
