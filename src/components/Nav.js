@@ -4,7 +4,14 @@ export default class Nav extends Component {
     render() {
         return (
             <div>
-                <h1>Nav Component</h1>
+                <div>
+                    <h1>Concert Quest</h1>
+                </div>
+                <div>
+                    <h2>About</h2>
+                    <h2>Register</h2>
+                    <h2>Contact</h2>
+                </div>
             </div>
         )
     }
