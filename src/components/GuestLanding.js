@@ -10,7 +10,6 @@ export default class Home extends Component {
                     <figcaption>Shows Near You</figcaption>
                     <img src='./images/band-icon.png'/>
                     <figcaption>Track Your Favorite Artists</figcaption>
-                    
                 </figure>
             </div>
         )

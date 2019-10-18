@@ -5,6 +5,7 @@ import UserProfile from './components/UserProfile';
 import Auth from './components/Auth';
 import About from './components/About';
 import UserLanding from './components/UserLanding';
+import Settings from './components/Settings';
 
 export default (
     <Router>
@@ -14,6 +15,7 @@ export default (
             <Route path='profile' component={UserProfile}/>
             <Route path='auth' component={Auth}/>
             <Route path='/about' component={About}/>
+            <Route path='settings' component={Settings}/>
         </Switch>
     </Router>
 )
