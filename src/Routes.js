@@ -3,6 +3,7 @@ import {Switch, Route, HashRouter as Router} from 'react-router-dom';
 import GuestLanding from './components/GuestLanding';
 import UserProfile from './components/UserProfile';
 import Auth from './components/Auth';
+import Settings from './components/Settings';
 
 export default (
     <Router>
@@ -11,6 +12,7 @@ export default (
             <Route path='/home' component={GuestLanding}/>
             <Route path='profile' component={UserProfile}/>
             <Route path='auth' component={Auth}/>
+            <Route path='settings' component={Settings}/>
         </Switch>
     </Router>
 )

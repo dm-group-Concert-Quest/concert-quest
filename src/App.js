@@ -1,12 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
+import Nav from './components/Nav';
+import routes from './Routes';
 import './App.css';
 import "./styles/Main.scss";
 
 function App() {
   return (
-    <div className="App">
-      
+    <div>
+      <Nav />
+      {routes}
     </div>
   );
 }
