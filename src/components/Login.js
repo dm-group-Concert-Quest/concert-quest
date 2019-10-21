@@ -7,7 +7,7 @@ export default class Auth extends Component {
             <div className={`hidden-by-default ${this.props.boxStatus}`}>
                 <h1 id='login-header'>Login</h1>
                 <label className='login-label'>Username<input className='login-input' name='username'/></label>
-                <label className='login-label'>Password<input className='login-input' name='password'/></label>
+                <label className='login-label'>Password<input className='login-input' name='password' type='password'/></label>
                 <button className='login-btn'>Log In</button>
                 <div>
                     <h4>Don't have an account?</h4>
