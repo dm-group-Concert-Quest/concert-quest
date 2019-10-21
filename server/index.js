@@ -2,7 +2,9 @@ require("dotenv").config();
 const express = require('express');
 const massive = require('massive');
 const session = require('express-session');
-const {SERVER_PORT} = process.env;
+
+const {SERVER_PORT} = process.env
+const authController = require("./Controller/authController");
 
 const app = express();
 app.use(express.json());
