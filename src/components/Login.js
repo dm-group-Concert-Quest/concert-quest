@@ -2,11 +2,11 @@ import React, { Component } from 'react'
 import {Link} from 'react-router-dom';
 
 export default class Auth extends Component {
-    render() {
+    render(props) {
         return (
-            <div id='login-container'>
-                <input className='login-input' name='username' placeholder='username'/>
-                <input className='login-input' name='password' placeholder='password'/>
+            <div className={`hidden-by-default ${this.props.boxStatus}`}>
+                <label className='login-label'>Username<input className='login-input' name='username'/></label>
+                <label className='login-label'>Password<input className='login-input' name='password'/></label>
                 <button className='login-btn'>Log In</button>
                 <div>
                     <h4>Don't have an account?</h4>

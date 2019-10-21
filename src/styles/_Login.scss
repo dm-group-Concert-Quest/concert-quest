@@ -1,23 +1,29 @@
 @import './Utilities';
 
-#login-container {
+.hidden-by-default {
+    display: none;
+}
+
+.open {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     position: absolute;
+    right: 100px;
     height: 300px;
     width: 350px;
     border-radius: 7px;
     border-style: solid;
-    border-width: 2px;
-    border-color: color(dark-blue);
+    border-width: 5px;
+    border-color: color(light-blue);
     box-shadow: 3px 3px 3px color(light-gray);
     background-color: #fff;
-    animation: slide_up 1s 1;
+    animation: slide_up .7s 1;
 
     .login-input {
         width: 80%;
+        border-radius: 2px;
     }
 
     #login-register {
@@ -28,24 +34,55 @@
     }
 }
 
-#login-container:after, #login-container:before {
+.closed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    right: 100px;
+    height: 300px;
+    width: 350px;
+    border-radius: 7px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: color(light-blue);
+    box-shadow: 3px 3px 3px color(light-gray);
+    background-color: #fff;
+    animation: slide_down .7s forwards;
+
+    .login-input {
+        width: 80%;
+        border-radius: 2px;
+    }
+
+    #login-register {
+        text-align: center;
+        text-decoration: none;
+        color: color(dark-gray);
+        cursor: pointer;
+    }
+}
+
+
+//box arrow
+.open:after, .open:before {
     bottom: 100%;
     left: 50%;
-    border: solid transparent;
+    border: solid;
     content: " ";
     height: 0;
     width: 0;
     position: absolute;
-    pointer-events: none;
+    pointer-events: painted;
 }
-
-#login-container:after {
+.open:after {
     border-color: rgba(136, 183, 213, 0);
-    border-bottom-color: #88b7d5;
+    border-bottom-color: #fff;
     border-width: 15px;
     margin-left: -15px;
 }
-#login-container:before {
+.open:before {
     border-color: rgba(194, 225, 245, 0);
     border-bottom-color: color(light-blue);
     border-width: 21px;
@@ -55,7 +92,17 @@
 @keyframes slide_up {
     0% {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(40px);
     }
     100% {opacity: 1;}
+}
+
+@keyframes slide_down {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
 }
