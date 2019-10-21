@@ -1,0 +1,61 @@
+@import './Utilities';
+
+#login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    height: 300px;
+    width: 350px;
+    border-radius: 7px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: color(dark-blue);
+    box-shadow: 3px 3px 3px color(light-gray);
+    background-color: #fff;
+    animation: slide_up 1s 1;
+
+    .login-input {
+        width: 80%;
+    }
+
+    #login-register {
+        text-align: center;
+        text-decoration: none;
+        color: color(dark-gray);
+        cursor: pointer;
+    }
+}
+
+#login-container:after, #login-container:before {
+    bottom: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+#login-container:after {
+    border-color: rgba(136, 183, 213, 0);
+    border-bottom-color: #88b7d5;
+    border-width: 15px;
+    margin-left: -15px;
+}
+#login-container:before {
+    border-color: rgba(194, 225, 245, 0);
+    border-bottom-color: color(light-blue);
+    border-width: 21px;
+    margin-left: -21px;
+}
+
+@keyframes slide_up {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {opacity: 1;}
+}
