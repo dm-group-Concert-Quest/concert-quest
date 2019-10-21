@@ -13,15 +13,15 @@ export default class Home extends Component {
                         <h1 id='gl-title'>Concert Quest</h1>
                         <div className='gl-banner'>
                         <figure>
-                            <img src={gps_icon}/>
+                            <img src={gps_icon} alt='gps'/>
                             <figcaption>Find shows near you</figcaption>
                         </figure>
                         <figure>
-                            <img src={band_icon}/>
+                            <img src={band_icon} alt='band'/>
                             <figcaption>Track your favorite artists</figcaption>
                         </figure>
                         <figure>
-                            <img src={ticket_icon}/>
+                            <img src={ticket_icon} alt='ticket'/>
                                 <figcaption>Get tickets</figcaption>
                         </figure>
                     </div>

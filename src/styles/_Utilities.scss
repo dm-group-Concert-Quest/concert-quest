@@ -1,5 +1,6 @@
+$mont: 'Montserrat';
 $colors: (
-    dark-blue: #025D86,
+    dark-blue: #026AA7,
     light-blue: #03A9F4,
     cool-white: #EBEDF3,
     darker-white: #D6D8DD,
@@ -12,4 +13,3 @@ $colors: (
     @return map-get($colors, $color-name);
 }
 
-$mont: 'Montserrat'
