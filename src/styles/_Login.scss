@@ -20,6 +20,7 @@
     box-shadow: 3px 3px 3px color(light-gray);
     background-color: #fff;
     animation: slide_up .7s 1;
+    z-index: 100;
 
     #login-header {
         font-family: $mont;
@@ -29,11 +30,10 @@
     .login-label {
         font-family: $mont;
         .login-input {
-            // height: 70%;
+            height: 30px;
             width: 100%;
             border-radius: 5px;
-            font-family: $mont;
-            // font-size: 2ch;
+            font-size: large;
         }
     }
 

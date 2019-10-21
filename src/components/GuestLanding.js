@@ -3,9 +3,13 @@ import gps_icon from './images/gps-icon.png';
 import band_icon from './images/band-icon.png';
 import ticket_icon from './images/ticket-icon.png';
 import Events from './Events';
+import {Redirect} from 'react-router-dom';
 
 export default class Home extends Component {
-    render() {
+    render(props) {
+        if (this.props.userId) {
+            return <Redirect to='/Home'/>
+        }
         return (
             <div id='gl-bg'>
                 <div id='guest-landing'>
@@ -25,7 +29,7 @@ export default class Home extends Component {
                                 <figcaption>Get tickets</figcaption>
                         </figure>
                     </div>
-                    <div class="arrow">
+                    <div className="arrow">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -37,3 +41,9 @@ export default class Home extends Component {
         )
     }
 }
+
+const mapStateToProps = reduxState => {
+    return {
+        userId: reduxState.userReducer.userId
+    }
+};

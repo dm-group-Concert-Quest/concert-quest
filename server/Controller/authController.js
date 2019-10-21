@@ -43,14 +43,16 @@ module.exports={
             let hash = user[0].password;
             bcrypt.compare(password, hash).then(areSame => {
                 if(areSame){
+                    console.log(user[0]);
                     req.session.user ={
                         username,
-                        firstName: user[0].first_name,
+                        firstName: user[0].firstname,
                         email: user[0].email,
                         city: user[0].city,
                         state: user[0].state,
-                        id: user[0].id
+                        userid: user[0].userid
                     }
+                    console.log(req.session.user);
                     res.status(200).json(req.session.user);
                 } else {
                     res.status(401).json({
