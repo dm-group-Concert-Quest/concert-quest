@@ -20,6 +20,7 @@
     box-shadow: 3px 3px 3px color(light-gray);
     background-color: #fff;
     animation: slide_up .7s 1;
+    z-index: 100;
 
     #login-header {
         font-family: $mont;

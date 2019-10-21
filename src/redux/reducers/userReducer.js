@@ -28,14 +28,15 @@ export function getSession() {
 export function registerUser(newUser) {
     return {
         type: REGISTER_USER,
-        payload: axios.post("/auth/register")
+        payload: axios.post("/auth/register", newUser)
     };
 };
 
 export function loginUser(user) {
+    // console.log(user)
     return {
         type: LOGIN_USER,
-        payload: axios.post("/auth/login")
+        payload: axios.post("/auth/login", user)
     };
 };
 
@@ -50,6 +51,7 @@ export function logoutUser() {
 
 export default function reducer(state = initialState, action) {
     const { type, payload } = action;
+    console.log(type);
     switch (type) {
         case `${GET_SESSION}_PENDING`:
             return {
@@ -57,12 +59,13 @@ export default function reducer(state = initialState, action) {
                 loading: true
             };
         case `${GET_SESSION}_FULFILLED`:
+
             return {
                 ...state,
-                userId: payload.data.userId,
+                userId: payload.data.userid,
                 name: payload.data.name,
                 username: payload.data.username,
-                firstName: payload.data.firstName,
+                firstName: payload.data.firstname,
                 city: payload.data.city,
                 state: payload.data.state,
                 loading: false
@@ -91,10 +94,10 @@ export default function reducer(state = initialState, action) {
         case `${LOGIN_USER}_FULFILLED`:
             return {
                 ...state,
-                userId: payload.data.userId,
+                userId: payload.data.userid,
                 name: payload.data.name,
                 username: payload.data.username,
-                firstName: payload.data.firstName,
+                firstName: payload.data.firstname,
                 city: payload.data.city,
                 state: payload.data.state,
                 loading: false
