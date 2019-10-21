@@ -1,3 +1,5 @@
+@import "./Utilities";
+
 .theTeamContainer{
     display:flex;
     justify-content: center;
@@ -60,4 +62,38 @@
     position:relative;
     top:3px;
     filter: invert(45%);
+}
+@media(max-width:450px){
+    .teamContainer{
+        display:flex;
+        flex-wrap: wrap;
+        width:90vw;
+        height:60vh;
+        margin-left:20px;
+    }
+    .theTeam{
+        width:90vw;
+        position: relative;
+        text-align: center;
+        font-size: 13ch;
+    }
+    .noelParagraph, .madelynParagraph, .treyParagraph{
+        width:90vw;
+    }
+    .madelynAboutPic, .noelAboutPic, .treyAboutPic{
+        position: relative;
+        left:74px;
+    }
+    .noelDiv{
+        position: relative;
+        top:20px;
+    }
+    .madelynDiv{
+        position: relative;
+        top:50px;
+    }
+    .treyDiv{
+        position: relative;
+        margin-top:80px;
+    }
 }
