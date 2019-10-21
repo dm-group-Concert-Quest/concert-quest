@@ -21,9 +21,20 @@
     background-color: #fff;
     animation: slide_up .7s 1;
 
-    .login-input {
-        width: 80%;
-        border-radius: 2px;
+    #login-header {
+        font-family: $mont;
+        font-size: 4ch;
+    }
+
+    .login-label {
+        font-family: $mont;
+        .login-input {
+            height: 70%;
+            width: 80%;
+            border-radius: 2px;
+            font-family: $mont;
+            font-size: 2ch;
+        }
     }
 
     #login-register {

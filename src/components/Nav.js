@@ -9,11 +9,11 @@ class Nav extends Component {
     constructor() {
         super();
         this.state = {
-            boxStatus: 'closed'
+            boxStatus: 'none'
         }
     }
     toggle = () => {
-        if(this.state.boxStatus == 'closed') {
+        if(this.state.boxStatus == 'closed' || this.state.boxStatus == 'none') {
             this.setState({boxStatus: 'open'});
         } else {
             this.setState({boxStatus: 'closed'});
