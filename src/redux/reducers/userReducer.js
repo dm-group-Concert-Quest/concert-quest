@@ -23,6 +23,7 @@ const UPDATE_FIRST_NAME = "UPDATE_FIRST_NAME";
 const UPDATE_CITY = "UPDATE_CITY";
 const UPDATE_STATE = "UPDATE_STATE";
 const UPDATE_EMAIL = "UPDATE_EMAIL";
+const DELETE_USER = "DELETE_USER";
 
 //action creators
 export function getSession() {
@@ -92,6 +93,13 @@ export function updateEmail(email) {
     return {
         type: UPDATE_EMAIL,
         payload: axios.put("/auth/settings/email", email)
+    };
+};
+
+export function deleteUser() {
+    return {
+        type: DELETE_USER,
+        payload: axios.delete("/auth/settings/user")
     };
 };
 
@@ -173,7 +181,74 @@ export default function reducer(state = initialState, action) {
             return {
                 ...state,
                 username: payload.data.username,
+                loading: false
             };
+        case `${UPDATE_PASSWORD}_PENDING`:
+            return {
+                ...state,
+                loading: true,
+            };
+        case `${UPDATE_PASSWORD}_FULFILLED`:
+            return {
+                ...state,
+                password: payload.data.password,
+                loading: false
+            };
+        case `${UPDATE_FIRST_NAME}_PENDING`:
+            return {
+                ...state,
+                loading: true
+            };
+        case `${UPDATE_FIRST_NAME}_FULFILLED`:
+            return {
+                ...state,
+                firstName: payload.data.firstName,
+                loading: false
+            };
+        case `${UPDATE_CITY}_PENDING`:
+            return {
+                ...state,
+                loading: true
+            };
+        case `${UPDATE_CITY}_FULFILLED`:
+            return {
+                ...state,
+                city: payload.data.city,
+                loading: false
+            };
+        case `${UPDATE_STATE}_PENDING`:
+            return {
+                ...state,
+                loading: true
+            };
+        case `${UPDATE_STATE}_FULFILLED`:
+            return {
+                ...state,
+                state: payload.data.state,
+                loading: false
+            };
+        case `${UPDATE_EMAIL}_PENDING`:
+            return {
+                ...state,
+                loading: true
+            };
+        case `${UPDATE_EMAIL}_FULFILLED`:
+            return {
+                ...state,
+                email: payload.data.email,
+                loading: false
+            };
+        case `${DELETE_USER}_FULFILLED`:
+            return {
+                ...state,
+                userId: null,
+                username: "",
+                password: "",
+                firstName: "",
+                city: "",
+                state: "",
+                email: ""
+            }
             default: 
                 return state;
     };
