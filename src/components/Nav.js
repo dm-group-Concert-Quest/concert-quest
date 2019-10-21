@@ -6,7 +6,20 @@ import "../styles/_Nav.scss";
 import Login from './Login';
 
 class Nav extends Component {
-
+    constructor() {
+        super();
+        this.state = {
+            boxStatus: 'none'
+        }
+    }
+    toggle = () => {
+        if(this.state.boxStatus === 'closed' || this.state.boxStatus === 'none') {
+            this.setState({boxStatus: 'open'});
+        } else {
+            this.setState({boxStatus: 'closed'});
+        }
+        console.log(this.state.boxStatus);
+    }
     // componentDidMount() {
     //     this.props.getSession();
     // }
@@ -16,13 +29,13 @@ class Nav extends Component {
         return (
             <>
             <nav className="Nav-nav-container">
-                {!userId ?
+                {userId ?
                     <>
                         <div className="Nav-nav-title-logout">
                             <Link to="/" className="Nav-CQ"><h1>CQ</h1></Link>
                         </div>
                         <ul className="Nav-nav-links-logout">
-                            <h1 className="Nav-link">Login</h1>
+                            <h1 className="Nav-link" onClick={this.toggle}>Login</h1>
                             
                             <Link to="/about" className="Nav-link"><h1>About</h1></Link>
                         </ul>
@@ -44,7 +57,7 @@ class Nav extends Component {
                     </>
                 }
             </nav>
-            <Login/>
+            <Login boxStatus={this.state.boxStatus}/>
             </>
         )
     }
