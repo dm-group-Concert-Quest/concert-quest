@@ -3,7 +3,7 @@ const bcrypt = require("bcryptjs");
 module.exports={
     getUser: (req, res) => {
         if (req.session.user){
-            res.status(200).json(res.session.user)
+            res.status(200).json(req.session.user)
         }
     },
     registerUser: function (req,res){

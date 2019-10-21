@@ -3,11 +3,12 @@ import axios from "axios";
 //initialState
 const initialState = {
     userId: null,
-    name: "",
     username: "",
+    password: "",
     firstName: "",
     city: "",
     state: "",
+    email: "",
     loading: false
 };
 
@@ -16,6 +17,12 @@ const GET_SESSION = "GET_SESSION";
 const REGISTER_USER = "REGISTER_USER";
 const LOGIN_USER = "LOGIN_USER";
 const LOGOUT_USER = "LOGOUT_USER";
+const UPDATE_USERNAME = "UPDATE_USERNAME";
+const UPDATE_PASSWORD = "UPDATE_PASSWORD";
+const UPDATE_FIRST_NAME = "UPDATE_FIRST_NAME";
+const UPDATE_CITY = "UPDATE_CITY";
+const UPDATE_STATE = "UPDATE_STATE";
+const UPDATE_EMAIL = "UPDATE_EMAIL";
 
 //action creators
 export function getSession() {
@@ -46,6 +53,48 @@ export function logoutUser() {
     };
 };
 
+export function updateUsername(username) {
+    return {
+        type: UPDATE_USERNAME,
+        payload: axios.put("/auth/settings/username", username)
+    };
+};
+
+export function updatePassword(password) {
+    return {
+        type: UPDATE_PASSWORD,
+        payload: axios.put("/auth/settings/password", password)
+    };
+};
+
+export function updateFirstName(firstName) {
+    return {
+        type: UPDATE_FIRST_NAME,
+        payload: axios.put("/auth/settings/firstName", firstName)
+    };
+};
+
+export function updateCity(city) {
+    return {
+        type: UPDATE_CITY,
+        payload: axios.put("/auth/settings/city", city)
+    };
+};
+
+export function updateState(state) {
+    return {
+        type: UPDATE_STATE,
+        payload: axios.put("/auth/settings/state", state)
+    };
+};
+
+export function updateEmail(email) {
+    return {
+        type: UPDATE_EMAIL,
+        payload: axios.put("/auth/settings/email", email)
+    };
+};
+
 //reducer
 
 export default function reducer(state = initialState, action) {
@@ -60,11 +109,11 @@ export default function reducer(state = initialState, action) {
             return {
                 ...state,
                 userId: payload.data.userId,
-                name: payload.data.name,
                 username: payload.data.username,
                 firstName: payload.data.firstName,
                 city: payload.data.city,
                 state: payload.data.state,
+                email: payload.data.email,
                 loading: false
             };
         case `${REGISTER_USER}_PENDING`:
@@ -76,11 +125,11 @@ export default function reducer(state = initialState, action) {
             return {
                 ...state,
                 userId: payload.data.userId,
-                name: payload.data.name,
                 username: payload.data.username,
                 firstName: payload.data.firstName,
                 city: payload.data.city,
                 state: payload.data.state,
+                email: payload.data.email,
                 loading: false
             };
         case `${LOGIN_USER}_PENDING`:
@@ -92,11 +141,11 @@ export default function reducer(state = initialState, action) {
             return {
                 ...state,
                 userId: payload.data.userId,
-                name: payload.data.name,
                 username: payload.data.username,
                 firstName: payload.data.firstName,
                 city: payload.data.city,
                 state: payload.data.state,
+                email: payload.data.email,
                 loading: false
             };
         case `${LOGOUT_USER}_PENDING`:
@@ -108,12 +157,22 @@ export default function reducer(state = initialState, action) {
             return {
                 ...state,
                 userId: null,
-                name: "",
                 username: "",
                 firstName: "",
                 city: "",
                 state: "",
+                email: "",
                 loading: false
+            };
+        case `${UPDATE_USERNAME}_PENDING`:
+            return {
+                ...state,
+                loading: true
+            };
+        case `${UPDATE_USERNAME}_FULFILLED`:
+            return {
+                ...state,
+                username: payload.data.username,
             };
             default: 
                 return state;
