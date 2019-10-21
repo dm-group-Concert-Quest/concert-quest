@@ -14,15 +14,15 @@ class Nav extends Component {
         const { userId } = this.props;
         return (
             <nav className="Nav-nav-container">
-                {userId ?
+                {!userId ?
                     <>
                         <div className="Nav-nav-title-logout">
                             <Link to="/" className="Nav-CQ"><h1>CQ</h1></Link>
                         </div>
-                        <div className="Nav-nav-links-logout">
-                            <h2>Register</h2>
-                            <Link to="/about" className="Nav-link"><h2>About</h2></Link>
-                        </div>
+                        <ul className="Nav-nav-links-logout">
+                            <li className="Nav-link">Login</li>
+                            <Link to="/about" className="Nav-link"><li>About</li></Link>
+                        </ul>
                     </>
                     :
                     <>
