@@ -3,6 +3,7 @@ import {Link, withRouter} from "react-router-dom";
 import {connect} from "react-redux";
 import { getSession, logoutUser } from "../redux/reducers/userReducer";
 import "../styles/_Nav.scss";
+import Login from './Login';
 
 class Nav extends Component {
 
@@ -13,14 +14,16 @@ class Nav extends Component {
     render() {
         const { userId } = this.props;
         return (
+            <>
             <nav className="Nav-nav-container">
-                {userId ?
+                {!userId ?
                     <>
                         <div className="Nav-nav-title-logout">
                             <Link to="/" className="Nav-CQ"><h1>CQ</h1></Link>
                         </div>
                         <ul className="Nav-nav-links-logout">
                             <h1 className="Nav-link">Login</h1>
+                            
                             <Link to="/about" className="Nav-link"><h1>About</h1></Link>
                         </ul>
                     </>
@@ -41,6 +44,8 @@ class Nav extends Component {
                     </>
                 }
             </nav>
+            <Login/>
+            </>
         )
     }
 }
