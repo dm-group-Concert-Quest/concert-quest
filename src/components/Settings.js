@@ -199,4 +199,14 @@ const mapStateToProps = reduxState => {
     };
 };
 
-export default connect(mapStateToProps, { getSession, updateUsername, updatePassword, updateFirstName, updateCity, updateState, updateEmail, deleteUser })(Settings);
+export default connect(mapStateToProps, 
+    { 
+        getSession, 
+        updateUsername, 
+        updatePassword, 
+        updateFirstName, 
+        updateCity, 
+        updateState, 
+        updateEmail, 
+        deleteUser 
+    })(Settings);

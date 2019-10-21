@@ -11,7 +11,7 @@ export default (
     <Router>
         <Switch>
             <Route exact path='/' component={GuestLanding}/>
-            <Route path='/user' component={UserLanding}/>
+            <Route path='/home' component={UserLanding}/>
             <Route path='/profile' component={UserProfile}/>
             <Route path='/register' component={Register}/>
             <Route path='/about' component={About}/>
