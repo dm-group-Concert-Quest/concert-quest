@@ -19,7 +19,7 @@ class About extends React.Component{
             <h1 className="theTeam">The Team</h1>
             </div>
             <div className="teamContainer">
-                <div>
+                <div className="noelDiv">
                     <img className="noelAboutPic" align="middle" src={noelSwag} alt='noelProfPic'/>
                     <h1 className="noelTitle">Noel</h1>
                     <p className="noelParagraph">Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
@@ -41,7 +41,7 @@ class About extends React.Component{
                         </div>
                 </div>
 
-                <div>
+                <div className="madelynDiv">
                     <img className="madelynAboutPic" align="top" src={yeet} alt='madelynProfPic'/>
                     <h1 className="madelynTitle">Madelyn</h1>
                     <p className="madelynParagraph"> swag money swag money. i love swag money swag money.
@@ -58,7 +58,7 @@ class About extends React.Component{
                          </a>
                         </div>
                 </div>
-                <div>
+                <div className="treyDiv">
                     <img className="treyAboutPic" src={treySwag} alt='treyProfPic'/>
                     <h1 className="treyTitle">Trey</h1>
                     <p className="treyParagraph">Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
