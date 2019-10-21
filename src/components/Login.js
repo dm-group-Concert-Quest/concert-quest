@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom';
-import close from './images/close-x-icon.jpg';
 
 export default class Auth extends Component {
     render(props) {

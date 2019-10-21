@@ -13,7 +13,7 @@ class Nav extends Component {
         }
     }
     toggle = () => {
-        if(this.state.boxStatus == 'closed' || this.state.boxStatus == 'none') {
+        if(this.state.boxStatus === 'closed' || this.state.boxStatus === 'none') {
             this.setState({boxStatus: 'open'});
         } else {
             this.setState({boxStatus: 'closed'});
