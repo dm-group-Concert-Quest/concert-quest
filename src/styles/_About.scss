@@ -1,3 +1,5 @@
+@import "./Utilities";
+
 .theTeamContainer{
     display:flex;
     justify-content: center;
@@ -60,4 +62,21 @@
     position:relative;
     top:3px;
     filter: invert(45%);
+}
+@media(max-width:450px){
+    .theTeamContainer{
+        display:flex;
+        width:90vw;
+        height:60vh;
+        margin-left:20px;
+    }
+    .posts{
+        margin-left:20px;
+    }
+    .title, .info{
+        width:65vw;
+    }
+    .addTour, .addPic, .logoutButton, .editTourButton, .deleteButton{
+        width:30vw;
+    }
 }
