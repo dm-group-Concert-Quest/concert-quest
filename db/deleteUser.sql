@@ -1,2 +1,2 @@
 DELETE FROM users
-WHERE userid = $1;
+WHERE user_id = $1;

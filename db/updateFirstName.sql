@@ -1,4 +1,4 @@
 UPDATE users
-SET firstname = $2
-WHERE userid = $1
+SET first_name = $2
+WHERE user_id = $1
 RETURNING *;

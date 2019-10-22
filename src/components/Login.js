@@ -30,7 +30,7 @@ class Login extends Component {
     }
 
     render(props) {
-        if (this.props.userId) {
+        if (this.props.user_id) {
             return <Redirect to='/home' />
         }
         return (
@@ -51,7 +51,7 @@ class Login extends Component {
                             onChange={this.handleInput}
                         />
                     </label>
-                    <button className='login-btn' onClick={this.handleSubmit}><Link to={this.props.userId ? '/home' : '/'}>Log In</Link></button>
+                    <button className='login-btn' onClick={this.handleSubmit}><Link to={this.props.user_id ? '/home' : '/'}>Log In</Link></button>
                 <div>
                     <h4>Don't have an account?</h4>
                     <h4>Sign up <Link id='login-register' to='/register' onClick={this.props.toggle}>here!</Link></h4>
@@ -63,7 +63,7 @@ class Login extends Component {
 
 const mapStateToProps = reduxState => {
     return {
-        userId: reduxState.userReducer.userId
+        user_id: reduxState.userReducer.user_id
     }
 };
 
