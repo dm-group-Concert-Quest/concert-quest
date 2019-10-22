@@ -14,12 +14,12 @@ class Settings extends Component {
             city: "",
             state: "",
             email: "",
+            menuOpenStatus:"side-menu",
             editStatus: false
         };
     };
 
     componentDidMount() {
-        console.log(this.props.firstName)
         this.props.getSession();
     };
 
@@ -32,7 +32,7 @@ class Settings extends Component {
     };
 
     handleDeleteUser = () => {
-        const {first_name} = this.props;
+        const { first_name } = this.props;
 
         const result = window.confirm(`${first_name}: Your account will be deleted if you click OK!`);
         if (result) {
@@ -40,9 +40,17 @@ class Settings extends Component {
             this.props.history.push("/");
         };
     };
+    toggle = () => {
+        
+        if (this.state.menuOpenStatus === "side-menu-close" || this.state.menuOpenStatus === "side-menu"){
+            this.setState({menuOpenStatus: "side-menu-open"});
+        } else if (this.state.menuOpenStatus === "side-menu-open"){
+            this.setState({menuOpenStatus: "side-menu-close"})
+        }
+    }
 
     handleCancelEdit = () => {
-        this.setState({editStatus: false})
+        this.setState({ editStatus: false })
     };
 
     handleEditUpdate = () => {
@@ -83,7 +91,7 @@ class Settings extends Component {
         } else {
             this.props.updateEmail({ email });
         };
-        this.setState({editStatus: false})
+        this.setState({ editStatus: false })
     };
 
     render() {
@@ -91,29 +99,29 @@ class Settings extends Component {
         return (
             <main className="Settings-main-container">
                 <div className="Settings-settings-title">
-                    <h1>Settings</h1>
+                    <h1 className="main-settings-title">Settings</h1>
                 </div>
                 {this.state.editStatus ?
                     <>
                         <div className="Settings-input-fields">
                             <div className="Settings-input-box">
-                                <label>Username:</label>
+                                <label className="setting-titles">Username:</label>
                                 <input
                                     type="text"
-                                    name="username" 
-                                    defaultValue={username} 
+                                    name="username"
+                                    defaultValue={username}
                                     onChange={this.handleInputChange} />
                             </div>
                             <div className="Settings-input-box">
-                                <label>Password:</label>
+                                <label className="setting-titles">Password:</label>
                                 <input
                                     type="password"
-                                    name="password" 
+                                    name="password"
                                     defaultValue={password}
                                     onChange={this.handleInputChange} />
                             </div>
                             <div className="Settings-input-box">
-                                <label>First Name:</label>
+                                <label className="setting-titles">First Name:</label>
                                 <input
                                     type="text"
                                     name="first_name"
@@ -121,7 +129,7 @@ class Settings extends Component {
                                     onChange={this.handleInputChange} />
                             </div>
                             <div className="Settings-input-box">
-                                <label>Email:</label>
+                                <label className="setting-titles">Email:</label>
                                 <input
                                     type="email"
                                     name="email"
@@ -129,7 +137,7 @@ class Settings extends Component {
                                     onChange={this.handleInputChange} />
                             </div>
                             <div className="Settings-input-box">
-                                <label>City:</label>
+                                <label className="setting-titles">City:</label>
                                 <input
                                     type="text"
                                     name="city"
@@ -137,7 +145,7 @@ class Settings extends Component {
                                     onChange={this.handleInputChange} />
                             </div>
                             <div className="Settings-input-box">
-                                <label>State:</label>
+                                <label className="setting-titles">State:</label>
                                 <input
                                     type="text"
                                     name="state"
@@ -155,32 +163,32 @@ class Settings extends Component {
                     <>
                         <div className="Settings-input-fields">
                             <div className="Settings-input-box">
-                                <h1>Username:</h1>
-                                <h3>{username}</h3>
+                                <h1 className="setting-titles">Username:</h1>
+                                <h3 className="setting-credentials">{username}</h3>
                             </div>
                             <div className="Settings-input-box">
-                                <h1>Password:</h1>
-                                <h3>{`******`}</h3>
+                                <h1 className="setting-titles">Password:</h1>
+                                <h3 className="setting-credentials">{`******`}</h3>
                             </div>
                             <div className="Settings-input-box">
-                                <h1>First Name:</h1>
-                                <h3>{first_name}</h3>
+                                <h1 className="setting-titles">First Name:</h1>
+                                <h3 className="setting-credentials">{first_name}</h3>
                             </div>
                             <div className="Settings-input-box">
-                                <h1>Email:</h1>
-                                <h3>{email}</h3>
+                                <h1 className="setting-titles">Email:</h1>
+                                <h3 className="setting-credentials">{email}</h3>
                             </div>
                             <div className="Settings-input-box">
-                                <h1>City:</h1>
-                                <h3>{city}</h3>
+                                <h1 className="setting-titles">City:</h1>
+                                <h3 className="setting-credentials">{city}</h3>
                             </div>
                             <div className="Settings-input-box">
-                                <h1>State:</h1>
-                                <h3>{state}</h3>
+                                <h1 className="setting-titles">State:</h1>
+                                <h3 className="setting-credentials">{state}</h3>
                             </div>
                             <div className="Settings-input-box">
-                                <button onClick={this.handleEditStatus}>Edit</button>
-                                <button onClick={this.handleDeleteUser}>Delete</button>
+                                <button className="settings-editButton" onClick={this.handleEditStatus}>Edit</button>
+                                <button className="settings-deleteButton" onClick={this.handleDeleteUser}>Delete</button>
                             </div>
                         </div>
                     </>
@@ -201,14 +209,14 @@ const mapStateToProps = reduxState => {
     };
 };
 
-export default connect(mapStateToProps, 
-    { 
-        getSession, 
-        updateUsername, 
-        updatePassword, 
-        updateFirstName, 
-        updateCity, 
-        updateState, 
-        updateEmail, 
-        deleteUser 
+export default connect(mapStateToProps,
+    {
+        getSession,
+        updateUsername,
+        updatePassword,
+        updateFirstName,
+        updateCity,
+        updateState,
+        updateEmail,
+        deleteUser
     })(Settings);

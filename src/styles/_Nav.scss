@@ -12,13 +12,16 @@
     z-index: 2;
     .Nav-CQ {
         text-decoration: none;
-    }
+    };
     .Nav-link {
         text-decoration: none;
         color: color(cool-white);
         cursor: pointer;
         font-family: $mont;
-    }
+    };
+    .Nav-link:hover {
+        text-decoration: underline;
+    };
     .Nav-nav-title-logout {
         width: 5ch;
         height: 100%;
@@ -30,22 +33,22 @@
         text-decoration: none;
         h1 {
             color: color(cool-white)
-        }
-    }
+        };
+    };
     .Nav-nav-links-logout {
         width: 40ch;
         height: 100%;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        font-size: 20px;
+        font-size: 1.25rem;
         text-decoration: none;
         h2 {
             color: color(cool-white);
             font-size: 20px;
             cursor: pointer;
-        }
-    }
+        };
+    };
     .Nav-nav-title-login {
         width: 5ch;
         height: 100%;
@@ -57,19 +60,37 @@
         text-decoration: none;
         h1 {
             color: color(cool-white)
-        }
-    }
+        };
+    };
     .Nav-nav-links-login {
-        // display: flex;
-        justify-content: space-evenly;
-        align-items: center;
         width: 100ch;
         height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 1.25rem;
         text-decoration: none;
         h2 {
             color: color(cool-white);
             font-size: 20px;
             cursor: pointer;
+        };
+        .Nav-nav-logout {
+            width: 15%;
+            height: 35%;
+            font-size: 1.25rem;
+            border-radius: 5px;
+            background-color: color(dark-blue);
+            color: color(cool-white);
+            outline: none;
+        };
+        .Nav-nav-logout:hover {
+            background-color: color(cool-white);
+            color: color(dark-blue);
+            cursor: pointer;
+        };
+    };
+};
         }
     }
 };
