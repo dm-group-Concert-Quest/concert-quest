@@ -14,11 +14,17 @@ class Login extends Component {
 
     componentDidMount() {
         this.props.getSession();
+    };
+
+    componentDidUpdate(prevProps) {
+        if(prevProps.boxStatus !== this.props.boxStatus && this.props.boxStatus === 'closed') {
+            this.setState({username: '', password: ''})
+        }
     }
 
     handleInput = e => {
         this.setState({ [e.target.name]: e.target.value });
-    }
+    };
 
     handleSubmit = e => {
         e.preventDefault();
@@ -27,7 +33,7 @@ class Login extends Component {
         this.props.loginUser({ username, password });
         this.setState({ username: '', password: '' })
         this.props.toggle();
-    }
+    };
 
     render(props) {
         if (this.props.user_id) {
@@ -36,23 +42,25 @@ class Login extends Component {
         return (
             <div id='login-container'>
                 <form className={`hidden-by-default ${this.props.boxStatus}`}>
-                        <h1 id='login-header'>Login</h1>
-                        <label className='login-label'>
-                            Username
+                    <h1 id='login-header'>Login</h1>
+                    <label className='login-label'>
+                        Username
                         <input className='login-input'
-                                name='username'
-                                type='text'
-                                onChange={this.handleInput} />
-                        </label>
-                        <label className='login-label'>
-                            Password
+                            name='username'
+                            type='text'
+                            value={this.state.username}
+                            onChange={this.handleInput} />
+                    </label>
+                    <label className='login-label'>
+                        Password
                         <input className='login-input'
-                                name='password'
-                                type='password'
-                                onChange={this.handleInput}
-                            />
-                        </label>
-                        <button className='login-btn' onClick={this.handleSubmit}><Link to={this.props.user_id ? '/home' : '/'}>Log In</Link></button>
+                            name='password'
+                            type='password'
+                            value={this.state.password}
+                            onChange={this.handleInput}
+                        />
+                    </label>
+                    <button className='login-btn' onClick={this.handleSubmit}><Link to={this.props.user_id ? '/home' : '/'}>Log In</Link></button>
                     <div>
                         <h4>Don't have an account?</h4>
                         <h4>Sign up <Link id='login-register' to='/register' onClick={this.props.toggle}>here!</Link></h4>

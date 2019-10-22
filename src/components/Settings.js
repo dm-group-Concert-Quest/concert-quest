@@ -20,7 +20,6 @@ class Settings extends Component {
     };
 
     componentDidMount() {
-        console.log(this.props.firstName)
         this.props.getSession();
     };
 
@@ -33,7 +32,7 @@ class Settings extends Component {
     };
 
     handleDeleteUser = () => {
-        const {first_name} = this.props;
+        const { first_name } = this.props;
 
         const result = window.confirm(`${first_name}: Your account will be deleted if you click OK!`);
         if (result) {
@@ -51,7 +50,7 @@ class Settings extends Component {
     }
 
     handleCancelEdit = () => {
-        this.setState({editStatus: false})
+        this.setState({ editStatus: false })
     };
 
     handleEditUpdate = () => {
@@ -92,7 +91,7 @@ class Settings extends Component {
         } else {
             this.props.updateEmail({ email });
         };
-        this.setState({editStatus: false})
+        this.setState({ editStatus: false })
     };
 
     render() {
@@ -109,15 +108,15 @@ class Settings extends Component {
                                 <label className="setting-titles">Username:</label>
                                 <input
                                     type="text"
-                                    name="username" 
-                                    defaultValue={username} 
+                                    name="username"
+                                    defaultValue={username}
                                     onChange={this.handleInputChange} />
                             </div>
                             <div className="Settings-input-box">
                                 <label className="setting-titles">Password:</label>
                                 <input
                                     type="password"
-                                    name="password" 
+                                    name="password"
                                     defaultValue={password}
                                     onChange={this.handleInputChange} />
                             </div>
@@ -210,14 +209,14 @@ const mapStateToProps = reduxState => {
     };
 };
 
-export default connect(mapStateToProps, 
-    { 
-        getSession, 
-        updateUsername, 
-        updatePassword, 
-        updateFirstName, 
-        updateCity, 
-        updateState, 
-        updateEmail, 
-        deleteUser 
+export default connect(mapStateToProps,
+    {
+        getSession,
+        updateUsername,
+        updatePassword,
+        updateFirstName,
+        updateCity,
+        updateState,
+        updateEmail,
+        deleteUser
     })(Settings);
