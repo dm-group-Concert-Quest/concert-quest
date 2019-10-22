@@ -7,22 +7,22 @@ module.exports={
         }
     },
     registerUser: function (req,res){
-        const {username, password, email, firstName, city, state} = req.body
+        const {username, password, email, first_name, city, state} = req.body
         const db = req.app.get("db");
 
-        db.checkForTakenUsernameOrEmail(username, email).then(count => {
+        db.auth.checkForTakenUsernameOrEmail(username, email).then(count => {
             if(+count[0].count === 0){
                 const salt = bcrypt.genSaltSync(10)
                 bcrypt.hash(password, salt).then(hash => {
-                    db.registerUsers(firstName, email, username, city, state, hash).then(() => {
+                    db.auth.registerUsers(first_name, email, username, city, state, hash).then(() => {
                         db.getPassword(username).then(user =>{
                             req.session.user ={
                                 username,
-                                firstName,
+                                first_name,
                                 email,
                                 city,
                                 state,
-                                id: user[0].id
+                                user_id: user[0].user_id
                                 
                             }
                             res.status(200).json(req.session.user);
@@ -46,11 +46,11 @@ module.exports={
                     console.log(user[0]);
                     req.session.user ={
                         username,
-                        firstName: user[0].firstname,
+                        first_name: user[0].first_name,
                         email: user[0].email,
                         city: user[0].city,
                         state: user[0].state,
-                        userid: user[0].userid
+                        user_id: user[0].user_id
                     }
                     console.log(req.session.user);
                     res.status(200).json(req.session.user);
