@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { getSession, logoutUser } from "../redux/reducers/userReducer";
 import "../styles/_Nav.scss";
 import Login from './Login';
+import hbgr from './images/hamburger-icon.jpg';
 
 class Nav extends Component {
     constructor() {
@@ -35,11 +36,12 @@ class Nav extends Component {
         return (
             <>
                 <nav className="Nav-nav-container">
+                    <div className="Nav-nav-title-logout">
+                        <Link to="/" className="Nav-CQ"><h1>CQ</h1></Link>
+                    </div>
                     {!user_id ?
                         <>
-                            <div className="Nav-nav-title-logout">
-                                <Link to="/" className="Nav-CQ"><h1>CQ</h1></Link>
-                            </div>
+                            
                             <ul className="Nav-nav-links-logout">
                                 <h1 className="Nav-link" onClick={this.toggle}>Login</h1>
                                 <Link to="/about" className="Nav-link"><h1>About</h1></Link>
@@ -47,11 +49,6 @@ class Nav extends Component {
                         </>
                         :
                         <>
-                            <div className="Nav-nav-container">
-                                <div className="Nav-nav-title-login">
-                                    <Link to="/" className="Nav-CQ"><h1>CQ</h1></Link>
-                                </div>
-                            </div>
                             <div className="Nav-nav-links-login">
                                 <Link to="/home" className="Nav-link"><h2>Home</h2></Link>
                                 <Link to="profile" className="Nav-link"><h2>Profile</h2></Link>
@@ -61,6 +58,7 @@ class Nav extends Component {
                             </div>
                         </>
                     }
+                <img src={hbgr} className='hidden-by-default nav-menu-btn'></img>
                 </nav>
                 <Login
                     boxStatus={this.state.boxStatus}

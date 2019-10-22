@@ -71,3 +71,15 @@
         }
     }
 };
+
+@media(max-width: 768px) {
+    .nav-menu-btn {
+        display: block;
+        height: 65px;
+        width: 80px;
+    }
+
+    .Nav-nav-container :nth-child(2) {
+        display: none;
+    }
+}

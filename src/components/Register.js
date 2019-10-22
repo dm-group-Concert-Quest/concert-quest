@@ -44,8 +44,8 @@ class Register extends Component {
                     <h1 id='reg-title'>Create an account</h1>
                     <label>Username<input className='register-input' name='username' onChange={this.handleInput}/></label>
                     <label>Password<input className='register-input' name='password' onChange={this.handleInput}/></label>
-                    <label>First name<input className='register-input' name='first_name' onChange={this.handleInput}/></label>
                     <label>Verify password<input className='register-input' name='passwordAgain' onChange={this.handleInput}/></label>
+                    <label>First name<input className='register-input' name='first_name' onChange={this.handleInput}/></label>
                     <label>Email address<input className='register-input' name='email' onChange={this.handleInput}/></label>
                     <div id='reg-location'>
                         <label>City<input className='register-input' name='city' onChange={this.handleInput}/></label>
