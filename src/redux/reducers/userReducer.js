@@ -2,10 +2,10 @@ import axios from "axios";
 
 //initialState
 const initialState = {
-    userId: null,
+    user_id: null,
     username: "",
     password: "",
-    firstName: "",
+    first_name: "",
     city: "",
     state: "",
     email: "",
@@ -68,10 +68,10 @@ export function updatePassword(password) {
     };
 };
 
-export function updateFirstName(firstName) {
+export function updateFirstName(first_name) {
     return {
         type: UPDATE_FIRST_NAME,
-        payload: axios.put("/auth/settings/firstName", firstName)
+        payload: axios.put("/auth/settings/first_name", first_name)
     };
 };
 
@@ -115,10 +115,10 @@ export default function reducer(state = initialState, action) {
         case `${GET_SESSION}_FULFILLED`:
             return {
                 ...state,
-                userId: payload.data.userid,
+                user_id: payload.data.user_id,
+                name: payload.data.name,
                 username: payload.data.username,
-                password: payload.data.password,
-                firstName: payload.data.firstname,
+                first_name: payload.data.first_name,
                 city: payload.data.city,
                 state: payload.data.state,
                 email: payload.data.email,
@@ -132,10 +132,9 @@ export default function reducer(state = initialState, action) {
         case `${REGISTER_USER}_FULFILLED`:
             return {
                 ...state,
-                userId: payload.data.userid,
+                user_id: payload.data.user_id,
                 username: payload.data.username,
-                password: payload.data.password,
-                firstName: payload.data.firstname,
+                first_name: payload.data.first_name,
                 city: payload.data.city,
                 state: payload.data.state,
                 email: payload.data.email,
@@ -149,10 +148,10 @@ export default function reducer(state = initialState, action) {
         case `${LOGIN_USER}_FULFILLED`:
             return {
                 ...state,
-                userId: payload.data.userid,
+                user_id: payload.data.user_id,
+                name: payload.data.name,
                 username: payload.data.username,
-                password: payload.data.password,
-                firstName: payload.data.firstname,
+                first_name: payload.data.first_name,
                 city: payload.data.city,
                 state: payload.data.state,
                 email: payload.data.email,
@@ -166,10 +165,10 @@ export default function reducer(state = initialState, action) {
         case `${LOGOUT_USER}_FULFILLED`:
             return {
                 ...state,
-                userId: null,
+                user_id: null,
                 username: "",
+                first_name: "",
                 password: "",
-                firstName: "",
                 city: "",
                 state: "",
                 email: "",
@@ -205,7 +204,7 @@ export default function reducer(state = initialState, action) {
         case `${UPDATE_FIRST_NAME}_FULFILLED`:
             return {
                 ...state,
-                firstName: payload.data.firstName,
+                first_name: payload.data.first_name,
                 loading: false
             };
         case `${UPDATE_CITY}_PENDING`:
@@ -244,10 +243,10 @@ export default function reducer(state = initialState, action) {
         case `${DELETE_USER}_FULFILLED`:
             return {
                 ...state,
-                userId: null,
+                user_id: null,
                 username: "",
                 password: "",
-                firstName: "",
+                first_name: "",
                 city: "",
                 state: "",
                 email: ""

@@ -10,7 +10,7 @@ class Settings extends Component {
         this.state = {
             username: "",
             password: "",
-            firstName: "",
+            first_name: "",
             city: "",
             state: "",
             email: "",
@@ -32,9 +32,9 @@ class Settings extends Component {
     };
 
     handleDeleteUser = () => {
-        const {firstName} = this.props;
+        const {first_name} = this.props;
 
-        const result = window.confirm(`${firstName}: Your account will be deleted if you click OK!`);
+        const result = window.confirm(`${first_name}: Your account will be deleted if you click OK!`);
         if (result) {
             this.props.deleteUser();
             this.props.history.push("/");
@@ -46,7 +46,7 @@ class Settings extends Component {
     };
 
     handleEditUpdate = () => {
-        const { username, password, firstName, city, state, email } = this.state;
+        const { username, password, first_name, city, state, email } = this.state;
 
         if (username === "") {
             this.setState({ username: this.props.username })
@@ -60,10 +60,10 @@ class Settings extends Component {
             this.props.updatePassword({ password });
         };
 
-        if (firstName === "") {
-            this.setState({ password: this.props.firstName })
+        if (first_name === "") {
+            this.setState({ password: this.props.first_name })
         } else {
-            this.props.updateFirstName({ firstName });
+            this.props.updatefirst_name({ first_name });
         };
 
         if (city === "") {
@@ -87,7 +87,7 @@ class Settings extends Component {
     };
 
     render() {
-        const { username, password, firstName, city, state, email } = this.props;
+        const { username, password, first_name, city, state, email } = this.props;
         return (
             <main className="Settings-main-container">
                 <div className="Settings-settings-title">
@@ -116,8 +116,8 @@ class Settings extends Component {
                                 <label>First Name:</label>
                                 <input
                                     type="text"
-                                    name="firstName"
-                                    defaultValue={firstName}
+                                    name="first_name"
+                                    defaultValue={first_name}
                                     onChange={this.handleInputChange} />
                             </div>
                             <div className="Settings-input-box">
@@ -164,7 +164,7 @@ class Settings extends Component {
                             </div>
                             <div className="Settings-input-box">
                                 <h1>First Name:</h1>
-                                <h3>{firstName}</h3>
+                                <h3>{first_name}</h3>
                             </div>
                             <div className="Settings-input-box">
                                 <h1>Email:</h1>
@@ -194,7 +194,7 @@ const mapStateToProps = reduxState => {
     return {
         username: reduxState.userReducer.username,
         password: reduxState.userReducer.password,
-        firstName: reduxState.userReducer.firstName,
+        first_name: reduxState.userReducer.first_name,
         city: reduxState.userReducer.city,
         state: reduxState.userReducer.state,
         email: reduxState.userReducer.email
