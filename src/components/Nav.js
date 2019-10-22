@@ -27,9 +27,9 @@ class Nav extends Component {
 
     handleClick = e => {
         if (this.node.contains(e.target)) {
-            this.setState({boxStatus: 'open'})
+            this.setState({ boxStatus: 'open' })
         } else {
-            this.setState({boxStatus: 'closed'})
+            this.setState({ boxStatus: 'closed' })
         };
     };
 
