@@ -105,24 +105,6 @@
     }
 }
 
-@keyframes slide_left {
-    0% {
-        opacity: 0;
-        transform: translateY(100px);
-    }
-    100% {opacity: 1;}
-}
-
-@keyframes slide_right {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(100px);
-    }
-}
-
 @media(min-width: 625px) {
     
     .open, .closed {
@@ -142,13 +124,13 @@
         justify-content: center;
     }
     .open, .closed {
-        animation: slide_left .7s 1;
+        animation: slide_up .7s 1;
         width: 315px;
         align-self: center;
         margin-top: 155px;
     }
 
     .closed {
-        animation: slide_right .7s forwards;
+        animation: slide_down .7s forwards;
     }
 }
