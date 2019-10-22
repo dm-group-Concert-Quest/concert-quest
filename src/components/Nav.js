@@ -15,15 +15,31 @@ class Nav extends Component {
 
     componentDidMount() {
         this.props.getSession();
-    }
+    };
+
+    componentWillMount() {
+        document.addEventListener('click', this.handleClick, false);
+    };
+
+    componentWillUnmount() {
+        document.removeEventListener('click', this.handleClick, false);
+    };
+
+    handleClick = e => {
+        if (this.node.contains(e.target)) {
+            this.setState({boxStatus: 'open'})
+        } else {
+            this.setState({boxStatus: 'closed'})
+        };
+    };
 
     toggle = () => {
         if (this.state.boxStatus === 'closed' || this.state.boxStatus === 'none') {
             this.setState({ boxStatus: 'open' });
         } else {
             this.setState({ boxStatus: 'closed' });
-        }
-    }
+        };
+    };
 
     handleLogout = () => {
         this.props.logoutUser();
@@ -57,14 +73,16 @@ class Nav extends Component {
                                 <Link to="profile" className="Nav-link"><h2>Profile</h2></Link>
                                 <Link to="/about" className="Nav-link"><h2>About</h2></Link>
                                 <Link to="settings" className="Nav-link"><h2>Settings</h2></Link>
-                                <button onClick={this.handleLogout}>LOGOUT</button>
+                                <button className="Nav-nav-logout" onClick={this.handleLogout}>Logout</button>
                             </div>
                         </>
                     }
                 </nav>
-                <Login
-                    boxStatus={this.state.boxStatus}
-                    toggle={this.toggle} />
+                <div ref={node => this.node = node}>
+                    <Login
+                        boxStatus={this.state.boxStatus}
+                        toggle={this.toggle} />
+                </div>
             </>
         )
     }
