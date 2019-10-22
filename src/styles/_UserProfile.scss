@@ -1,0 +1,30 @@
+@import './Utilities';
+
+#profile-bg {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-color: black;
+
+    #user-profile {
+        background-color: #fff;
+    }
+}
+
+@media(min-width: 768px) {
+    #profile-bg {
+        background-image: url('http://myeventnation.com/wp-content/uploads/2017/02/crowd-at-concert-2.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        #user-profile {
+            width: 80vw;
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    #user-profile {
+        width: 100vw;
+    }
+}
