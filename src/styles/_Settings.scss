@@ -1,0 +1,33 @@
+@import "./Utilities";
+
+.Settings-main-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: color(cool-white);
+    .Settings-settings-title {
+        width: 100vw;
+        height: 20vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 8rem;
+    };
+    .Settings-input-fields {
+        width: 50%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        background: color(light-gray);
+        .Settings-input-box {
+            @extend .Settings-input-fields
+        }
+    };
+};
+

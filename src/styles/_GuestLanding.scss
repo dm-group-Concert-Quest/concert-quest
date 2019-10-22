@@ -3,41 +3,122 @@
 #gl-bg {
     display: flex;
     justify-content: center;
-    position: static;
     height: 100vh;
+    background-color: black;
 
     #guest-landing {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
-        width: 80vw;
-        height: 100vh;
-
-        #gl-title {
-            font-size: 20ch;
-            width: 720px;
-            text-align: center;
-            font-family: 'Modak', cursive;
-            color: color(cool-black);
-        }
-
-        .gl-banner {
+        height: auto;
+        background-color: #fff;
+        .gl-welcome {
             display: flex;
-            flex-direction: row;
-            width: 100%;
-            justify-content: space-around;
-            figure {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 80vw;
+            height: 100vh;
+            background-color: #fff;
 
-                img {
-                    padding-bottom: 10px;
-                    height: 200px;
-                    width: 200px;
+            #gl-title {
+                width: 100%;
+                text-align: center;
+                font-family: 'Modak', cursive;
+                color: color(cool-black);
+            }
+
+            .gl-banner {
+                display: flex;
+                flex-direction: row;
+                width: 90%;
+                justify-content: space-around;
+                align-items: center;
+                font-family: $mont;
+                background-color: color(darker-white);
+                border-radius: 10px;
+                figure {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    img {
+                        padding-bottom: 10px;
+                        max-width: 80%;
+                        max-height: 25vh;
+                    }
                 }
             }
+            .arrow{
+                // position: relative;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+            .arrow span{
+                display: block;
+                width: 30px;
+                height: 30px;
+                border-bottom: 5px solid color(light-blue);
+                border-right: 5px solid #06A8FF;
+                transform: rotate(45deg);
+                margin: -10px;
+                animation: scroll_down 2s infinite;
+            }
+            .arrow span:nth-child(2){
+                animation-delay: -0.2s;
+            }
+            .arrow span:nth-child(3){
+                animation-delay: -0.4s;
+            }
         }
+    }
+}
+
+@media(min-width: 660px) {
+    #gl-title {
+        font-size: 9em;
+    }
+    .gl-banner {
+        height: 250px;
+    }
+}
+
+@media(min-width: 768px) {
+    #gl-bg {
+        background-image: url('http://myeventnation.com/wp-content/uploads/2017/02/crowd-at-concert-2.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        #guest-landing {
+            width: 80vw;
+        }
+    }
+}
+
+@media(max-width: 660px) {
+    #gl-title {
+        font-size: 5em;
+    }
+}
+
+@media(max-width: 768px) {
+    #guest-landing {
+        width: 100vw;
+    }
+}
+
+@keyframes scroll_down {
+    0%{
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px,-20px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(20px,20px);
     }
 }

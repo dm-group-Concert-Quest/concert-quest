@@ -1,11 +1,15 @@
+@import "./Utilities";
+
 .theTeamContainer{
     display:flex;
     justify-content: center;
 }
 .theTeam{
-    font-size: 13ch;
-    font-family: 'Montserrat', sans-serif;
+    font-size: 16ch;
+    // font-family: 'Montserrat', sans-serif;
+    font-family: 'Poiret One', cursive;
     color:#676767
+
 
 }
 .teamContainer{
@@ -34,10 +38,62 @@
     
 }
 
+.linksDiv{
+    display: flex;
+    justify-content: space-evenly;
+}
 .noelParagraph, .madelynParagraph, .treyParagraph{
     text-align: center;
     width:20vw;
     line-height: 3ch;
     font-size: 2.5ch;
     font-family: 'Forum', cursive;
+}
+.githubIcon{
+    height:40px;
+}
+.linkedinIcon{
+    height:34px;
+    position: relative;
+    top:5px;
+}
+.portfolioIcon{
+    height:35px;
+    position:relative;
+    top:3px;
+    filter: invert(45%);
+}
+@media(max-width:450px){
+    .teamContainer{
+        display:flex;
+        flex-wrap: wrap;
+        width:90vw;
+        height:60vh;
+        margin-left:20px;
+    }
+    .theTeam{
+        width:90vw;
+        position: relative;
+        text-align: center;
+        font-size: 13ch;
+    }
+    .noelParagraph, .madelynParagraph, .treyParagraph{
+        width:90vw;
+    }
+    .madelynAboutPic, .noelAboutPic, .treyAboutPic{
+        position: relative;
+        left:74px;
+    }
+    .noelDiv{
+        position: relative;
+        top:20px;
+    }
+    .madelynDiv{
+        position: relative;
+        top:50px;
+    }
+    .treyDiv{
+        position: relative;
+        margin-top:80px;
+    }
 }
