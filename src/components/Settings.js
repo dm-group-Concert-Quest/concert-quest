@@ -18,9 +18,10 @@ class Settings extends Component {
         };
     };
 
-    // componentDidMount() {
-    //     this.props.getSession();
-    // };
+    componentDidMount() {
+        console.log(this.props.firstName)
+        this.props.getSession();
+    };
 
     handleInputChange = e => {
         this.setState({ [e.target.name]: e.target.value })
@@ -82,6 +83,7 @@ class Settings extends Component {
         } else {
             this.props.updateEmail({ email });
         };
+        this.setState({editStatus: false})
     };
 
     render() {
@@ -158,7 +160,7 @@ class Settings extends Component {
                             </div>
                             <div className="Settings-input-box">
                                 <h1>Password:</h1>
-                                <h3>{password}</h3>
+                                <h3>{`******`}</h3>
                             </div>
                             <div className="Settings-input-box">
                                 <h1>First Name:</h1>

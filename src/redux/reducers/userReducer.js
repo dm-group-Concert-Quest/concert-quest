@@ -41,7 +41,6 @@ export function registerUser(newUser) {
 };
 
 export function loginUser(user) {
-    // console.log(user)
     return {
         type: LOGIN_USER,
         payload: axios.post("/auth/login", user)
@@ -105,10 +104,8 @@ export function deleteUser() {
 };
 
 //reducer
-
 export default function reducer(state = initialState, action) {
     const { type, payload } = action;
-    console.log(type);
     switch (type) {
         case `${GET_SESSION}_PENDING`:
             return {
@@ -116,7 +113,6 @@ export default function reducer(state = initialState, action) {
                 loading: true
             };
         case `${GET_SESSION}_FULFILLED`:
-
             return {
                 ...state,
                 user_id: payload.data.user_id,
@@ -172,6 +168,7 @@ export default function reducer(state = initialState, action) {
                 user_id: null,
                 username: "",
                 first_name: "",
+                password: "",
                 city: "",
                 state: "",
                 email: "",

@@ -1,0 +1,45 @@
+#reg-bg {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-color: black;
+    
+    #register-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: auto;
+        background-color: #fff;
+
+        #reg-title {
+            font-size: 7ch;
+            font-family: $mont;
+        }
+
+        #reg-btn {
+            height: 50px;
+            width: 200px;
+            font-family: $mont;
+            font-size: large;
+        }
+    }
+}
+
+@media(min-width: 768px) {
+    #reg-bg {
+        background-image: url('http://myeventnation.com/wp-content/uploads/2017/02/crowd-at-concert-2.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        #register-form {
+            width: 80vw;
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    #register-form {
+        width: 100vw;
+    }
+}
