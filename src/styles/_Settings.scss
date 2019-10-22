@@ -42,7 +42,8 @@
     };
 }
 .setting-titles{
-    font-family: 'Poiret One', cursive;
+        font-family: $mont;
+
 font-size:4ch;
 }
 .setting-credentials{
@@ -66,6 +67,6 @@ font-size:4ch;
     }
     .Settings-input-fields{
         align-items: center;
-        width:auto;
+        
     }
 }
