@@ -10,7 +10,8 @@ class Nav extends Component {
     constructor() {
         super();
         this.state = {
-            boxStatus: 'none'
+            boxStatus: 'none',
+            menuStatus: 'none'
         }
     }
 
@@ -23,6 +24,14 @@ class Nav extends Component {
             this.setState({ boxStatus: 'open' });
         } else {
             this.setState({ boxStatus: 'closed' });
+        }
+    }
+
+    toggleMenu = () => {
+        if (this.state.menuStatus === 'hide-menu' || this.state.menuStatus === 'none') {
+            this.setState({ menuStatus: 'see-menu' });
+        } else {
+            this.setState({ menuStatus: 'hide-menu' });
         }
     }
 
@@ -41,8 +50,7 @@ class Nav extends Component {
                     </div>
                     {!user_id ?
                         <>
-                            
-                            <ul className="Nav-nav-links-logout">
+                            <ul className="Nav-nav-links-logout hidden-by-default">
                                 <h1 className="Nav-link" onClick={this.toggle}>Login</h1>
                                 <Link to="/about" className="Nav-link"><h1>About</h1></Link>
                             </ul>
@@ -58,8 +66,25 @@ class Nav extends Component {
                             </div>
                         </>
                     }
-                <img src={hbgr} className='hidden-by-default nav-menu-btn'></img>
+                <img src={hbgr} className='hidden-by-default nav-menu-btn' onClick={this.toggleMenu}></img>
                 </nav>
+
+                {!user_id ?
+                    <menu className={`hidden-by-default ${this.state.menuStatus}`}>
+                        <ul className="Nav-nav-links-logout hidden-by-default">
+                            <h1 className="Nav-link" onClick={this.toggle}>Login</h1>
+                            <Link to="/about" className="Nav-link"><h1>About</h1></Link>
+                        </ul>
+                    </menu> 
+                :
+                    <menu className={`hidden-by-default ${this.state.menuStatus}`}>
+                        <Link to="/home" className="Nav-link"><h2>Home</h2></Link>
+                        <Link to="profile" className="Nav-link"><h2>Profile</h2></Link>
+                        <Link to="/about" className="Nav-link"><h2>About</h2></Link>
+                        <Link to="settings" className="Nav-link"><h2>Settings</h2></Link>
+                        <button onClick={this.handleLogout}>LOGOUT</button>
+                    </menu>
+                }
                 <Login
                     boxStatus={this.state.boxStatus}
                     toggle={this.toggle} />
