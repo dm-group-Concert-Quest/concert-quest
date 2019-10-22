@@ -41,7 +41,7 @@ class Home extends Component {
 
 const mapStateToProps = reduxState => {
     return {
-        userId: reduxState.userReducer.userId
+        user_id: reduxState.userReducer.user_id
     }
 };
 

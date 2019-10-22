@@ -31,7 +31,7 @@ app.post("/auth/logout", authController.logOut);
 //settings endpoints
 app.put("/auth/settings/username", authController.updateUsername);
 app.put("/auth/settings/password", authController.updatePassword);
-app.put("/auth/settings/firstName", authController.updateFirstName);
+app.put("/auth/settings/first_name", authController.updateFirstName);
 app.put("/auth/settings/city", authController.updateCity);
 app.put("/auth/settings/state", authController.updateState);
 app.put("/auth/settings/email", authController.updateEmail);

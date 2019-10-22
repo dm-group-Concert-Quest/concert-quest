@@ -6,24 +6,24 @@ module.exports = {
             res.status(200).json(req.session.user)
         }
     },
-    registerUser: function (req, res) {
-        const { username, password, email, firstName, city, state } = req.body
+
+    registerUser: function (req,res){
+        const {username, password, email, first_name, city, state} = req.body
         const db = req.app.get("db");
 
-        db.checkForTakenUsernameOrEmail(username, email).then(count => {
-            if (+count[0].count === 0) {
+        db.auth.checkForTakenUsernameOrEmail(username, email).then(count => {
+            if(+count[0].count === 0){
                 const salt = bcrypt.genSaltSync(10)
                 bcrypt.hash(password, salt).then(hash => {
-                    db.registerUsers(firstName, email, username, city, state, hash).then(() => {
-                        db.getPassword(username).then(user => {
-                            req.session.user = {
+                    db.auth.registerUsers(first_name, email, username, city, state, hash).then(() => {
+                        db.auth.getPassword(username).then(user =>{
+                            req.session.user ={
                                 username,
-                                password,
-                                firstName,
+                                first_name,
                                 email,
                                 city,
                                 state,
-                                id: user[0].id
+                                user_id: user[0].user_id
                             }
                             res.status(200).json(req.session.user);
                         })
@@ -39,19 +39,18 @@ module.exports = {
     loginUser: function (req, res) {
         const { username, password } = req.body;
         const db = req.app.get("db");
-        db.getPassword(username).then(user => {
+        db.auth.getPassword(username).then(user => {
             let hash = user[0].password;
             bcrypt.compare(password, hash).then(areSame => {
                 if (areSame) {
                     console.log(user[0]);
                     req.session.user = {
                         username,
-                        password: user[0].password,
-                        firstname: user[0].firstname,
+                        first_name: user[0].first_name,
                         email: user[0].email,
                         city: user[0].city,
                         state: user[0].state,
-                        userid: user[0].userid
+                        user_id: user[0].user_id
                     }
                     console.log(req.session.user);
                     res.status(200).json(req.session.user);
@@ -69,21 +68,21 @@ module.exports = {
     },
     updateUsername: async (req, res) => {
         const { username } = req.body;
-        const { userid } = req.session.user;
+        const { user_id } = req.session.user;
         const db = req.app.get("db");
 
-        const foundUser = await db.checkForUsername(username);
+        const foundUser = await db.auth.checkForUsername(username);
 
         if (foundUser[0]) {
             res.status(409).json("Username Taken");
         } else {
-            const usernameEdit = await db.updateUsername(userid, username);
+            const usernameEdit = await db.auth.updateUsername(user_id, username);
 
             req.session.user = {
-                userid: usernameEdit[0].userid,
+                user_id: usernameEdit[0].user_id,
                 username: usernameEdit[0].username,
                 password: usernameEdit[0].password,
-                firstname: usernameEdit[0].firstname,
+                first_name: usernameEdit[0].first_name,
                 city: usernameEdit[0].city,
                 state: usernameEdit[0].state,
                 email: usernameEdit[0].email
@@ -94,16 +93,16 @@ module.exports = {
     },
     updatePassword: async (req, res) => {
         const { password } = req.body;
-        const { userid } = req.session.user;
+        const { user_id } = req.session.user;
         const db = req.app.get("db");
 
-        const editPassword = await db.updatePassword(userid, password);
+        const editPassword = await db.updatePassword(user_id, password);
 
         req.session.user = {
-            userid: editPassword[0].userid,
+            user_id: editPassword[0].user_id,
             username: editPassword[0].username,
             password: editPassword[0].password,
-            firstname: editPassword[0].firstname,
+            first_name: editPassword[0].first_name,
             city: editPassword[0].city,
             state: editPassword[0].state,
             email: editPassword[0].email
@@ -112,17 +111,17 @@ module.exports = {
         res.status(200).json(req.session.user);
     },
     updateFirstName: async (req, res) => {
-        const { firstname } = req.body;
-        const { userid } = req.session.user;
+        const { first_name } = req.body;
+        const { user_id } = req.session.user;
         const db = req.app.get("db");
 
-        const editFirstName = await db.updateFirstName(userid, firstname);
+        const editFirstName = await db.auth.updateFirstName(user_id, first_name);
 
         req.session.user = {
-            userid: editFirstName[0].userid,
+            user_id: editFirstName[0].user_id,
             username: editFirstName[0].username,
             password: editFirstName[0].password,
-            firstname: editFirstName[0].firstname,
+            first_name: editFirstName[0].first_name,
             city: editFirstName[0].city,
             state: editFirstName[0].state,
             email: editFirstName[0].email
@@ -132,16 +131,16 @@ module.exports = {
     },
     updateCity: async (req, res) => {
         const { city } = req.body;
-        const { userid } = req.session.user;
+        const { user_id } = req.session.user;
         const db = req.app.get("db");
 
-        const editCity = await db.updateCity(userid, city);
+        const editCity = await db.auth.updateCity(user_id, city);
 
         req.session.user = {
-            userid: editCity[0].userid,
+            user_id: editCity[0].user_id,
             username: editCity[0].username,
             password: editCity[0].password,
-            firstname: editCity[0].firstname,
+            first_name: editCity[0].first_name,
             city: editCity[0].city,
             state: editCity[0].state,
             email: editCity[0].email
@@ -151,16 +150,16 @@ module.exports = {
     },
     updateState: async (req, res) => {
         const { state } = req.body;
-        const { userid } = req.session.user;
+        const { user_id } = req.session.user;
         const db = req.app.get("db");
 
-        const editState = await db.updateState(userid, state);
+        const editState = await db.auth.updateState(user_id, state);
 
         req.session.user = {
-            userid: editState[0].userid,
+            user_id: editState[0].user_id,
             username: editState[0].username,
             password: editState[0].password,
-            firstname: editState[0].firstname,
+            first_name: editState[0].first_name,
             city: editState[0].city,
             state: editState[0].state,
             email: editState[0].email
@@ -170,16 +169,16 @@ module.exports = {
     },
     updateEmail: async (req, res) => {
         const { email } = req.body;
-        const { userid } = req.session.user;
+        const { user_id } = req.session.user;
         const db = req.app.get("db");
 
-        const editEmail = await db.updateEmail(userid, email);
+        const editEmail = await db.auth.updateEmail(user_id, email);
 
         req.session.user = {
-            userid: editEmail[0].userid,
+            user_id: editEmail[0].user_id,
             username: editEmail[0].username,
             password: editEmail[0].password,
-            firstname: editEmail[0].firstname,
+            first_name: editEmail[0].first_name,
             city: editEmail[0].city,
             state: editEmail[0].state,
             email: editEmail[0].email
@@ -188,10 +187,10 @@ module.exports = {
         res.status(200).json(req.session.user);
     },
     deleteUser: async (req, res) => {
-        const { userid } = req.session.user;
+        const { user_id } = req.session.user;
         const db = req.app.get("db");
 
-        await db.deleteUser(userid);
+        await db.auth.deleteUser(user_id);
         res.sendStatus(200);
     }
 }

@@ -31,11 +31,11 @@ class Nav extends Component {
     };
 
     render() {
-        const { userId } = this.props;
+        const { user_id } = this.props;
         return (
             <>
                 <nav className="Nav-nav-container">
-                    {userId ?
+                    {!user_id ?
                         <>
                             <div className="Nav-nav-title-logout">
                                 <Link to="/" className="Nav-CQ"><h1>CQ</h1></Link>
@@ -72,7 +72,7 @@ class Nav extends Component {
 
 const mapStateToProps = reduxState => {
     return {
-        userId: reduxState.userReducer.userId
+        user_id: reduxState.userReducer.user_id
     }
 }
 
