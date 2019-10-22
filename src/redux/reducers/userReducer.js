@@ -136,9 +136,9 @@ export default function reducer(state = initialState, action) {
         case `${REGISTER_USER}_FULFILLED`:
             return {
                 ...state,
-                userId: payload.data.userId,
+                userId: payload.data.userid,
                 username: payload.data.username,
-                firstName: payload.data.firstName,
+                firstName: payload.data.firstname,
                 city: payload.data.city,
                 state: payload.data.state,
                 email: payload.data.email,
@@ -207,7 +207,7 @@ export default function reducer(state = initialState, action) {
         case `${UPDATE_FIRST_NAME}_FULFILLED`:
             return {
                 ...state,
-                firstName: payload.data.firstName,
+                firstName: payload.data.firstname,
                 loading: false
             };
         case `${UPDATE_CITY}_PENDING`:
