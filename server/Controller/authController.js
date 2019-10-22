@@ -72,7 +72,7 @@ module.exports = {
         const { userid } = req.session.user;
         const db = req.app.get("db");
 
-        const foundUser = await db.auth.checkForUsername(username);
+        const foundUser = await db.checkForUsername(username);
 
         if (foundUser[0]) {
             res.status(409).json("Username Taken");
@@ -112,11 +112,11 @@ module.exports = {
         res.status(200).json(req.session.user);
     },
     updateFirstName: async (req, res) => {
-        const { firstName } = req.body;
+        const { firstname } = req.body;
         const { userid } = req.session.user;
         const db = req.app.get("db");
 
-        const editFirstName = await db.updateFirstName(userid, firstName);
+        const editFirstName = await db.updateFirstName(userid, firstname);
 
         req.session.user = {
             userid: editFirstName[0].userid,

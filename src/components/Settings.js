@@ -160,7 +160,7 @@ class Settings extends Component {
                             </div>
                             <div className="Settings-input-box">
                                 <h1>Password:</h1>
-                                <h3>{password}</h3>
+                                <h3>{`******`}</h3>
                             </div>
                             <div className="Settings-input-box">
                                 <h1>First Name:</h1>
