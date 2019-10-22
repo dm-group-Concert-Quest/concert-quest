@@ -1,29 +1,29 @@
 const bcrypt = require("bcryptjs");
 
-module.exports={
+module.exports = {
     getUser: (req, res) => {
-        if (req.session.user){
+        if (req.session.user) {
             res.status(200).json(req.session.user)
         }
     },
-    registerUser: function (req,res){
-        const {username, password, email, firstName, city, state} = req.body
+    registerUser: function (req, res) {
+        const { username, password, email, firstName, city, state } = req.body
         const db = req.app.get("db");
 
         db.checkForTakenUsernameOrEmail(username, email).then(count => {
-            if(+count[0].count === 0){
+            if (+count[0].count === 0) {
                 const salt = bcrypt.genSaltSync(10)
                 bcrypt.hash(password, salt).then(hash => {
                     db.registerUsers(firstName, email, username, city, state, hash).then(() => {
-                        db.getPassword(username).then(user =>{
-                            req.session.user ={
+                        db.getPassword(username).then(user => {
+                            req.session.user = {
                                 username,
+                                password,
                                 firstName,
                                 email,
                                 city,
                                 state,
                                 id: user[0].id
-                                
                             }
                             res.status(200).json(req.session.user);
                         })
@@ -36,16 +36,17 @@ module.exports={
             }
         })
     },
-    loginUser: function(req, res){
-        const {username, password} = req.body;
+    loginUser: function (req, res) {
+        const { username, password } = req.body;
         const db = req.app.get("db");
         db.getPassword(username).then(user => {
             let hash = user[0].password;
             bcrypt.compare(password, hash).then(areSame => {
-                if(areSame){
+                if (areSame) {
                     console.log(user[0]);
-                    req.session.user ={
+                    req.session.user = {
                         username,
+                        password: user[0].password,
                         firstName: user[0].firstname,
                         email: user[0].email,
                         city: user[0].city,
@@ -62,8 +63,135 @@ module.exports={
             })
         })
     },
-    logOut: function(req, res){
+    logOut: function (req, res) {
         req.session.destroy()
         return res.sendStatus(200)
+    },
+    updateUsername: async (req, res) => {
+        const { username } = req.body;
+        const { userid } = req.session.user;
+        const db = req.app.get("db");
+
+        const foundUser = await db.auth.checkForUsername(username);
+
+        if (foundUser[0]) {
+            res.status(409).json("Username Taken");
+        } else {
+            const usernameEdit = await db.updateUsername(userid, username);
+
+            req.session.user = {
+                userid: usernameEdit[0].userid,
+                username: usernameEdit[0].username,
+                password: usernameEdit[0].password,
+                firstName: usernameEdit[0].firstname,
+                city: usernameEdit[0].city,
+                state: usernameEdit[0].state,
+                email: usernameEdit[0].email
+            };
+
+            res.status(200).json(req.session.user);
+        };
+    },
+    updatePassword: async (req, res) => {
+        const { password } = req.body;
+        const { userid } = req.session.user;
+        const db = req.app.get("db");
+
+        const editPassword = await db.updatePassword(userid, password);
+
+        req.session.user = {
+            user_id: editPassword[0].user_id,
+            username: editPassword[0].username,
+            password: editPassword[0].password,
+            firstName: editPassword[0].firstname,
+            city: editPassword[0].city,
+            state: editPassword[0].state,
+            email: editPassword[0].email
+        };
+
+        res.status(200).json(req.session.user);
+    },
+    updateFirstName: async (req, res) => {
+        const { firstName } = req.body;
+        const { userid } = req.session.user;
+        const db = req.app.get("db");
+
+        const editFirstName = await db.updateFirstName(userid, firstName);
+
+        req.session.user = {
+            user_id: editFirstName[0].user_id,
+            username: editFirstName[0].username,
+            password: editFirstName[0].password,
+            firstName: editFirstName[0].firstname,
+            city: editFirstName[0].city,
+            state: editFirstName[0].state,
+            email: editFirstName[0].email
+        };
+
+        res.status(200).json(req.session.user);
+    },
+    updateCity: async (req, res) => {
+        const { city } = req.body;
+        const { userid } = req.session.user;
+        const db = req.app.get("db");
+
+        const editCity = await db.updateCity(userid, city);
+
+        req.session.user = {
+            user_id: editCity[0].user_id,
+            username: editCity[0].username,
+            password: editCity[0].password,
+            firstName: editCity[0].firstname,
+            city: editCity[0].city,
+            state: editCity[0].state,
+            email: editCity[0].email
+        };
+
+        res.status(200).json(req.session.user);
+    },
+    updateState: async (req, res) => {
+        const { state } = req.body;
+        const { userid } = req.session.user;
+        const db = req.app.get("db");
+
+        const editState = await db.updateState(userid, state);
+
+        req.session.user = {
+            user_id: editState[0].user_id,
+            username: editState[0].username,
+            password: editState[0].password,
+            firstName: editState[0].firstname,
+            city: editState[0].city,
+            state: editState[0].state,
+            email: editState[0].email
+        };
+
+        res.status(200).json(req.session.user);
+    },
+    updateEmail: async (req, res) => {
+        const { email } = req.body;
+        const { userid } = req.session.user;
+        const db = req.app.get("db");
+
+        const editEmail = await db.updateEmail(userid, email);
+
+        req.session.user = {
+            user_id: editEmail[0].user_id,
+            username: editEmail[0].username,
+            password: editEmail[0].password,
+            firstName: editEmail[0].firstname,
+            city: editEmail[0].city,
+            state: editEmail[0].state,
+            email: editEmail[0].email
+        };
+
+        res.status(200).json(req.session.user);
+    },
+    deleteUser: async (req, res) => {
+        const { userid } = req.session.user;
+        const db = req.app.get("db");
+
+        await db.deleteUser(userid);
+        res.sendStatus(200);
     }
 }

@@ -19,6 +19,7 @@ class Settings extends Component {
     };
 
     componentDidMount() {
+        console.log(this.props.firstName)
         this.props.getSession();
     };
 
@@ -82,6 +83,7 @@ class Settings extends Component {
         } else {
             this.props.updateEmail({ email });
         };
+        this.setState({editStatus: false})
     };
 
     render() {

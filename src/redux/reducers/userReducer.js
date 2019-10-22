@@ -41,7 +41,6 @@ export function registerUser(newUser) {
 };
 
 export function loginUser(user) {
-    // console.log(user)
     return {
         type: LOGIN_USER,
         payload: axios.post("/auth/login", user)
@@ -105,10 +104,8 @@ export function deleteUser() {
 };
 
 //reducer
-
 export default function reducer(state = initialState, action) {
     const { type, payload } = action;
-    console.log(type);
     switch (type) {
         case `${GET_SESSION}_PENDING`:
             return {
@@ -116,12 +113,11 @@ export default function reducer(state = initialState, action) {
                 loading: true
             };
         case `${GET_SESSION}_FULFILLED`:
-
             return {
                 ...state,
                 userId: payload.data.userid,
-                name: payload.data.name,
                 username: payload.data.username,
+                password: payload.data.password,
                 firstName: payload.data.firstname,
                 city: payload.data.city,
                 state: payload.data.state,
@@ -138,7 +134,8 @@ export default function reducer(state = initialState, action) {
                 ...state,
                 userId: payload.data.userid,
                 username: payload.data.username,
-                firstName: payload.data.firstname,
+                password: payload.data.password,
+                firstName: payload.data.firstName,
                 city: payload.data.city,
                 state: payload.data.state,
                 email: payload.data.email,
@@ -153,9 +150,9 @@ export default function reducer(state = initialState, action) {
             return {
                 ...state,
                 userId: payload.data.userid,
-                name: payload.data.name,
                 username: payload.data.username,
-                firstName: payload.data.firstname,
+                password: payload.data.password,
+                firstName: payload.data.firstName,
                 city: payload.data.city,
                 state: payload.data.state,
                 email: payload.data.email,
@@ -171,6 +168,7 @@ export default function reducer(state = initialState, action) {
                 ...state,
                 userId: null,
                 username: "",
+                password: "",
                 firstName: "",
                 city: "",
                 state: "",
@@ -207,7 +205,7 @@ export default function reducer(state = initialState, action) {
         case `${UPDATE_FIRST_NAME}_FULFILLED`:
             return {
                 ...state,
-                firstName: payload.data.firstname,
+                firstName: payload.data.firstName,
                 loading: false
             };
         case `${UPDATE_CITY}_PENDING`:
