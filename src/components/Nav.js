@@ -4,12 +4,14 @@ import { connect } from "react-redux";
 import { getSession, logoutUser } from "../redux/reducers/userReducer";
 import "../styles/_Nav.scss";
 import Login from './Login';
+import hbgr from './images/hamburger-icon.jpg';
 
 class Nav extends Component {
     constructor() {
         super();
         this.state = {
-            boxStatus: 'none'
+            boxStatus: 'none',
+            menuStatus: 'none'
         }
     }
 
@@ -25,6 +27,14 @@ class Nav extends Component {
         }
     }
 
+    toggleMenu = () => {
+        if (this.state.menuStatus === 'hide-menu' || this.state.menuStatus === 'none') {
+            this.setState({ menuStatus: 'show-menu' });
+        } else {
+            this.setState({ menuStatus: 'hide-menu' });
+        }
+    }
+
     handleLogout = () => {
         this.props.logoutUser();
         this.props.history.push("/");
@@ -35,23 +45,18 @@ class Nav extends Component {
         return (
             <>
                 <nav className="Nav-nav-container">
+                    <div className="Nav-nav-title-logout">
+                        <Link to="/" className="Nav-CQ"><h1>CQ</h1></Link>
+                    </div>
                     {!user_id ?
                         <>
-                            <div className="Nav-nav-title-logout">
-                                <Link to="/" className="Nav-CQ"><h1>CQ</h1></Link>
-                            </div>
-                            <ul className="Nav-nav-links-logout">
+                            <ul className="Nav-nav-links-logout hidden-by-default">
                                 <h1 className="Nav-link" onClick={this.toggle}>Login</h1>
                                 <Link to="/about" className="Nav-link"><h1>About</h1></Link>
                             </ul>
                         </>
                         :
                         <>
-                            <div className="Nav-nav-container">
-                                <div className="Nav-nav-title-login">
-                                    <Link to="/" className="Nav-CQ"><h1>CQ</h1></Link>
-                                </div>
-                            </div>
                             <div className="Nav-nav-links-login">
                                 <Link to="/home" className="Nav-link"><h2>Home</h2></Link>
                                 <Link to="profile" className="Nav-link"><h2>Profile</h2></Link>
@@ -59,9 +64,24 @@ class Nav extends Component {
                                 <Link to="settings" className="Nav-link"><h2>Settings</h2></Link>
                                 <button onClick={this.handleLogout}>LOGOUT</button>
                             </div>
+                            <img src={hbgr} className='hidden-by-default nav-menu-btn' onClick={this.toggleMenu}></img>
                         </>
                     }
+                
                 </nav>
+
+                {!user_id ?
+                <>
+                    </>
+                :
+                    <menu className={`hidden-by-default ${this.state.menuStatus}`}>
+                        <Link to="/home" className="nav-menu-item"><h2>Home</h2></Link>
+                        <Link to="profile" className="nav-menu-item"><h2>Profile</h2></Link>
+                        <Link to="/about" className="nav-menu-item"><h2>About</h2></Link>
+                        <Link to="settings" className="nav-menu-item"><h2>Settings</h2></Link>
+                        <h2 onClick={this.handleLogout} className="nav-menu-item">Logout</h2>
+                    </menu>
+                }
                 <Login
                     boxStatus={this.state.boxStatus}
                     toggle={this.toggle} />
