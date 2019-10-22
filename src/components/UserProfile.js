@@ -8,7 +8,50 @@ class UserProfile extends Component {
         return (
             <div id='profile-bg'>
                 <div id='user-profile'>
-
+                    <h1 className='profile-title'>Your Profile</h1>
+                    <div className='profile-lists'>
+                        <section className='profile-list'>
+                            <h4>AAAAAAAAAAAA</h4>
+                            <h4>AAAAAAAAAAAA</h4>
+                            <h4>AAAAAAAAAAAA</h4>
+                            <h4>AAAAAAAAAAAA</h4>
+                            <h4>AAAAAAAAAAAA</h4>
+                            <h4>AAAAAAAAAAAA</h4>
+                            <h4>AAAAAAAAAAAA</h4>
+                            <h4>AAAAAAAAAAAA</h4>
+                            <h4>AAAAAAAAAAAA</h4>
+                            <h4>AAAAAAAAAAAA</h4>
+                            <h4>AAAAAAAAAAAA</h4>
+                            <h4>AAAAAAAAAAAA</h4>
+                            <h4>AAAAAAAAAAAA</h4>
+                            <h4>AAAAAAAAAAAA</h4>
+                            <h4>AAAAAAAAAAAA</h4>
+                            <h4>AAAAAAAAAAAA</h4>
+                            <h4>AAAAAAAAAAAA</h4>
+                            <h4>AAAAAAAAAAAA</h4>
+                            <h4>AAAAAAAAAAAA</h4>
+                            <h4>AAAAAAAAAAAA</h4>
+                            <h4>AAAAAAAAAAAA</h4>
+                            <h4>AAAAAAAAAAAA</h4>
+                            <h4>AAAAAAAAAAAA</h4>
+                            <h4>AAAAAAAAAAAA</h4>
+                            <h4>AAAAAAAAAAAA</h4>
+                            <h4>AAAAAAAAAAAA</h4>
+                            <h4>AAAAAAAAAAAA</h4>
+                            <h4>AAAAAAAAAAAA</h4>
+                            <h4>AAAAAAAAAAAA</h4>
+                            <h4>AAAAAAAAAAAA</h4>
+                            <h4>AAAAAAAAAAAA</h4>
+                            <h4>AAAAAAAAAAAA</h4>
+                            <h4>AAAAAAAAAAAA</h4>
+                            <h4>AAAAAAAAAAAA</h4>
+                            <h4>AAAAAAAAAAAA</h4>
+                            <h4>AAAAAAAAAAAA</h4>
+                            <h4>AAAAAAAAAAAA</h4>
+                            <h4>AAAAAAAAAAAA</h4>
+                        </section>
+                        <section className='profile-list'></section>
+                    </div>
                 </div>
             </div>
         )
