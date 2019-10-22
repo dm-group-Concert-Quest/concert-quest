@@ -61,11 +61,9 @@ class Nav extends Component {
         return (
             <>
                 <nav className="Nav-nav-container">
+                <Link to="/" className="Nav-CQ"><h1>CQ</h1></Link>
                     {!user_id ?
                         <>
-                            <div className="Nav-nav-title-logout">
-                              <Link to="/" className="Nav-CQ"><h1>CQ</h1></Link>
-                            </div>
                             <ul className="Nav-nav-links-logout hidden-by-default">
                                 <h1 className="Nav-link" onClick={this.toggle}>Login</h1>
                                 <Link to="/about" className="Nav-link"><h1>About</h1></Link>
@@ -78,17 +76,17 @@ class Nav extends Component {
                                 <Link to="profile" className="Nav-link"><h2>Profile</h2></Link>
                                 <Link to="/about" className="Nav-link"><h2>About</h2></Link>
                                 <Link to="settings" className="Nav-link"><h2>Settings</h2></Link>
-                                <button className="Nav-nav-logout" onClick={this.handleLogout}>Logout</button>
+                                <h2 className="Nav-link" onClick={this.handleLogout}>Logout</h2>
                             </div>
                             <img src={hbgr} className='hidden-by-default nav-menu-btn' onClick={this.toggleMenu}></img>
                         </>
                     }
-                
+
                 </nav>
-          {!user_id ?
-                <>
+                {!user_id ?
+                    <>
                     </>
-                :
+                    :
                     <menu className={`hidden-by-default ${this.state.menuStatus}`}>
                         <Link to="/home" className="nav-menu-item"><h2>Home</h2></Link>
                         <Link to="profile" className="nav-menu-item"><h2>Profile</h2></Link>
