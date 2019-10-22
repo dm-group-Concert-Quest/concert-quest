@@ -1,4 +1,4 @@
 UPDATE users
 SET state = $2
-WHERE userid = $1
+WHERE user_id = $1
 RETURNING *;
