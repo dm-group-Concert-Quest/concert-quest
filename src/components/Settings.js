@@ -18,9 +18,9 @@ class Settings extends Component {
         };
     };
 
-    // componentDidMount() {
-    //     this.props.getSession();
-    // };
+    componentDidMount() {
+        this.props.getSession();
+    };
 
     handleInputChange = e => {
         this.setState({ [e.target.name]: e.target.value })
