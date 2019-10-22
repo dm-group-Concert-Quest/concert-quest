@@ -19,6 +19,7 @@ module.exports = {
                         db.auth.getPassword(username).then(user =>{
                             req.session.user ={
                                 username,
+                                password,
                                 first_name,
                                 email,
                                 city,
@@ -46,6 +47,7 @@ module.exports = {
                     console.log(user[0]);
                     req.session.user = {
                         username,
+                        password: user[0].password,
                         first_name: user[0].first_name,
                         email: user[0].email,
                         city: user[0].city,
@@ -96,7 +98,10 @@ module.exports = {
         const { user_id } = req.session.user;
         const db = req.app.get("db");
 
-        const editPassword = await db.updatePassword(user_id, password);
+        const salt = bcrypt.genSaltSync(10);
+        const hash = bcrypt.hashSync(password, salt);
+
+        const editPassword = await db.auth.updatePassword(user_id, hash);
 
         req.session.user = {
             user_id: editPassword[0].user_id,

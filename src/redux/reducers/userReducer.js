@@ -116,8 +116,8 @@ export default function reducer(state = initialState, action) {
             return {
                 ...state,
                 user_id: payload.data.user_id,
-                name: payload.data.name,
                 username: payload.data.username,
+                password: payload.data.password,
                 first_name: payload.data.first_name,
                 city: payload.data.city,
                 state: payload.data.state,
@@ -134,6 +134,7 @@ export default function reducer(state = initialState, action) {
                 ...state,
                 user_id: payload.data.user_id,
                 username: payload.data.username,
+                password: payload.data.password,
                 first_name: payload.data.first_name,
                 city: payload.data.city,
                 state: payload.data.state,
@@ -149,8 +150,8 @@ export default function reducer(state = initialState, action) {
             return {
                 ...state,
                 user_id: payload.data.user_id,
-                name: payload.data.name,
                 username: payload.data.username,
+                password: payload.data.password,
                 first_name: payload.data.first_name,
                 city: payload.data.city,
                 state: payload.data.state,
