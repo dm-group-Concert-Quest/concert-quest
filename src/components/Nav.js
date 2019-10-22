@@ -29,7 +29,7 @@ class Nav extends Component {
 
     toggleMenu = () => {
         if (this.state.menuStatus === 'hide-menu' || this.state.menuStatus === 'none') {
-            this.setState({ menuStatus: 'see-menu' });
+            this.setState({ menuStatus: 'show-menu' });
         } else {
             this.setState({ menuStatus: 'hide-menu' });
         }
@@ -64,25 +64,22 @@ class Nav extends Component {
                                 <Link to="settings" className="Nav-link"><h2>Settings</h2></Link>
                                 <button onClick={this.handleLogout}>LOGOUT</button>
                             </div>
+                            <img src={hbgr} className='hidden-by-default nav-menu-btn' onClick={this.toggleMenu}></img>
                         </>
                     }
-                <img src={hbgr} className='hidden-by-default nav-menu-btn' onClick={this.toggleMenu}></img>
+                
                 </nav>
 
                 {!user_id ?
-                    <menu className={`hidden-by-default ${this.state.menuStatus}`}>
-                        <ul className="Nav-nav-links-logout hidden-by-default">
-                            <h1 className="Nav-link" onClick={this.toggle}>Login</h1>
-                            <Link to="/about" className="Nav-link"><h1>About</h1></Link>
-                        </ul>
-                    </menu> 
+                <>
+                    </>
                 :
                     <menu className={`hidden-by-default ${this.state.menuStatus}`}>
-                        <Link to="/home" className="Nav-link"><h2>Home</h2></Link>
-                        <Link to="profile" className="Nav-link"><h2>Profile</h2></Link>
-                        <Link to="/about" className="Nav-link"><h2>About</h2></Link>
-                        <Link to="settings" className="Nav-link"><h2>Settings</h2></Link>
-                        <button onClick={this.handleLogout}>LOGOUT</button>
+                        <Link to="/home" className="nav-menu-item"><h2>Home</h2></Link>
+                        <Link to="profile" className="nav-menu-item"><h2>Profile</h2></Link>
+                        <Link to="/about" className="nav-menu-item"><h2>About</h2></Link>
+                        <Link to="settings" className="nav-menu-item"><h2>Settings</h2></Link>
+                        <h2 onClick={this.handleLogout} className="nav-menu-item">Logout</h2>
                     </menu>
                 }
                 <Login

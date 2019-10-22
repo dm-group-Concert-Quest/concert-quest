@@ -1,13 +1,15 @@
 @import "./Utilities";
 
 .Nav-nav-container {
-    width: 100%;
+    position: relative;
+    width:100vw;
     height: 10ch;
     background: color(dark-blue);
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: color(cool-white);
+    z-index: 2;
     .Nav-CQ {
         text-decoration: none;
     }
@@ -33,7 +35,7 @@
     .Nav-nav-links-logout {
         width: 40ch;
         height: 100%;
-        // display: flex;
+        display: flex;
         justify-content: space-evenly;
         align-items: center;
         font-size: 20px;
@@ -47,7 +49,7 @@
     .Nav-nav-title-login {
         width: 5ch;
         height: 100%;
-        display: flex;
+        // display: flex;
         justify-content: center;
         align-items: center;
         font-size: 5rem;
@@ -58,7 +60,7 @@
         }
     }
     .Nav-nav-links-login {
-        display: flex;
+        // display: flex;
         justify-content: space-evenly;
         align-items: center;
         width: 100ch;
@@ -72,24 +74,68 @@
     }
 };
 
-.hidden-by-default {
-    display: none;
+.show-menu, .hide-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    width: 100vw;
+    height: 200px;
+    top: -120px;
+    background-color: color(light-gray);
+    z-index: 1;
+    font-family: $mont;
+    font-size: large;
+
+    .nav-menu-item {
+        text-decoration: none;
+        color: color(cool-black)
+    }
+}
+
+.show-menu {
+    animation: slide_menu_down forwards .7s 1;
+}
+
+.hide-menu {
+    animation: slide_menu_up forwards .7s 1;
+}
+
+
+
+@keyframes slide_menu_down {
+    0% {
+    }
+    100% {
+        transform: translateY(200px);
+    }
+}
+
+@keyframes slide_menu_up {
+    0% {
+        transform: translateY(200px);
+    }
 }
 
 @media(max-width: 768px) {
     .nav-menu-btn {
         display: block;
+        cursor: pointer;
         height: 65px;
         width: 80px;
     }
 
-    .Nav-nav-container :nth-child(2) {
+    .Nav-nav-links-login  {
         display: none;
     }
 }
 
 @media(min-width: 768px) {
-    .Nav-nav-links-logout {
+    .show-menu, .hide-menu {
+        display: none;
+    }
+    .Nav-nav-links-login  {
         display: flex;
     }
 }
