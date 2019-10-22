@@ -35,29 +35,31 @@ class Login extends Component {
             return <Redirect to='/home' />
         }
         return (
-            <form className={`hidden-by-default ${this.props.boxStatus}`}>
-                    <h1 id='login-header'>Login</h1>
-                    <label className='login-label'>
-                        Username
-                    <input className='login-input'
-                            name='username'
-                            type='text'
-                            onChange={this.handleInput} />
-                    </label>
-                    <label className='login-label'>
-                        Password
-                    <input className='login-input'
-                            name='password'
-                            type='password'
-                            onChange={this.handleInput}
-                        />
-                    </label>
-                    <button className='login-btn' onClick={this.handleSubmit}><Link to={this.props.userId ? '/home' : '/'}>Log In</Link></button>
-                <div>
-                    <h4>Don't have an account?</h4>
-                    <h4>Sign up <Link id='login-register' to='/register' onClick={this.props.toggle}>here!</Link></h4>
-                </div>
-            </form>
+            <div id='login-container'>
+                <form className={`hidden-by-default ${this.props.boxStatus}`}>
+                        <h1 id='login-header'>Login</h1>
+                        <label className='login-label'>
+                            Username
+                        <input className='login-input'
+                                name='username'
+                                type='text'
+                                onChange={this.handleInput} />
+                        </label>
+                        <label className='login-label'>
+                            Password
+                        <input className='login-input'
+                                name='password'
+                                type='password'
+                                onChange={this.handleInput}
+                            />
+                        </label>
+                        <button className='login-btn' onClick={this.handleSubmit}><Link to={this.props.userId ? '/home' : '/'}>Log In</Link></button>
+                    <div>
+                        <h4>Don't have an account?</h4>
+                        <h4>Sign up <Link id='login-register' to='/register' onClick={this.props.toggle}>here!</Link></h4>
+                    </div>
+                </form>
+            </div>
         )
     }
 }
