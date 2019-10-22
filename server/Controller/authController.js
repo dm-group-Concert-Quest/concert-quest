@@ -47,7 +47,7 @@ module.exports = {
                     req.session.user = {
                         username,
                         password: user[0].password,
-                        firstName: user[0].firstname,
+                        firstname: user[0].firstname,
                         email: user[0].email,
                         city: user[0].city,
                         state: user[0].state,
@@ -83,7 +83,7 @@ module.exports = {
                 userid: usernameEdit[0].userid,
                 username: usernameEdit[0].username,
                 password: usernameEdit[0].password,
-                firstName: usernameEdit[0].firstname,
+                firstname: usernameEdit[0].firstname,
                 city: usernameEdit[0].city,
                 state: usernameEdit[0].state,
                 email: usernameEdit[0].email
@@ -100,10 +100,10 @@ module.exports = {
         const editPassword = await db.updatePassword(userid, password);
 
         req.session.user = {
-            user_id: editPassword[0].user_id,
+            userid: editPassword[0].userid,
             username: editPassword[0].username,
             password: editPassword[0].password,
-            firstName: editPassword[0].firstname,
+            firstname: editPassword[0].firstname,
             city: editPassword[0].city,
             state: editPassword[0].state,
             email: editPassword[0].email
@@ -119,10 +119,10 @@ module.exports = {
         const editFirstName = await db.updateFirstName(userid, firstName);
 
         req.session.user = {
-            user_id: editFirstName[0].user_id,
+            userid: editFirstName[0].userid,
             username: editFirstName[0].username,
             password: editFirstName[0].password,
-            firstName: editFirstName[0].firstname,
+            firstname: editFirstName[0].firstname,
             city: editFirstName[0].city,
             state: editFirstName[0].state,
             email: editFirstName[0].email
@@ -138,10 +138,10 @@ module.exports = {
         const editCity = await db.updateCity(userid, city);
 
         req.session.user = {
-            user_id: editCity[0].user_id,
+            userid: editCity[0].userid,
             username: editCity[0].username,
             password: editCity[0].password,
-            firstName: editCity[0].firstname,
+            firstname: editCity[0].firstname,
             city: editCity[0].city,
             state: editCity[0].state,
             email: editCity[0].email
@@ -157,10 +157,10 @@ module.exports = {
         const editState = await db.updateState(userid, state);
 
         req.session.user = {
-            user_id: editState[0].user_id,
+            userid: editState[0].userid,
             username: editState[0].username,
             password: editState[0].password,
-            firstName: editState[0].firstname,
+            firstname: editState[0].firstname,
             city: editState[0].city,
             state: editState[0].state,
             email: editState[0].email
@@ -176,10 +176,10 @@ module.exports = {
         const editEmail = await db.updateEmail(userid, email);
 
         req.session.user = {
-            user_id: editEmail[0].user_id,
+            userid: editEmail[0].userid,
             username: editEmail[0].username,
             password: editEmail[0].password,
-            firstName: editEmail[0].firstname,
+            firstname: editEmail[0].firstname,
             city: editEmail[0].city,
             state: editEmail[0].state,
             email: editEmail[0].email
