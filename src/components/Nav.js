@@ -23,7 +23,6 @@ class Nav extends Component {
         } else {
             this.setState({ boxStatus: 'closed' });
         }
-        console.log(this.state.boxStatus);
     }
 
     handleLogout = () => {
