@@ -154,8 +154,8 @@ class Settings extends Component {
                                     onChange={this.handleInputChange} />
                             </div>
                             <div className="Settings-input-box">
-                                <button onClick={this.handleEditUpdate}>Update</button>
-                                <button onClick={this.handleCancelEdit}>Cancel</button>
+                                <button className="settings-editButton" onClick={this.handleEditUpdate}>Update</button>
+                                <button className="settings-deleteButton" onClick={this.handleCancelEdit}>Cancel</button>
                             </div>
                         </div>
                     </>
