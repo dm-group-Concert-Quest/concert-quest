@@ -31,5 +31,3 @@ const mapStateToProps = reduxState => {
         user_id: reduxState.userReducer.user_id
     }
 }
-
-export default connect()

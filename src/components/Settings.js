@@ -63,7 +63,7 @@ class Settings extends Component {
         if (first_name === "") {
             this.setState({ password: this.props.first_name })
         } else {
-            this.props.updatefirst_name({ first_name });
+            this.props.updateFirstName({ first_name });
         };
 
         if (city === "") {
