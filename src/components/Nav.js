@@ -35,7 +35,7 @@ class Nav extends Component {
         return (
             <>
                 <nav className="Nav-nav-container">
-                    {!userId ?
+                    {userId ?
                         <>
                             <div className="Nav-nav-title-logout">
                                 <Link to="/" className="Nav-CQ"><h1>CQ</h1></Link>
