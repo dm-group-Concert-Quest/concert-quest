@@ -10,47 +10,8 @@ class UserProfile extends Component {
                 <div id='user-profile'>
                     <h1 className='profile-title'>Your Profile</h1>
                     <div className='profile-lists'>
-                        <section className='profile-list'>
-                            <h4>AAAAAAAAAAAA</h4>
-                            <h4>AAAAAAAAAAAA</h4>
-                            <h4>AAAAAAAAAAAA</h4>
-                            <h4>AAAAAAAAAAAA</h4>
-                            <h4>AAAAAAAAAAAA</h4>
-                            <h4>AAAAAAAAAAAA</h4>
-                            <h4>AAAAAAAAAAAA</h4>
-                            <h4>AAAAAAAAAAAA</h4>
-                            <h4>AAAAAAAAAAAA</h4>
-                            <h4>AAAAAAAAAAAA</h4>
-                            <h4>AAAAAAAAAAAA</h4>
-                            <h4>AAAAAAAAAAAA</h4>
-                            <h4>AAAAAAAAAAAA</h4>
-                            <h4>AAAAAAAAAAAA</h4>
-                            <h4>AAAAAAAAAAAA</h4>
-                            <h4>AAAAAAAAAAAA</h4>
-                            <h4>AAAAAAAAAAAA</h4>
-                            <h4>AAAAAAAAAAAA</h4>
-                            <h4>AAAAAAAAAAAA</h4>
-                            <h4>AAAAAAAAAAAA</h4>
-                            <h4>AAAAAAAAAAAA</h4>
-                            <h4>AAAAAAAAAAAA</h4>
-                            <h4>AAAAAAAAAAAA</h4>
-                            <h4>AAAAAAAAAAAA</h4>
-                            <h4>AAAAAAAAAAAA</h4>
-                            <h4>AAAAAAAAAAAA</h4>
-                            <h4>AAAAAAAAAAAA</h4>
-                            <h4>AAAAAAAAAAAA</h4>
-                            <h4>AAAAAAAAAAAA</h4>
-                            <h4>AAAAAAAAAAAA</h4>
-                            <h4>AAAAAAAAAAAA</h4>
-                            <h4>AAAAAAAAAAAA</h4>
-                            <h4>AAAAAAAAAAAA</h4>
-                            <h4>AAAAAAAAAAAA</h4>
-                            <h4>AAAAAAAAAAAA</h4>
-                            <h4>AAAAAAAAAAAA</h4>
-                            <h4>AAAAAAAAAAAA</h4>
-                            <h4>AAAAAAAAAAAA</h4>
-                        </section>
-                        <section className='profile-list'></section>
+                        <label className='profile-list-label'>Concerts you're interested in<section className='profile-list'></section></label>
+                        <label className='profile-list-label'>Your tracked bands<section className='profile-list'></section></label>
                     </div>
                 </div>
             </div>
