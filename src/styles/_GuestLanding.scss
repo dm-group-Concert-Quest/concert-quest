@@ -3,16 +3,17 @@
 #gl-bg {
     display: flex;
     justify-content: center;
-    height: 100vh;
+    height: 185vh;
     background-color: black;
 
     #guest-landing {
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: flex-start;
         align-items: center;
-        height: auto;
+        height: 185vh;
         background-color: #fff;
+
         .gl-welcome {
             display: flex;
             flex-direction: column;
@@ -51,7 +52,7 @@
                 }
             }
             .arrow{
-                // position: relative;
+                margin-top: 60px;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%,-50%);

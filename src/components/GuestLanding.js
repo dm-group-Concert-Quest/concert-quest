@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import gps_icon from './images/gps-icon.png';
 import band_icon from './images/band-icon.png';
 import ticket_icon from './images/ticket-icon.png';
-import Events from './Events';
+import EventList from './EventList';
 import { connect } from 'react-redux';
 
 class Home extends Component {
@@ -32,7 +32,7 @@ class Home extends Component {
                             <span></span>
                         </div>
                     </section>
-                    <Events />
+                    <EventList />
                 </div>
             </div>
         )
