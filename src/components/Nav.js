@@ -53,6 +53,7 @@ class Nav extends Component {
 
     handleLogout = () => {
         this.props.logoutUser();
+        this.toggleMenu();
         this.props.history.push("/");
     };
 
@@ -91,7 +92,7 @@ class Nav extends Component {
                         <Link to="profile" className="nav-menu-item" onClick={this.toggleMenu}><h2>Profile</h2></Link>
                         <Link to="/about" className="nav-menu-item" onClick={this.toggleMenu}><h2>About</h2></Link>
                         <Link to="settings" className="nav-menu-item" onClick={this.toggleMenu}><h2>Settings</h2></Link>
-                        <h2 onClick={this.handleLogout} className="nav-menu-item" onClick={this.toggleMenu}>Logout</h2>
+                        <h2 onClick={this.handleLogout} className="nav-menu-item">Logout</h2>
                     </menu>
                 }
                 <div ref={node => this.node = node}>
