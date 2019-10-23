@@ -13,7 +13,7 @@ export default class Events extends Component {
     componentDidMount() {
         axios
         .get(
-        "https://rest.bandsintown.com/artists/post%20malone/events?app_id=91c0c88b6caf37f202bb9148bbdb6591&date=upcoming"
+        "https://rest.bandsintown.com/artists/post%20malone/events?app_id="
         )
         .then(response => {
         this.setState({ events: response.data });
