@@ -7,7 +7,43 @@
     background-color: black;
 
     #user-profile {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
         background-color: #fff;
+
+        .profile-title {
+            font-size: 10ch;
+            font-family: 'Poiret One', cursive;
+        }
+
+        .profile-lists {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-evenly;
+            
+            .profile-list-label{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                font-family: $mont;
+                font-size: 2.7ch;
+            }
+                .profile-list {
+                    border-style: inset;
+                    border-width: 2px;
+                    border-radius: 7px;
+                    height: 450px;
+                    width: 350px;
+                    background-color: color(cool-white);
+                    overflow-y: auto;
+                }
+        }
+        
     }
 }
 
@@ -17,8 +53,13 @@
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
+
         #user-profile {
             width: 80vw;
+
+            .profile-title {
+                font-size: 136px;
+            }
         }
     }
 }
@@ -26,5 +67,11 @@
 @media(max-width: 768px) {
     #user-profile {
         width: 100vw;
+
+        .profile-title {
+            width: 100%;
+            text-align: center;
+            font-size: 88px;
+        }
     }
 }

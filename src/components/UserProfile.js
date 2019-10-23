@@ -8,7 +8,11 @@ class UserProfile extends Component {
         return (
             <div id='profile-bg'>
                 <div id='user-profile'>
-
+                    <h1 className='profile-title'>Your Profile</h1>
+                    <div className='profile-lists'>
+                        <label className='profile-list-label'>Concerts you're interested in<section className='profile-list'></section></label>
+                        <label className='profile-list-label'>Your tracked bands<section className='profile-list'></section></label>
+                    </div>
                 </div>
             </div>
         )
