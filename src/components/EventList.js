@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import axios from "axios";
+import { connect } from 'react-redux';
 require("dotenv").config();
 
-export default class Events extends Component {
+class EventList extends Component {
     constructor() {
         super();
         this.state = {
@@ -12,23 +13,21 @@ export default class Events extends Component {
     }
 
     componentDidMount() {
-        const {REACT_APP_BAND_APP_KEY} = process.env
+        const { REACT_APP_BAND_APP_KEY } = process.env;
         axios
-        .get(
-        `https://rest.bandsintown.com/artists/post%20malone/events?app_id=${REACT_APP_BAND_APP_KEY}`
-        )
-        .then(response => {
-        this.setState({ events: response.data });
-        console.log(response.data);
-        });
+            .get(
+                `https://rest.bandsintown.com/artists/post%20malone/events?app_id=${REACT_APP_BAND_APP_KEY}`
+            )
+            .then(response => {
+                this.setState({ events: response.data });
+            });
         axios
-        .get(
-        `https://rest.bandsintown.com/artists/post%20malone?app_id=${REACT_APP_BAND_APP_KEY}`
-        )
-        .then(response => {
-        this.setState({ artist: response.data });
-        // console.log(this.state.artist);
-        });
+            .get(
+                `https://rest.bandsintown.com/artists/post%20malone?app_id=${REACT_APP_BAND_APP_KEY}`
+            )
+            .then(response => {
+                this.setState({ artist: response.data });
+            });
     }
 
     render() {
@@ -37,10 +36,16 @@ export default class Events extends Component {
         const eventsMapped = this.state.events.map((event, i) => {
             return (
                 <div key={i} className='event-container'>
-                    <img className='event-image' src={artist.image_url}/>
+                    <img className='event-image' src={artist.image_url} alt="artist-pic" />
                     <h4>{event.venue.name}</h4>
                     <h6>{event.venue.city}</h6>
-                    <a href={event.offers[0].url}>Tickets!!!</a>
+                    {!this.props.user_id ?
+                        null
+                        :
+                        <div>
+                            <a target="_blank" rel="noopener noreferrer" href={event.offers[0].url}><button>Tickets!!!</button></a>
+                        </div>
+                    }
                 </div>
             );
         });
@@ -53,3 +58,11 @@ export default class Events extends Component {
         )
     }
 }
+
+const mapStateToProps = reduxState => {
+    return {
+        user_id: reduxState.userReducer.user_id
+    }
+};
+
+export default connect(mapStateToProps, {})(EventList);
