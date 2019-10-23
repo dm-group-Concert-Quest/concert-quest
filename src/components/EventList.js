@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from "axios";
+require("dotenv").config();
 
 export default class Events extends Component {
     constructor() {
@@ -11,9 +12,10 @@ export default class Events extends Component {
     }
 
     componentDidMount() {
+        const {REACT_APP_BAND_APP_KEY} = process.env
         axios
         .get(
-        "https://rest.bandsintown.com/artists/post%20malone/events?app_id="
+        `https://rest.bandsintown.com/artists/post%20malone/events?app_id=${REACT_APP_BAND_APP_KEY}`
         )
         .then(response => {
         this.setState({ events: response.data });
@@ -21,7 +23,7 @@ export default class Events extends Component {
         });
         axios
         .get(
-        "https://rest.bandsintown.com/artists/post%20malone?app_id="
+        `https://rest.bandsintown.com/artists/post%20malone?app_id=${REACT_APP_BAND_APP_KEY}`
         )
         .then(response => {
         this.setState({ artist: response.data });
