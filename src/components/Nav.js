@@ -66,7 +66,7 @@ class Nav extends Component {
                         <>
                             <ul className="Nav-nav-links-logout hidden-by-default">
                                 <h1 className="Nav-link" onClick={this.toggle}>Login</h1>
-                                <Link to="/about" className="Nav-link"><h1>About</h1></Link>
+                                <Link to="/about" className="Nav-link"><h2>About</h2></Link>
                             </ul>
                         </>
                         :
@@ -78,10 +78,9 @@ class Nav extends Component {
                                 <Link to="settings" className="Nav-link"><h2>Settings</h2></Link>
                                 <h2 className="Nav-link" onClick={this.handleLogout}>Logout</h2>
                             </div>
-                            <img src={hbgr} className='hidden-by-default nav-menu-btn' onClick={this.toggleMenu}></img>
+                            <img src={hbgr} alt="hbgr" className='hidden-by-default nav-menu-btn' onClick={this.toggleMenu}></img>
                         </>
                     }
-
                 </nav>
                 {!user_id ?
                     <>
