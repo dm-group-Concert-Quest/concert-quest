@@ -1,0 +1,46 @@
+@import "./Utilities";
+
+.events-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 80vh;
+    width: 70vw;
+    background-color: color(cool-white);
+    border-style: inset;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: color(light-gray);
+    overflow-y: auto;
+    overflow-x: none;
+
+    .event-container {
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+        background-color: color(light-gray);
+        margin-left: 18px;
+        margin-right: 18px;
+        margin-bottom: 18px;
+        flex-grow: 1;
+
+        .event-image {
+            height: 60px;
+            width: 60px;
+        }
+    }
+}
+
+@media(min-width: 1440px) {
+    .event-container {
+        height: 250px;
+        width: 250px;
+    }
+}
+
+@media(max-width: 1440px) {
+    .event-container {
+        height: 150px;
+        width: 150px;
+    }
+}

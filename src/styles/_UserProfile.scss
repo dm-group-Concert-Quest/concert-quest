@@ -1,9 +1,10 @@
 @import './Utilities';
 
 #profile-bg {
+    // margin-top: -50px;
     display: flex;
     justify-content: center;
-    height: 100vh;
+    height: auto;
     background-color: black;
 
     #user-profile {
@@ -12,15 +13,15 @@
         justify-content: space-evenly;
         align-items: center;
         background-color: #fff;
+        height: auto;
+        padding-bottom: 50px;
 
         .profile-title {
-            font-size: 10ch;
             font-family: 'Poiret One', cursive;
         }
 
         .profile-lists {
             display: flex;
-            flex-direction: row;
             width: 100%;
             justify-content: space-evenly;
             
@@ -38,7 +39,6 @@
                     border-width: 2px;
                     border-radius: 7px;
                     height: 450px;
-                    width: 350px;
                     background-color: color(cool-white);
                     overflow-y: auto;
                 }
@@ -58,9 +58,21 @@
             width: 80vw;
 
             .profile-title {
-                font-size: 136px;
+                font-size: 120px;
             }
         }
+    }
+}
+
+@media(min-width: 985px) {
+    .profile-lists {
+        flex-direction: row;
+    }
+}
+
+@media(max-width: 985px) {
+    .profile-lists {
+        flex-direction: column;
     }
 }
 
@@ -73,5 +85,17 @@
             text-align: center;
             font-size: 88px;
         }
+    }
+}
+
+@media(max-width: 320px) {
+    .profile-list {
+        width: 270px;
+    }
+}
+
+@media(min-width: 320px) {
+    .profile-list {
+        width: 350px;
     }
 }
