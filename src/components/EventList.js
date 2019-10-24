@@ -17,14 +17,14 @@ class EventList extends Component {
         const { REACT_APP_BAND_APP_KEY } = process.env;
         axios
             .get(
-                `https://rest.bandsintown.com/artists/post%20malone/events?app_id=${REACT_APP_BAND_APP_KEY}`
+                `https://rest.bandsintown.com/artists/logic/events?app_id=${REACT_APP_BAND_APP_KEY}`
             )
             .then(response => {
                 this.setState({ events: response.data });
             });
         axios
             .get(
-                `https://rest.bandsintown.com/artists/post%20malone?app_id=${REACT_APP_BAND_APP_KEY}`
+                `https://rest.bandsintown.com/artists/logic?app_id=${REACT_APP_BAND_APP_KEY}`
             )
             .then(response => {
                 console.log(response.data)
