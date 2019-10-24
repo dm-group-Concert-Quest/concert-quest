@@ -14,7 +14,8 @@ export default class Search extends Component {
     }
 
     handleInput = (e) => {
-            this.setState({artist: e.target.value})
+            this.setState({artist: e.target.value});
+            this.setState({events: []});
     }
 
     handleSearch = (e) => {
@@ -46,9 +47,9 @@ export default class Search extends Component {
     render() {
         return (
             <div>
-                <form onSubmit={this.handleSearch}>
+                <form className='search-form' onSubmit={this.handleSearch}>
                     <label className='search-label'>Search for an artist<input className='search-input' type='text' onChange={this.handleInput}></input></label>
-                    <input type='submit' value='Search'/>
+                    <input className='search-btn' type='submit' value='Search'/>
                 </form>
                 <EventList artist={this.state.artist} events={this.state.events}/>
             </div>
