@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from "axios";
 import { connect } from 'react-redux';
-require("dotenv").config();
+import { thisExpression } from '@babel/types';
 
 
 class EventList extends Component {
@@ -13,28 +13,14 @@ class EventList extends Component {
         };
     }
 
-    componentDidMount() {
-        const { REACT_APP_BAND_APP_KEY } = process.env;
-        axios
-            .get(
-                `https://rest.bandsintown.com/artists/post%20malone/events?app_id=${REACT_APP_BAND_APP_KEY}`
-            )
-            .then(response => {
-                this.setState({ events: response.data });
-            });
-        axios
-            .get(
-                `https://rest.bandsintown.com/artists/post%20malone?app_id=${REACT_APP_BAND_APP_KEY}`
-            )
-            .then(response => {
-                console.log(response.data)
-                this.setState({ artist: response.data });
-            });
-    };
+
+    // componentDidMount() {
+    //     this.setState({artist: this.props.artist});
+    // }
 
     render() {
-        const { artist } = this.state;
-        const eventsMapped = this.state.events.map((event, i) => {
+        const { artist, events } = this.props;
+        const eventsMapped = events.map((event, i) => {
             const str = event.offers[0].status;
             const status = str.toLowerCase()
                 .split(' ')
