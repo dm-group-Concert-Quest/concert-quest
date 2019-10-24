@@ -17,6 +17,7 @@ class Nav extends Component {
 
     componentDidMount() {
         this.props.getSession();
+        // this.setState({boxStatus: 'none'})
     };
 
     componentWillMount() {
@@ -30,14 +31,21 @@ class Nav extends Component {
     handleClick = e => {
         if ((!this.node.contains(e.target)) && (this.state.boxStatus === 'open')) {
             this.setState({ boxStatus: 'closed' })
+            console.log('closing: ' + this.state.boxStatus)
         };
     };
+
+    closeOnButtonClick = () => {
+        this.setState({boxStatus: 'none'})
+    }
 
     toggle = () => {
         if (this.state.boxStatus === 'closed' || 'none') {
             this.setState({ boxStatus: 'open' });
+            console.log('opening: opened');
         } else if(this.state.boxStatus === 'open') {
             this.setState({ boxStatus: 'closed' });
+            console.log('closing: closed')
         };
     };
 
@@ -96,7 +104,8 @@ class Nav extends Component {
                 <div ref={node => this.node = node}>
                     <Login
                         boxStatus={this.state.boxStatus}
-                        toggle={this.toggle} />
+                        toggle={this.toggle} 
+                        closeOnButtonClick={this.closeOnButtonClick}/>
                 </div>
             </>
         )

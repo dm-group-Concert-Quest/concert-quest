@@ -5,62 +5,61 @@
 }
 
 #login-container {
+    .open, .closed{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        position: fixed;
+        height: 300px;
+        border-radius: 7px;
+        border-style: solid;
+        border-width: 5px;
+        border-color: color(light-blue);
+        box-shadow: 3px 3px 3px color(light-gray);
+        background-color: #fff;
+        z-index: 100;
 
-.open, .closed{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    position: absolute;
-    height: 300px;
-    border-radius: 7px;
-    border-style: solid;
-    border-width: 5px;
-    border-color: color(light-blue);
-    box-shadow: 3px 3px 3px color(light-gray);
-    background-color: #fff;
-    z-index: 100;
+        #login-header {
+            font-family: $mont;
+            font-size: 4ch;
+        }
 
-    #login-header {
-        font-family: $mont;
-        font-size: 4ch;
-    }
+        .login-label {
+            font-family: $mont;
+            .login-input {
+                height: 30px;
+                width: 100%;
+                border-radius: 5px;
+                font-size: large;
+            }
+        }
 
-    .login-label {
-        font-family: $mont;
-        .login-input {
-            height: 30px;
-            width: 100%;
+        .login-btn {
+            height: 10%;
+            width: 20%;
             border-radius: 5px;
-            font-size: large;
+            background-color: color(light-blue);
+            color: color(cool-white);
+            outline: none;
+        }
+
+        .login-btn:hover {
+            background-color: color(dark-blue);
+            cursor: pointer;
+        }
+
+        h4 {
+            font-family: $mont;
+            text-align: center;
+        }
+        #login-register {
+            text-decoration: none;
+            color: color(light-blue);
+            cursor: pointer;
+            font-family: $mont;
         }
     }
-
-    .login-btn {
-        height: 10%;
-        width: 20%;
-        border-radius: 5px;
-        background-color: color(light-blue);
-        color: color(cool-white);
-        outline: none;
-    }
-
-    .login-btn:hover {
-        background-color: color(dark-blue);
-        cursor: pointer;
-    }
-
-    h4 {
-        font-family: $mont;
-        text-align: center;
-    }
-    #login-register {
-        text-decoration: none;
-        color: color(light-blue);
-        cursor: pointer;
-        font-family: $mont;
-    }
-}
 }
 
 
