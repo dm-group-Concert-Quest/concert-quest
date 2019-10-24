@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from "axios";
 require("dotenv").config();
 
-export default class Events extends Component {
+export default class EventList extends Component {
     constructor() {
         super();
         this.state = {
