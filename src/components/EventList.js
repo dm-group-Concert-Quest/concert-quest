@@ -13,6 +13,7 @@ class EventList extends Component {
         };
     }
 
+
     // componentDidMount() {
     //     this.setState({artist: this.props.artist});
     // }
