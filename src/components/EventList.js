@@ -11,12 +11,6 @@ class EventList extends Component {
         };
     }
 
-
-
-    // componentDidMount() {
-    //     this.setState({artist: this.props.artist});
-    // }
-
     render() {
         const { artist, events } = this.props;
         const eventsMapped = events.map((event, i) => {

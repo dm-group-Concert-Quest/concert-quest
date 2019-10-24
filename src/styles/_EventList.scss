@@ -24,10 +24,8 @@
         margin-right: 18px;
         margin-bottom: 18px;
         align-items: flex-start;
-        // flex-grow: 1;
         font-size: 1.1rem;
         height: auto;
-        overflow: scroll;
         border-color:color(dark-blue);
         border-width: 1px;
         border-style: solid;
@@ -59,10 +57,6 @@
             justify-content: flex-end;
             align-items: center;
             margin-top:15px;
-            // border-color: color(dark-blue);
-            // border-width: 1.5px;
-            // border-style: solid;
-            // border-radius: 15px;
             font-size: 1rem;
             background-color: white;
             position: relative;
@@ -75,13 +69,9 @@
             background-color: transparent;
             .event-ticket-button {
                 @extend .settings-editButton;
-                // height: 25px;
                 width: 80px;
-                // margin-top: 7px;
-                // border-radius: 15%;
                 border-color: color(dark-blue);
                 background: color(cool-white);
-                // font-family: 'Montserrat', sans-serif;
                 font-size: 1ch;
                 outline: none;
             }
