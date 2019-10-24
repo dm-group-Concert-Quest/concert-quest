@@ -31,6 +31,7 @@ export default class Search extends Component {
                 alert(`${this.state.artist} is incorrect.`)
                 window.location.reload();
                 this.setState({artist: ''})
+                console.log(this.state.artist)
             });
             axios
             .get(
