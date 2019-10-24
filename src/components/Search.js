@@ -42,6 +42,7 @@ export default class Search extends Component {
                     console.log(this.state.artist);
                 });
             }
+
     render() {
         return (
             <div>
@@ -49,7 +50,7 @@ export default class Search extends Component {
                     <label className='search-label'>Search for an artist<input className='search-input' type='text' onChange={this.handleInput}></input></label>
                     <input type='submit' value='Search'/>
                 </form>
-                <EventList artist={this.state.artist} events={this.state.events}/>
+                <EventList artist={this.state.artist} events={this.state.events} handleSearch={this.handleSearch}/>
             </div>
         )
     }
