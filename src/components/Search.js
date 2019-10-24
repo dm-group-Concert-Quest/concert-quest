@@ -18,6 +18,7 @@ export default class Search extends Component {
     }
 
     handleSearch = (e) => {
+        e.preventDefault();
         const { REACT_APP_BAND_APP_KEY } = process.env;
         
         axios
@@ -26,6 +27,10 @@ export default class Search extends Component {
             )
             .then(response => {
                 this.setState({ events: response.data });
+            }).catch(err => {
+                alert(`${this.state.artist} is incorrect.`)
+                window.location.reload();
+                this.setState({artist: ''})
             });
             axios
             .get(
@@ -40,9 +45,9 @@ export default class Search extends Component {
     render() {
         return (
             <div>
-                <form>
+                <form onSubmit={this.handleSearch}>
                     <label className='search-label'>Search for an artist<input className='search-input' type='text' onChange={this.handleInput}></input></label>
-                    <input type='button' value='Search' onClick={this.handleSearch}/>
+                    <input type='submit' value='Search'/>
                 </form>
                 <EventList artist={this.state.artist} events={this.state.events}/>
             </div>
