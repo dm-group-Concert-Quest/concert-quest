@@ -6,6 +6,7 @@
     flex-wrap: wrap;
     height: 80vh;
     width: auto;
+    min-width: 60vw;
     background-color: color(cool-white);
     border-style: inset;
     border-width: 2px;
@@ -26,7 +27,6 @@
         // flex-grow: 1;
         font-size: 1.1rem;
         height: auto;
-        overflow: scroll;
         border-color:color(dark-blue);
         border-width: 1px;
         border-style: solid;
