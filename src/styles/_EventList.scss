@@ -5,7 +5,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     height: 80vh;
-    width: 70vw;
+    width: auto;
     background-color: color(cool-white);
     border-style: inset;
     border-width: 2px;
@@ -18,13 +18,19 @@
         display: flex;
         flex-direction: column;
         border-radius: 5px;
-        background-color: color(light-gray);
+        background-color: white;
         margin-left: 18px;
         margin-right: 18px;
         margin-bottom: 18px;
-        flex-grow: 1;
+        align-items: flex-start;
+        // flex-grow: 1;
         font-size: 1.1rem;
+        height: auto;
         overflow: scroll;
+        border-color:color(dark-blue);
+        border-width: 1px;
+        border-style: solid;
+        border-radius: 12px;
         text-align: center;
         font-family: 'Montserrat', sans-serif;
         .event-header {
@@ -41,8 +47,7 @@
         }
         .event-image {
             height: 20vh;
-            // width: 16vw;
-            margin-top:12px;
+            width: 99%;
             border-radius: 10px;
         }
         .event-venue-info {
@@ -53,12 +58,12 @@
             justify-content: flex-end;
             align-items: center;
             margin-top:15px;
-            border-color: color(dark-blue);
-            border-width: 1.5px;
-            border-style: solid;
-            border-radius: 15px;
-            font-size: 1.5rem;
-            background-color: whitesmoke;
+            // border-color: color(dark-blue);
+            // border-width: 1.5px;
+            // border-style: solid;
+            // border-radius: 15px;
+            font-size: 1rem;
+            background-color: white;
             position: relative;
             left:15px;
                 }
@@ -85,15 +90,14 @@
 
 @media(min-width: 1440px) {
     .event-container {
-        height: 250px;
-        width: 250px;
+        width: 245px;
     }
 }
 
 @media(max-width: 1440px) {
     .event-container {
         height: 150px;
-        width: 150px;
+        width: 145px;
     }
 }
 @media(max-width: 390px){
