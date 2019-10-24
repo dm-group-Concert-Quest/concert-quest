@@ -30,7 +30,7 @@ class EventList extends Component {
                 console.log(response.data)
                 this.setState({ artist: response.data });
             });
-    }
+    };
 
     render() {
         const { artist } = this.state;
