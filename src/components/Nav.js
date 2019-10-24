@@ -28,17 +28,15 @@ class Nav extends Component {
     };
 
     handleClick = e => {
-        if (this.node.contains(e.target)) {
-            this.setState({ boxStatus: 'open' })
-        } else {
+        if ((!this.node.contains(e.target)) && (this.state.boxStatus === 'open')) {
             this.setState({ boxStatus: 'closed' })
         };
     };
 
     toggle = () => {
-        if (this.state.boxStatus === 'closed' || this.state.boxStatus === 'none') {
+        if (this.state.boxStatus === 'closed' || 'none') {
             this.setState({ boxStatus: 'open' });
-        } else {
+        } else if(this.state.boxStatus === 'open') {
             this.setState({ boxStatus: 'closed' });
         };
     };
