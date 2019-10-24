@@ -63,7 +63,7 @@ class Login extends Component {
                     <button className='login-btn' onClick={this.handleSubmit}><Link to={this.props.user_id ? '/home' : '/'}>Log In</Link></button>
                     <div>
                         <h4>Don't have an account?</h4>
-                        <h4>Sign up <Link id='login-register' to='/register' onClick={this.props.toggle}>here!</Link></h4>
+                        <h4>Sign up <Link id='login-register' to='/register' onClick={this.props.closeOnButtonClick}>here!</Link></h4>
                     </div>
                 </form>
             </div>

@@ -2,11 +2,15 @@ import React, { Component } from 'react'
 import gps_icon from './images/gps-icon.png';
 import band_icon from './images/band-icon.png';
 import ticket_icon from './images/ticket-icon.png';
-import EventList from './EventList';
+import Search from './Search';
 import { connect } from 'react-redux';
+import {Redirect} from 'react-router-dom';
 
 class Home extends Component {
     render(props) {
+        if(this.props.user_id) {
+            return <Redirect to='/home'/>
+        }
         return (
             <div id='gl-bg'>
                 <div id='guest-landing'>
@@ -32,7 +36,7 @@ class Home extends Component {
                             <span></span>
                         </div>
                     </section>
-                    <EventList />
+                    <Search/>
                 </div>
             </div>
         )
