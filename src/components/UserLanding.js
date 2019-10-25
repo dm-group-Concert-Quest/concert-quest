@@ -15,6 +15,7 @@ class UserLanding extends React.Component{
         if(!this.props.user_id) {
             return <Redirect to='/'/>
         }
+
       return (
             <div id='profile-bg'>
                 <div id='user-profile'>

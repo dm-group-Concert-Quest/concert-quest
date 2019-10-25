@@ -50,7 +50,7 @@ class EventList extends Component {
         return (
             <div>
                 <div>
-                    <h1>Login to buy tickets</h1>
+                    
                 </div>
                 <div className='events-list'>
                     {eventsMapped}
