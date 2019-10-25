@@ -13,6 +13,7 @@ const TRACK_ARTIST =  "TRACK_ARTIST";
 
 //action creators
 export function trackArtist(artistInfo) {
+    console.log(artistInfo)
     return {
         type: TRACK_ARTIST,
         payload: axios.post("/api/tracked", artistInfo)
