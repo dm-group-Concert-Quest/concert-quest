@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { trackArtist } from "../redux/reducers/postReducer";
 import { connect } from 'react-redux';
-
+import axios from 'axios';
 
 class EventList extends Component {
     constructor() {
@@ -11,14 +11,10 @@ class EventList extends Component {
             artist: {}
         };
     }
-    handleTrackBand = () => {
-        const {image_url, name} = this.props.artist;
-        console.log(image_url, name)
-    }
 
     handleTrackBand = () => {
         const { image_url, name } = this.props.artist;
-        const artistInfo = { image_url, name };
+        const artistInfo = { band_name: name, image_url };
 
         this.props.trackArtist(artistInfo);
     }
@@ -37,8 +33,8 @@ class EventList extends Component {
                 <div key={i} className='event-container'>
                     <div className="event-header">
 
-                        {/* {console.log(artist)} */}
-
+                        {/* {console.log(event.lin)} */}
+                {/* {let lineup1 = axios.get(`https://rest.bandsintown.com/artists/${event.lineup[0]}/events?app_id=${REACT_APP_BAND_APP_KEY}`)} */}
                         <img className='event-image' src={artist.image_url} alt="artist-pic" />
                         {event.lineup.length > 1 ? <p className="event-lineup">{`${event.lineup[0]}, ${event.lineup[1]}, ${event.lineup[2]}...`}</p> : <p className="event-lineup">{event.lineup}</p>}
                     </div>

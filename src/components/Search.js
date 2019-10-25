@@ -9,7 +9,8 @@ export default class Search extends Component {
         this.state ={
             artist: '',
             region: '',
-            events: []
+            events: [],
+            images: []
         }
     }
 
@@ -27,7 +28,9 @@ export default class Search extends Component {
             `https://rest.bandsintown.com/artists/${this.state.artist}/events?app_id=${REACT_APP_BAND_APP_KEY}`
             )
             .then(response => {
+                console.log(response);
                 this.setState({ events: response.data });
+                // this.setState({ images: response.data.})
             }).catch(err => {
                 if(this.state.region !== '' && this.state.artist.name !== undefined) {
                     alert(`${this.state.artist.name} has no upcoming shows in ${this.state.region}`)

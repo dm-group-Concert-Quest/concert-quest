@@ -40,5 +40,6 @@ app.delete("/auth/settings/user", authController.deleteUser);
 //posts endpoints
 app.post("/api/tracked", postController.trackBand);
 app.delete("/api/tracked", postController.unTrackBand);
+app.get("/api/tracked", postController.getTrackedArtists);
 
 app.listen(SERVER_PORT, () => console.log(`listening on ${SERVER_PORT}`));
