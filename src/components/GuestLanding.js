@@ -5,6 +5,7 @@ import ticket_icon from './images/ticket-icon.png';
 import Search from './Search';
 import { connect } from 'react-redux';
 import {Redirect} from 'react-router-dom';
+import {HashLink} from 'react-router-hash-link';
 
 class Home extends Component {
     render(props) {
@@ -30,13 +31,17 @@ class Home extends Component {
                                 <figcaption>Get tickets</figcaption>
                             </figure>
                         </div>
-                        <div className="arrow">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
+                        <HashLink to='/#search'>
+                            <div className="arrow">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </HashLink>
                     </section>
-                    <Search/>
+                    <section id='search'>
+                        <Search />
+                    </section>
                 </div>
             </div>
         )
