@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { trackArtist } from "../redux/reducers/postReducer";
 import { connect } from 'react-redux';
-
+import axios from 'axios';
 
 class EventList extends Component {
     constructor() {
@@ -14,10 +14,8 @@ class EventList extends Component {
 
     handleTrackBand = () => {
         const { image_url, name } = this.props.artist;
-        const { user_id } = this.props;
-        const artistInfo = { image_url, band_name: name, user_id };
-        console.log(artistInfo)
 
+        const artistInfo = { band_name: name, image_url };
         this.props.trackArtist(artistInfo);
     }
 
@@ -33,7 +31,8 @@ class EventList extends Component {
             var options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric' };
             return (
                 <div key={i} className='event-container'>
-                    <div className="event-header"><img className='event-image' src={artist.image_url} alt="artist-pic" />
+                    <div className="event-header">
+                        <img className='event-image' src={artist.image_url} alt="artist-pic" />
                         {event.lineup.length > 1 ? <p className="event-lineup">{`${event.lineup[0]}, ${event.lineup[1]}, ${event.lineup[2]}...`}</p> : <p className="event-lineup">{event.lineup}</p>}
                     </div>
                     <div className="event-venue-info">

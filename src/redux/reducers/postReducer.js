@@ -3,12 +3,15 @@ import axios from "axios";
 //initialState
 const initialState = {
     artistInfo: [],
+    tracked_artist: [],
     image_url: "",
     name: ""
 };
 
 //constants
 const TRACK_ARTIST =  "TRACK_ARTIST";
+const UNTRACK_ARTIST = "UNTRACK_ARTIST";
+const GET_TRACKED_ARTIST = "GET _TRACKED_ARTIST";
 
 
 //action creators
@@ -20,6 +23,20 @@ export function trackArtist(artistInfo) {
     };
 };
 
+export function untrackArtist(band_name) {
+    console.log(`sending ${band_name} from reducer`)
+    return {
+        type: UNTRACK_ARTIST,
+        payload: axios.delete(`/api/tracked/${band_name}`)
+    };
+};
+
+export function getTrackedArtist() {
+    return {
+        type: GET_TRACKED_ARTIST,
+        payload: axios.get("/api/tracked")
+    };
+};
 
 //reducer
 export default function reducer(state = initialState, action) {
@@ -29,7 +46,17 @@ export default function reducer(state = initialState, action) {
             return {
                 ...state,
                 artistInfo: payload.data
-            }
+            };
+        case `${UNTRACK_ARTIST}_FULFILLED`:
+            return {
+                ...state,
+                tracked_artist: payload.data
+            };
+        case `${GET_TRACKED_ARTIST}_FULFILLED`:
+            return {
+                ...state,
+                tracked_artist: payload.data
+            };
         default:
             return state;
     };
