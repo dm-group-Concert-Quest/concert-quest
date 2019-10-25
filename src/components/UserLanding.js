@@ -2,6 +2,7 @@ import React from 'react'
 import {getSession} from '../redux/reducers/userReducer';
 import { connect } from 'react-redux';
 import {Redirect} from 'react-router-dom';
+import Search from './Search';
 
 class UserLanding extends React.Component{
     constructor(){
@@ -14,7 +15,7 @@ class UserLanding extends React.Component{
         if(!this.props.user_id) {
             return <Redirect to='/'/>
         }
-        return (
+      return (
             <div id='profile-bg'>
                 <div id='user-profile'>
                     <h1 className='profile-title'>Your Profile</h1>
