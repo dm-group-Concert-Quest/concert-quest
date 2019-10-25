@@ -24,9 +24,10 @@ export function trackArtist(artistInfo) {
 };
 
 export function untrackArtist(band_name) {
+    console.log(`sending ${band_name} from reducer`)
     return {
         type: UNTRACK_ARTIST,
-        payload: axios.delete(`/api/tracked`, band_name)
+        payload: axios.delete(`/api/tracked/${band_name}`)
     };
 };
 

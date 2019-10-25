@@ -13,17 +13,22 @@ class TrackedBands extends React.Component {
     componentDidMount() {
         this.props.getTrackedArtist();
     }
+
+    componentDidUpdate(prevProps) {
+        if(prevProps !== this.props.tracked_artist) {
+            this.props.getTrackedArtist();
+        }
+    }
+
     handleUntrackBand = (band_name) => {
-        console.log(band_name)
         this.props.untrackArtist(band_name);
-        console.log(band_name)
     };
 
     render() {
         const trackArtistsMapped = this.props.tracked_artist.map((artist, i) => {
             return (
                 <div key={i}>
-                    <img alt="artist pic" src={artist.image_url}/>
+                    <img alt="artist pic" src={artist.image_url} style={{width: "50px", height: "50px"}}/>
                     <h1>{artist.band_name}</h1>
                     <button onClick={() => this.handleUntrackBand(artist.band_name)}>Untrack</button>
                 </div>
