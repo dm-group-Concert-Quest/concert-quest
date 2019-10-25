@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux';
 import {Redirect} from 'react-router-dom';
+import Search from './Search';
 
 class UserLanding extends React.Component{
     constructor(){
@@ -14,7 +15,7 @@ class UserLanding extends React.Component{
             return <Redirect to='/'/>
         }
         return(
-            <h1>UserLanding!</h1>
+            <Search/>
         )
     }
 }
