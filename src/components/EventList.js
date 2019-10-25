@@ -24,7 +24,9 @@ class EventList extends Component {
             return (
                 <div key={i} className='event-container'>
                     <div className="event-header">
-                        {console.log(artist)}
+
+                        {/* {console.log(artist)} */}
+
                         <img className='event-image' src={artist.image_url} alt="artist-pic" />
                         {event.lineup.length > 1 ? <p className="event-lineup">{`${event.lineup[0]}, ${event.lineup[1]}, ${event.lineup[2]}...`}</p> : <p className="event-lineup">{event.lineup}</p>}
                     </div>

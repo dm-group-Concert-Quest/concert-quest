@@ -1,23 +1,28 @@
 @import "./Utilities";
 
 .search-form {
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
     color: color(dark-gray);
+
+    .search-title {
+        font-family: $mont;
+        font-size: xx-large;
+        margin-bottom: 20px;
+    }
+
     .search-label {
         display: flex;
         flex-direction: column;
         align-items: center;
         font-family: $mont;
-        font-size: 4ch;
+        font-size: x-large;
         .search-input {
             width: 300px;
             height: 20px;
             border-radius: 5px;
         }
     }
-}
-.search-btn {
-    padding-top: 100px;
 }
