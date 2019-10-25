@@ -46,8 +46,11 @@ export default class Search extends Component {
                 )
                 .then(response => {
                     console.log(response.data)
+                    console.log(response.data.image_url)
+                    console.log(response.data.name)
+
                     this.setState({ artist: response.data });
-                    console.log(this.state.artist);
+                    // console.log(this.state.artist);
                 });
             }
 
