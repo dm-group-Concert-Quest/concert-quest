@@ -45,9 +45,9 @@ export default class Search extends Component {
                 `https://rest.bandsintown.com/artists/${this.state.artist}?app_id=${REACT_APP_BAND_APP_KEY}`
                 )
                 .then(response => {
-                    console.log(response.data)
-                    console.log(response.data.image_url)
-                    console.log(response.data.name)
+                    // console.log(response.data)
+                    // console.log(response.data.image_url)
+                    // console.log(response.data.name)
 
                     this.setState({ artist: response.data });
                     // console.log(this.state.artist);

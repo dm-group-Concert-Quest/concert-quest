@@ -11,14 +11,12 @@ class EventList extends Component {
             artist: {}
         };
     }
-    handleTrackBand = () => {
-        const {image_url, name} = this.props.artist;
-        console.log(image_url, name)
-    }
 
     handleTrackBand = () => {
         const { image_url, name } = this.props.artist;
-        const artistInfo = { image_url, name };
+        const { user_id } = this.props;
+        const artistInfo = { image_url, band_name: name, user_id };
+        console.log(artistInfo)
 
         this.props.trackArtist(artistInfo);
     }
@@ -35,25 +33,20 @@ class EventList extends Component {
             var options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric' };
             return (
                 <div key={i} className='event-container'>
-                    <div className="event-header">
-
-                        {/* {console.log(artist)} */}
-
-                        <img className='event-image' src={artist.image_url} alt="artist-pic" />
+                    <div className="event-header"><img className='event-image' src={artist.image_url} alt="artist-pic" />
                         {event.lineup.length > 1 ? <p className="event-lineup">{`${event.lineup[0]}, ${event.lineup[1]}, ${event.lineup[2]}...`}</p> : <p className="event-lineup">{event.lineup}</p>}
                     </div>
                     <div className="event-venue-info">
                         <h4>{event.venue.name}</h4>
                         <h4>{`${event.venue.city}, ${event.venue.region}`}</h4>
                         <h4>{date.toLocaleDateString("en-US", options)}</h4>
-                        <button className="trackArtistButton" onClick ={this.handleTrackBand}>Track Artist</button>
-
                         <br />
                     </div>
                     {!this.props.user_id ?
                         null
                         :
                         <div className="event-ticket-box">
+                            <button className="trackArtistButton" onClick={this.handleTrackBand}>Track Artist</button>
                             <a target="_blank" rel="noopener noreferrer" href={event.offers[0].url}><button className="event-ticket-button">Tickets</button></a>
                             <p>{status}</p>
                         </div>
