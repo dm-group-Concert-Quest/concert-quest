@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { trackArtist } from "../redux/reducers/postReducer";
 import { connect } from 'react-redux';
 
 
@@ -13,6 +14,13 @@ class EventList extends Component {
     handleTrackBand = () => {
         const {image_url, name} = this.props.artist;
         console.log(image_url, name)
+    }
+
+    handleTrackBand = () => {
+        const { image_url, name } = this.props.artist;
+        const artistInfo = { image_url, name };
+
+        this.props.trackArtist(artistInfo);
     }
 
     render() {
@@ -39,6 +47,7 @@ class EventList extends Component {
                         <h4>{`${event.venue.city}, ${event.venue.region}`}</h4>
                         <h4>{date.toLocaleDateString("en-US", options)}</h4>
                         <button className="trackArtistButton" onClick ={this.handleTrackBand}>Track Artist</button>
+
                         <br />
                     </div>
                     {!this.props.user_id ?
@@ -55,7 +64,7 @@ class EventList extends Component {
         return (
             <div>
                 <div>
-                    
+
                 </div>
                 <div className='events-list'>
                     {eventsMapped}
@@ -71,4 +80,4 @@ const mapStateToProps = reduxState => {
     }
 };
 
-export default connect(mapStateToProps, {})(EventList);
+export default connect(mapStateToProps, { trackArtist })(EventList);
