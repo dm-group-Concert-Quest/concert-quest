@@ -12,11 +12,6 @@ class EventList extends Component {
         };
     }
     handleTrackBand = () => {
-        const {image_url, name} = this.props.artist;
-        console.log(image_url, name)
-    }
-
-    handleTrackBand = () => {
         const { image_url, name } = this.props.artist;
         const artistInfo = { image_url, name };
 
