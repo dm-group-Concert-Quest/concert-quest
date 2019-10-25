@@ -11,6 +11,10 @@ class EventList extends Component {
             artist: {}
         };
     }
+    handleTrackBand = () => {
+        const {image_url, name} = this.props.artist;
+        console.log(image_url, name)
+    }
 
     handleTrackBand = () => {
         const { image_url, name } = this.props.artist;
@@ -42,7 +46,8 @@ class EventList extends Component {
                         <h4>{event.venue.name}</h4>
                         <h4>{`${event.venue.city}, ${event.venue.region}`}</h4>
                         <h4>{date.toLocaleDateString("en-US", options)}</h4>
-                        <button className="trackArtistButton" onClick={this.handleTrackBand}>Track Artist</button>
+                        <button className="trackArtistButton" onClick ={this.handleTrackBand}>Track Artist</button>
+
                         <br />
                     </div>
                     {!this.props.user_id ?
