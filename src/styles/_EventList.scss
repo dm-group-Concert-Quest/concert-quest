@@ -78,6 +78,15 @@
         }
     }
 }
+.trackArtistButton{
+    width: 80px;
+    height:21px;
+                border-color: color(dark-blue);
+                background: color(cool-white);
+                font-size: 1ch;
+                outline: none;
+                border-radius: 7px;
+}
 
 @media(min-width: 1440px) {
     .event-container {
