@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import axios from "axios";
 import { connect } from 'react-redux';
-import { thisExpression } from '@babel/types';
 
 
 class EventList extends Component {
@@ -12,12 +10,6 @@ class EventList extends Component {
             artist: {}
         };
     }
-
-
-
-    // componentDidMount() {
-    //     this.setState({artist: this.props.artist});
-    // }
 
     render() {
         const { artist, events } = this.props;
@@ -32,6 +24,7 @@ class EventList extends Component {
             return (
                 <div key={i} className='event-container'>
                     <div className="event-header">
+                        {console.log(artist)}
                         <img className='event-image' src={artist.image_url} alt="artist-pic" />
                         {event.lineup.length > 1 ? <p className="event-lineup">{`${event.lineup[0]}, ${event.lineup[1]}, ${event.lineup[2]}...`}</p> : <p className="event-lineup">{event.lineup}</p>}
                     </div>
@@ -55,7 +48,7 @@ class EventList extends Component {
         return (
             <div>
                 <div>
-                    <h1>Login to buy tickets</h1>
+                    
                 </div>
                 <div className='events-list'>
                     {eventsMapped}

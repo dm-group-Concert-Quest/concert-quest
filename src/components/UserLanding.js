@@ -14,7 +14,9 @@ class UserLanding extends React.Component{
             return <Redirect to='/'/>
         }
         return(
+            <div>
             <h1>UserLanding!</h1>
+            </div>
         )
     }
 }
