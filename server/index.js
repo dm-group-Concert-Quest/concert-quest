@@ -5,6 +5,7 @@ const session = require('express-session');
 
 const {SERVER_PORT} = process.env
 const authController = require("./Controller/authController");
+const postController = require("./Controller/postController");
 
 const app = express();
 app.use(express.json());
@@ -36,5 +37,8 @@ app.put("/auth/settings/city", authController.updateCity);
 app.put("/auth/settings/state", authController.updateState);
 app.put("/auth/settings/email", authController.updateEmail);
 app.delete("/auth/settings/user", authController.deleteUser);
+//posts endpoints
+app.post("/api/tracked", postController.trackBand);
+app.delete("/api/tracked", postController.unTrackBand);
 
 app.listen(SERVER_PORT, () => console.log(`listening on ${SERVER_PORT}`));
