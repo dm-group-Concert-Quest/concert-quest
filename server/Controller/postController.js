@@ -3,10 +3,10 @@ module.exports = {
         const { band_name, image_url } = req.body;
         const db = req.app.get('db');
 
-        db.post.checkIfTracking(req.session.user.user_id, band_name).then(count => {
+        db.post.checkIfTracking(req.session.user.user_id, band_name).then(async count => {
             if (count[0].count == '0') {
-                db.post.trackBand(req.session.user.user_id, band_name, image_url);
-                res.status(200).json(`${band_name} tracked.`);
+                const trackedBands =  await db.post.trackBand(req.session.user.user_id, band_name, image_url);
+                res.status(200).json(trackedBands);
             } else {
                 res.status(400).json(`Already tracking ${band_name}.`);
             }

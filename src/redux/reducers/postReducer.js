@@ -3,9 +3,7 @@ import axios from "axios";
 //initialState
 const initialState = {
     artistInfo: [],
-    tracked_artist: [],
-    image_url: "",
-    name: ""
+    tracked_artist: []
 };
 
 //constants
@@ -43,7 +41,7 @@ export default function reducer(state = initialState, action) {
         case `${TRACK_ARTIST}_FULFILLED`:
             return {
                 ...state,
-                artistInfo: payload.data
+                tracked_artist: payload.data
             };
         case `${UNTRACK_ARTIST}_FULFILLED`:
             return {

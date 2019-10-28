@@ -1,6 +1,7 @@
 import React from "react";
 import { getTrackedArtist, untrackArtist } from "../redux/reducers/postReducer";
 import { connect } from "react-redux";
+import { breakStatement } from "@babel/types";
 
 class TrackedBands extends React.Component {
     constructor() {
@@ -12,12 +13,6 @@ class TrackedBands extends React.Component {
 
     componentDidMount() {
         this.props.getTrackedArtist();
-    }
-
-    componentDidUpdate(prevProps) {
-        if(prevProps !== this.props.tracked_artist) {
-            this.props.getTrackedArtist();
-        }
     }
 
     handleUntrackBand = (band_name) => {
