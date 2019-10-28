@@ -22,7 +22,7 @@ class UserLanding extends React.Component{
                 <div id='user-profile'>
                     <div className='profile-lists'>
                         <Search className='profile-list'/>
-                        <TrackedBands />
+                        <TrackedBands/>
                     </div>
                 </div>
             </div>
