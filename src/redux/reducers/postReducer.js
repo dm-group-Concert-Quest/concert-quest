@@ -16,7 +16,6 @@ const GET_TRACKED_ARTIST = "GET _TRACKED_ARTIST";
 
 //action creators
 export function trackArtist(artistInfo) {
-    console.log(artistInfo)
     return {
         type: TRACK_ARTIST,
         payload: axios.post("/api/tracked", artistInfo)
@@ -24,7 +23,6 @@ export function trackArtist(artistInfo) {
 };
 
 export function untrackArtist(band_name) {
-    console.log(`sending ${band_name} from reducer`)
     return {
         type: UNTRACK_ARTIST,
         payload: axios.delete(`/api/tracked/${band_name}`)

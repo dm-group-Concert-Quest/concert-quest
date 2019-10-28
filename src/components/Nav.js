@@ -31,7 +31,6 @@ class Nav extends Component {
     handleClick = e => {
         if ((!this.node.contains(e.target)) && (this.state.boxStatus === 'open')) {
             this.setState({ boxStatus: 'closed' })
-            console.log('closing: ' + this.state.boxStatus)
         };
     };
 
@@ -42,10 +41,8 @@ class Nav extends Component {
     toggle = () => {
         if (this.state.boxStatus === 'closed' || 'none') {
             this.setState({ boxStatus: 'open' });
-            console.log('opening: opened');
         } else if(this.state.boxStatus === 'open') {
             this.setState({ boxStatus: 'closed' });
-            console.log('closing: closed')
         };
     };
 

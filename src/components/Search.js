@@ -9,7 +9,7 @@ export default class Search extends Component {
         this.state = {
             artist: {},
             artistSearch: '',
-            region: '',
+            city: '',
             events: [],
             images: []
         };
@@ -34,12 +34,26 @@ export default class Search extends Component {
                 `https://rest.bandsintown.com/artists/${this.state.artistSearch}/events?app_id=${REACT_APP_BAND_APP_KEY}`
             )
             .then(response => {
-                console.log(response);
                 this.setState({ events: response.data });
+
+                if(this.state.city !== '') {
+                    const toCityCase = (str) => {return str.replace(
+                        /\w\S*/g,
+                        function(txt) {
+                            return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+                        }
+                    );}
+                    this.setState({city: toCityCase(this.state.city)});
+                    const result = this.state.events.filter(event => event.venue.city === this.state.city)
+                    if(result) {
+                        this.setState({events: result});
+                    }
+                }
+                
                 // this.setState({ images: response.data.})
             }).catch(err => {
-                if (this.state.region !== '' && this.state.artist.name !== undefined) {
-                    alert(`${this.state.artist.name} has no upcoming shows in ${this.state.region}`)
+                if (this.state.city !== '' && this.state.artist.name !== undefined) {
+                    alert(`${this.state.artist.name} has no upcoming shows in ${this.state.city}`)
                 } else if (!this.state.artist.name) {
                     alert(`${this.state.artistSearch} does not exist in the`)
                 } else {
@@ -47,7 +61,6 @@ export default class Search extends Component {
                 }
                 window.location.reload();
                 this.setState({ artistSearch: '' })
-                console.log(this.state.artistSearch)
             });
         axios
             .get(
@@ -73,11 +86,11 @@ export default class Search extends Component {
                             onChange={this.handleInput} />
                     </label>
                     <label className='search-label'>
-                        State
+                        City (leave blank for global)
                         <input
-                            className='search-city'
+                            className='search-input'
                             type='text'
-                            name='region'
+                            name='city'
                             onChange={this.handleInput} />
                     </label>
                     <input className='search-btn' type='submit' value='Search' />
