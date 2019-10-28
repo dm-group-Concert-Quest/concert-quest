@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { trackArtist } from "../redux/reducers/postReducer";
 import { connect } from 'react-redux';
-import axios from 'axios';
 
 class EventList extends Component {
     constructor() {
