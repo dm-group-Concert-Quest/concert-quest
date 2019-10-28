@@ -4,13 +4,13 @@ import band_icon from './images/band-icon.png';
 import ticket_icon from './images/ticket-icon.png';
 import Search from './Search';
 import { connect } from 'react-redux';
-import {Redirect} from 'react-router-dom';
-import {HashLink} from 'react-router-hash-link';
+import { Redirect } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 class Home extends Component {
     render(props) {
-        if(this.props.user_id) {
-            return <Redirect to='/home'/>
+        if (this.props.user_id) {
+            return <Redirect to='/home' />
         }
         return (
             <div id='gl-bg'>
