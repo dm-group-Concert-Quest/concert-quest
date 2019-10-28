@@ -27,15 +27,15 @@ class TrackedBands extends React.Component {
     render() {
         const trackArtistsMapped = this.props.tracked_artist.map((artist, i) => {
             return (
-                <div key={i}>
-                    <img alt="artist pic" src={artist.image_url} style={{width: "50px", height: "50px"}}/>
+                <div key={i} className='tracked-band'>
+                    <img alt="artist pic" src={artist.image_url} className='tb-pic'/>
                     <h1>{artist.band_name}</h1>
-                    <button onClick={() => this.handleUntrackBand(artist.band_name)}>Untrack</button>
+                    <button className='tb-btn' onClick={() => this.handleUntrackBand(artist.band_name)}>Untrack</button>
                 </div>
             )
         })
         return (
-            <div style={{marginTop: '200px'}}>
+            <div id='tracked-bands' style={{marginTop: '200px'}}>
                 {trackArtistsMapped}
             </div>
         )

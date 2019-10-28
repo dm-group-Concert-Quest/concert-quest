@@ -14,6 +14,7 @@
     border-color: color(light-gray);
     overflow-y: auto;
     overflow-x: none;
+    margin-bottom: 15px;
 
     .event-container {
         display: flex;
@@ -32,6 +33,7 @@
         border-radius: 12px;
         text-align: center;
         font-family: 'Montserrat', sans-serif;
+
         .event-header {
             max-width: 100%;
             display: flex;
@@ -62,11 +64,13 @@
             position: relative;
             left:15px;
                 }
+
         .event-ticket-box {
             @extend .event-venue-info;
             justify-content: space-evenly;
             border: none;
             background-color: transparent;
+
             .event-ticket-button {
                 @extend .settings-editButton;
                 width: 80px;

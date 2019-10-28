@@ -25,7 +25,6 @@ export default class Search extends Component {
         this.setState({ artistSearch: '' });
         this.setState({ events: [] });
     };
-
     handleSearch = e => {
         e.preventDefault();
         const { REACT_APP_BAND_APP_KEY } = process.env;
