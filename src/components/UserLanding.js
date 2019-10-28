@@ -1,23 +1,24 @@
 import React from 'react'
-import {getSession} from '../redux/reducers/userReducer';
+import { getSession } from '../redux/reducers/userReducer';
 import { connect } from 'react-redux';
-import {Redirect} from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import Search from './Search';
 import TrackedBands from "./TrackedBands";
 
-class UserLanding extends React.Component{
-    constructor(){
+class UserLanding extends React.Component {
+    constructor() {
         super()
-        this.state ={
+        this.state = {
 
         }
     }
-    render(){
-        if(!this.props.user_id) {
-            return <Redirect to='/'/>
+    render() {
+        if (!this.props.user_id) {
+            return <Redirect to='/' />
         }
 
-    return (
+
+        return (
             <div id='profile-bg'>
                 <div id='user-profile'>
                     <div className='profile-lists'>
@@ -37,4 +38,4 @@ const mapStateToProps = reduxState => {
     }
 };
 
-export default connect(mapStateToProps, {getSession})(UserLanding);
+export default connect(mapStateToProps, { getSession })(UserLanding);
