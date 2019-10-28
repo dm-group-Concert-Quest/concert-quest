@@ -1,0 +1,1 @@
+SELECT * from tracked_artists WHERE user_id = $1;
