@@ -1,0 +1,47 @@
+@import "./Utilities";
+
+#tracked-bands {
+    display: flex;
+    flex-direction: column;
+    max-height: 70vh;
+    max-width: 150px;
+    overflow-y: scroll;
+    padding: 10px;
+    border-style: solid;
+    border-color: color(light-blue);
+    border-radius: 10px;
+    border-width: 3px;
+    scroll-behavior: smooth;
+
+    .tracked-band {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 10px;
+        font-family: $mont;
+
+        .tb-btn {
+            background-color: color(dark-gray);
+            color: color(cool-white);
+            border-radius: 20px;
+            height: 30px;
+            width: 100px;
+            font-size: medium;
+        }
+
+        .tb-pic {
+            max-width: 80px;
+        }
+    }
+}
+
+#tracked-bands::-webkit-scrollbar {
+    background-color: color(dark-blue);
+    border-radius: 10px;
+}
+
+#tracked-bands::-webkit-scrollbar-thumb {
+    background-color: color(light-gray);
+    border-radius: 10px;
+}

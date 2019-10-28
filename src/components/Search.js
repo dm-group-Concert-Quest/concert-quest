@@ -14,12 +14,12 @@ export default class Search extends Component {
         }
     }
 
-    handleInput = (e) => {
+    handleInput = e => {
             this.setState({[e.target.name]: e.target.value});
             this.setState({events: []});
     }
 
-    handleSearch = (e) => {
+    handleSearch = e => {
         e.preventDefault();
         const { REACT_APP_BAND_APP_KEY } = process.env;
         
@@ -35,9 +35,9 @@ export default class Search extends Component {
                 if(this.state.region !== '' && this.state.artist.name !== undefined) {
                     alert(`${this.state.artist.name} has no upcoming shows in ${this.state.region}`)
                 } else if (!this.state.artist.name) {
-                    alert(`${this.state.artist} does not exist in the`)
+                    alert(`${this.state.artist} does not exist in the database.`)
                 } else {
-                    alert(`${this.state.artist} has no upcoming shows.`)
+                    alert(`${this.state.artist.name} has no upcoming shows.`)
                 }
                 window.location.reload();
                 this.setState({artist: ''})
