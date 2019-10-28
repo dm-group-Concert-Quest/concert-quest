@@ -103,7 +103,7 @@ class About extends React.Component {
                             <a href="https://github.com/Tlwaller">
                                 <img className="githubIcon" src={githubIcon} alt="github" />
                             </a>
-                            <a href="https://www.linkedin.com/in/noel-contreras/">
+                            <a href="https://www.linkedin.com/in/noelncontreras/">
                                 <img
                                     className="portfolioIcon"
                                     src={portfolioIcon}
