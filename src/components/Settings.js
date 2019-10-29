@@ -112,6 +112,7 @@ class Settings extends Component {
                             <div className="Settings-input-box">
                                 <label className="setting-titles">Username:</label>
                                 <input
+                                    className='settings-text-input-fields'
                                     type="text"
                                     name="username"
                                     defaultValue={username}
@@ -120,6 +121,7 @@ class Settings extends Component {
                             <div className="Settings-input-box">
                                 <label className="setting-titles">Password:</label>
                                 <input
+                                    className='settings-text-input-fields'
                                     type="password"
                                     name="password"
                                     defaultValue={password}
@@ -128,6 +130,7 @@ class Settings extends Component {
                             <div className="Settings-input-box">
                                 <label className="setting-titles">First Name:</label>
                                 <input
+                                    className='settings-text-input-fields'
                                     type="text"
                                     name="first_name"
                                     defaultValue={first_name}
@@ -136,6 +139,7 @@ class Settings extends Component {
                             <div className="Settings-input-box">
                                 <label className="setting-titles">Email:</label>
                                 <input
+                                    className='settings-text-input-fields'
                                     type="email"
                                     name="email"
                                     defaultValue={email}
@@ -144,18 +148,10 @@ class Settings extends Component {
                             <div className="Settings-input-box">
                                 <label className="setting-titles">City:</label>
                                 <input
+                                    className='settings-text-input-fields'
                                     type="text"
                                     name="city"
                                     defaultValue={city}
-                                    onChange={this.handleInputChange} />
-                            </div>
-                            <div className="Settings-input-box">
-                                <label className="setting-titles">State:</label>
-                                <input
-                                    type="text"
-                                    name="state"
-                                    defaultValue={state}
-                                    pattern="[A-Z]{2}"
                                     onChange={this.handleInputChange} />
                             </div>
                             <div className="Settings-input-box">
@@ -186,10 +182,6 @@ class Settings extends Component {
                             <div className="Settings-input-box">
                                 <h1 className="setting-titles">City:</h1>
                                 <h3 className="setting-credentials">{city}</h3>
-                            </div>
-                            <div className="Settings-input-box">
-                                <h1 className="setting-titles">State:</h1>
-                                <h3 className="setting-credentials">{state}</h3>
                             </div>
                             <div className="Settings-input-box">
                                 <button className="settings-editButton" onClick={this.handleEditStatus}>Edit</button>

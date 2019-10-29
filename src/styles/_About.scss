@@ -3,15 +3,16 @@
 .theTeamContainer{
     display:flex;
     justify-content: center;
+    background-color: color(cool-black);
 }
 .theTeam{
     font-size: 16ch;
     font-family: 'Poiret One', cursive;
-    color:#676767
+    color: color(cool-white);
 }
 
 .teamContainer{
-    background-color:white;
+    background-color: color(cool-black);
     height:90ch;
     width:100vw;
     display:flex;
@@ -29,11 +30,10 @@
 }
 
 .madelynTitle, .treyTitle, .noelTitle{
-    color:#025D86;
+    color: color(dark-blue);
     font-size: 5.5ch;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
-    
 }
 
 .linksDiv{
@@ -69,6 +69,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: color(cool-black);
+    color: color(cool-white);
 }
 
 @media(max-width:768px){

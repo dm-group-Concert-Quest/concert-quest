@@ -4,14 +4,14 @@
     display: flex;
     justify-content: center;
     height: 96.8vh;
-    background-color: #fff;
+    background-color: color(cool-black);
 
     #user-profile {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
-        background-color: #fff;
+        background-color: color(cool-black);
         height: auto;
         padding-bottom: 50px;
 
@@ -31,7 +31,7 @@
                 justify-content: center;
                 width: 100%;
                 height: 500px;
-                background-color: #fff;
+                background-color: color(cool-black);
                 font-family: $mont;
                 font-size: 2.7ch;
             }
