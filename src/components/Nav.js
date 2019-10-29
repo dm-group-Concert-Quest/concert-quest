@@ -77,6 +77,7 @@ class Nav extends Component {
                         <>
                             <div className="Nav-nav-links-login">
                                 <Link to="/home" className="Nav-link"><h2>Home</h2></Link>
+                                <Link to="/profile" className="Nav-link"><h2>Profile</h2></Link>
                                 <Link to="/about" className="Nav-link"><h2>About</h2></Link>
                                 <Link to="settings" className="Nav-link"><h2>Settings</h2></Link>
                                 <h2 className="Nav-link" onClick={this.handleLogout}>Logout</h2>
@@ -91,6 +92,7 @@ class Nav extends Component {
                     :
                     <menu className={`hidden-by-default ${this.state.menuStatus}`}>
                         <Link to="/home" className="nav-menu-item" onClick={this.toggleMenu}><h2>Home</h2></Link>
+                        <Link to="/profile" className="nav-menu-item" onClick={this.toggleMenu}><h2>Profile</h2></Link>
                         <Link to="/about" className="nav-menu-item" onClick={this.toggleMenu}><h2>About</h2></Link>
                         <Link to="settings" className="nav-menu-item" onClick={this.toggleMenu}><h2>Settings</h2></Link>
                         <h2 onClick={this.handleLogout} className="nav-menu-item">Logout</h2>

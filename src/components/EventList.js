@@ -10,6 +10,7 @@ class EventList extends Component {
             artist: {}
         };
     }
+    
     handleTrackBand = () => {
         const { image_url, name } = this.props.artist;
 
@@ -31,11 +32,11 @@ class EventList extends Component {
                 <div key={i} className='event-container'>
                     <div className="event-header">
                         <img className='event-image' src={artist.image_url} alt="artist-pic" />
-                        {event.lineup.length > 1 ? <p className="event-lineup">{`${event.lineup[0]}, ${event.lineup[1]}, ${event.lineup[2]}...`}</p> : <p className="event-lineup">{event.lineup}</p>}
+                        {event.lineup.length > 2 ? <p className="event-lineup">{`${event.lineup[0]}, ${event.lineup[1]}...`}</p> : <p className="event-lineup">{event.lineup.join(', ')}</p>}
                     </div>
                     <div className="event-venue-info">
                         <h4>{event.venue.name}</h4>
-                        <h4>{`${event.venue.city}, ${event.venue.region}`}</h4>
+                        <h4>{`${event.venue.city} ${event.venue.region}, ${event.venue.country}`}</h4>
                         <h4>{date.toLocaleDateString("en-US", options)}</h4>
                         <br />
                     </div>
