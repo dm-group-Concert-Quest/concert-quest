@@ -1,7 +1,6 @@
 import React from "react";
 import { getTrackedArtist, untrackArtist } from "../redux/reducers/postReducer";
 import { connect } from "react-redux";
-import { breakStatement } from "@babel/types";
 
 class TrackedBands extends React.Component {
     constructor() {
@@ -23,14 +22,14 @@ class TrackedBands extends React.Component {
         const trackArtistsMapped = this.props.tracked_artist.map((artist, i) => {
             return (
                 <div key={i} className='tracked-band'>
-                    <img alt="artist pic" src={artist.image_url} className='tb-pic'/>
+                    <img alt="artist pic" src={artist.image_url} className='tb-pic' />
                     <h1>{artist.band_name}</h1>
                     <button className='tb-btn' onClick={() => this.handleUntrackBand(artist.band_name)}>Untrack</button>
                 </div>
             )
         })
         return (
-            <div id='tracked-bands' style={{marginTop: '200px'}}>
+            <div id='tracked-bands' style={{ marginTop: '200px' }}>
                 {trackArtistsMapped}
             </div>
         )

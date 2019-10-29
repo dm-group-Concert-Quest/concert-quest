@@ -17,7 +17,7 @@
         justify-content: center;
         align-items: center;
         font-size: 8.5rem;
-        color:color(cool-black)
+        color: color(cool-black)
     };
     .Settings-input-fields {
         width: 60%;
@@ -31,7 +31,7 @@
         border-color: color(dark-blue);
         border-style:solid;
         border-radius: 60px;
-        margin-top:20px;
+        margin-top: 20px;
         
         .Settings-input-box {
             display:flex;
@@ -42,27 +42,26 @@
 }
 .setting-titles{
     font-family: $mont;
-    font-size:4ch;
+    font-size: 4ch;
 }
 .setting-credentials{
-    font-family: 'Montserrat', sans-serif;
+    font-family: $mont;
 
 }
 .settings-editButton, .settings-deleteButton{
-    height:25px;
-    width:70px;
+    height: 25px;
+    width: 70px;
     margin-top: 7px;
     border-radius: 15%;
     border-color: color(dark-blue);
     background: transparent;
-    font-family: 'Montserrat', sans-serif;
-    font-size:1.7ch;
+    font-family: $mont;
+    font-size: 1.7ch;
     outline: none;
 }
 
 @media (max-width: 450px){
     .main-settings-title {
-    font-size:.76ch;
+    font-size: .76ch;
     }
-     
 } 
