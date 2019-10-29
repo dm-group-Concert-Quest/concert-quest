@@ -51,18 +51,32 @@
     border-radius: 5px;
     margin-bottom: 5px;
 }
-.picAndLineupDiv{
+.event-lineup {
+    width: 80%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.picAndLineupDiv {
+    min-width: 30%;
+    max-width: 80%;
     display: flex;
     flex-direction: column;
 }
-.venueAndDateDiv{
+.venueAndDateDiv {
+    min-width: 40%;
+    max-width: 45%;
+    height: 80%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 .trackedEventsVenueName, .trackedEventsCity, .trackedEventsDate{
-    margin-top:23px;
+    margin-top: 23px;
 }
-.event-ticket-button{
+.event-ticket-button {
     width: 80px;
     border-color: color(dark-blue);
     background: color(dark-gray);
@@ -71,12 +85,23 @@
     outline: none;
     border-radius: 7px;
 }
-.ProfileTrackedBandsDiv{
+.ProfileTrackedBandsDiv {
+    height: 100vh;
     display: flex;
 }
-.trackedEventsTitle{
+.trackedEventsTitle {
     font-size:6ch;
     font-family: 'Montserrat', sans-serif;
-position: relative;
-left:20vw;
+    position: relative;
+    left: 20vw;
+}
+
+.myEventsMapped {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
 }
