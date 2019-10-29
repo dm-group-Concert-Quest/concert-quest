@@ -7,14 +7,15 @@
     height: 70vh;
     width: 50vw;
     min-width: 30vw;
-    background-color: color(cool-white);
+    background-color: color(dark-gray);
     border-style: inset;
     border-width: 2px;
     border-radius: 5px;
-    border-color: color(light-gray);
+    border-color: color(dark-gray);
     overflow-y: auto;
     overflow-x: none;
     margin-bottom: 15px;
+    scroll-behavior: smooth;
 
     .event-container {
         width: 100%;
@@ -29,6 +30,8 @@
         align-items: flex-start;
         font-size: 1.1rem;
         border-color:color(dark-blue);
+        background-color: color(cool-black);
+        color: color(cool-white);
         border-width: 1px;
         border-style: solid;
         border-radius: 11.8px;
@@ -50,7 +53,7 @@
             }
         }
         .event-image {
-            width: 55%;
+            max-width: 63%;
             border-radius: 10px;
         }
         .event-venue-info {
@@ -62,7 +65,6 @@
             align-items: center;
             margin-top: 15px;
             font-size: 1rem;
-            background-color: white;
             position: relative;
         }
 
@@ -74,10 +76,12 @@
 
             .event-ticket-button {
                 @extend .settings-editButton;
-                width: 80px;
+                width: 90px;
+                height: 30px;
                 border-color: color(dark-blue);
-                background: color(cool-white);
-                font-size: 1ch;
+                background-color: color(dark-gray);
+                color: color(cool-white);
+                font-size: 1.2ch;
                 outline: none;
             }
         }
@@ -92,6 +96,16 @@
     font-size: 1ch;
     outline: none;
     border-radius: 7px;
+}
+
+.events-list::-webkit-scrollbar {
+    background-color: color(dark-blue);
+    border-radius: 10px;
+}
+
+.events-list::-webkit-scrollbar-thumb {
+    background-color: color(light-gray);
+    border-radius: 10px;
 }
 
 @media(min-width: 1440px) {

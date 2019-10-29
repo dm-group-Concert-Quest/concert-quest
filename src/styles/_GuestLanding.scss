@@ -12,7 +12,7 @@
         justify-content: flex-start;
         align-items: center;
         height: 185vh;
-        background-color: #fff;
+        background-color: color(cool-black);
         padding-top: 100px;
 
         .gl-welcome {
@@ -22,13 +22,13 @@
             align-items: center;
             width: 80vw;
             height: 100vh;
-            background-color: #fff;
+            background-color: color(cool-black);
 
             #gl-title {
                 width: 100%;
                 text-align: center;
                 font-family: 'Modak', cursive;
-                color: color(cool-black);
+                color: color(cool-white);
             }
 
             .gl-banner {
@@ -38,7 +38,8 @@
                 justify-content: space-around;
                 align-items: center;
                 font-family: $mont;
-                background-color: color(darker-white);
+                background-color: color(dark-gray);
+                color: color(cool-white);
                 border-radius: 10px;
                 figure {
                     display: flex;

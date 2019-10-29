@@ -23,6 +23,7 @@
         text-align: center;
         margin-bottom: 10px;
         font-family: $mont;
+        color: color(cool-white);
 
         .tb-btn {
             background-color: color(dark-gray);
@@ -31,6 +32,7 @@
             height: 30px;
             width: 100px;
             font-size: medium;
+            border-color: color(light-blue);
         }
 
         .tb-pic {

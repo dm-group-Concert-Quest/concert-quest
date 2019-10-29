@@ -16,8 +16,9 @@
         border-style: solid;
         border-width: 5px;
         border-color: color(light-blue);
-        box-shadow: 3px 3px 3px color(light-gray);
-        background-color: #fff;
+        box-shadow: -3px 3px 3px color(dark-gray);
+        background-color: color(cool-black);
+        color: color(cool-white);
         z-index: 100;
 
         #login-header {
@@ -32,6 +33,9 @@
                 width: 100%;
                 border-radius: 5px;
                 font-size: large;
+                background-color: color(dark-gray);
+                border-color: color(dark-gray);
+                color: color(cool-white);
             }
         }
 
@@ -75,7 +79,7 @@
 }
 .open:after {
     border-color: rgba(136, 183, 213, 0);
-    border-bottom-color: #fff;
+    border-bottom-color: color(cool-black);
     border-width: 15px;
     margin-left: -15px;
 }

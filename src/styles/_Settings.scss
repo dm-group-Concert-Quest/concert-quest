@@ -7,7 +7,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background: color(cool-white);
+    background: color(cool-black);
     .Settings-settings-title {
         width: 100vw;
         height: 20vh;
@@ -17,7 +17,7 @@
         justify-content: center;
         align-items: center;
         font-size: 8.5rem;
-        color: color(cool-black)
+        color: color(cool-white)
     };
     .Settings-input-fields {
         width: 60%;
@@ -26,7 +26,7 @@
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
-        background: color(cool-white);
+        background: color(cool-black);
         border-width: 6px;
         border-color: color(dark-blue);
         border-style:solid;
@@ -37,24 +37,40 @@
             display:flex;
             flex-direction:column;
             align-items:center;
+            color: color(cool-white);
         }
     };
 }
 .setting-titles{
     font-family: $mont;
     font-size: 4ch;
+    color: color(cool-white);
 }
 .setting-credentials{
     font-family: $mont;
 
 }
+
+.settings-text-input-fields {
+    background-color: color(dark-gray);
+    color: color(cool-white);
+    border-color: color(light-gray);
+    border-radius: 5px;
+    width: 150px;
+    height: 20px;
+    font-size: 1.5ch;
+}
+
 .settings-editButton, .settings-deleteButton{
     height: 25px;
     width: 70px;
     margin-top: 7px;
-    border-radius: 15%;
+    border-radius: 15px;
+    border-width: 1px;
     border-color: color(dark-blue);
-    background: transparent;
+    background-color: color(dark-gray);
+    border-color: color(light-blue);
+    color: color(cool-white);
     font-family: $mont;
     font-size: 1.7ch;
     outline: none;
