@@ -5,6 +5,7 @@ import treySwag from "./images/treySwag.jpeg";
 import githubIcon from "./images/githubIcon.png";
 import linkedinIcon from "./images/linkedinIcon.jpg";
 import portfolioIcon from "./images/portfolioIcon.png";
+
 class About extends React.Component {
     constructor() {
         super();
@@ -44,7 +45,7 @@ class About extends React.Component {
                                     alt="portfolio"
                                 />
                             </a>
-                            <a href="https://www.linkedin.com/in/noel-contreras/">
+                            <a href="https://www.linkedin.com/in/noelncontreras/">
                                 <img
                                     className="linkedinIcon"
                                     src={linkedinIcon}
@@ -103,7 +104,7 @@ class About extends React.Component {
                             <a href="https://github.com/Tlwaller">
                                 <img className="githubIcon" src={githubIcon} alt="github" />
                             </a>
-                            <a href="https://www.linkedin.com/in/noelncontreras/">
+                            <a href="https://madelyna.com">
                                 <img
                                     className="portfolioIcon"
                                     src={portfolioIcon}

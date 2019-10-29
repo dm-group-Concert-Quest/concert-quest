@@ -1,5 +1,6 @@
 import { getSession, registerUser, loginUser, updateFirstName, updatePassword } from "../redux/reducers/userReducer";
 
+
 test('Test to see type of getSession == "GET_SESSION"', () => {
     expect(getSession().type).toBe("GET_SESSION")
 })
