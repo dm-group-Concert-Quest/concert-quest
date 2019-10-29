@@ -46,7 +46,7 @@ class Register extends Component {
     render() {
         return (
             <div id='reg-bg'>
-                <form id='register-form'>
+                <form className='register-form'>
                     <h1 id='reg-title'>Create an account</h1>
                     <label>Username<input required className='register-input' name='username' onChange={this.handleInput} /></label>
                     <label>Password<input required className='register-input' name='password' onChange={this.handleInput} /></label>
