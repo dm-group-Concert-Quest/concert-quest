@@ -1,6 +1,7 @@
 @import "./Utilities";
 
 .search-form {
+    text-align: center;
     margin-top: 20px;
     display: flex;
     flex-direction: column;
@@ -29,7 +30,7 @@
         }
     }
     .search-buttons-box {
-        width: 15vw;
+        width: 200px;
         height: 4vh;
         display: flex;
         justify-content: space-between;
@@ -37,7 +38,10 @@
         .search-btn {
             background-color: color(dark-gray);
             color: color(cool-white);
-            @extend .trackArtistButton;
+            border-color: color(dark-blue);
+            border-radius: 20px;
+            height: 30px;
+            width: 70px;
         }
     }
 }
