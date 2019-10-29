@@ -1,26 +1,55 @@
 @import "./Utilities";
 
-.trackedEventsDiv {
-    width: 140%;
-    height: 22vh;
+#tracked-events-container {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    overflow-y: scroll;
+    height: 65vh;
+    color: color(cool-white);
+    background-color: color(dark-gray);
     align-items: center;
-    border-radius: 5px;
-    background-color: white;
-    font-size: 1.1rem;
-    border-color: color(dark-blue);
-    border-width: 1px;
-    border-style: solid;
-    border-radius: 11.8px;
-    text-align: center;
-    font-family: $mont;
-}
-.trackedEventsArtistPic {
-    width: 10vw;
-    height: 16vh;
-    margin-top: 8px;
     border-radius: 10px;
+    border-color: color(dark-gray);
+    border-style: inset;
+    border-width: thin;
+    padding: 30px;
+
+    .trackedEventsDiv {
+        width: 60vw;
+        height: 200px;
+        display: flex;
+        flex-direction: row;
+        border-radius: 5px;
+        background-color: color(cool-black);
+        font-size: 1.1rem;
+        border-color:color(dark-blue);
+        border-width: 1px;
+        border-style: solid;
+        border-radius: 11.8px;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+}
+
+#tracked-events-container::-webkit-scrollbar {
+    background-color: color(dark-blue);
+    border-radius: 10px;
+}
+
+#tracked-events-container::-webkit-scrollbar-thumb {
+    background-color: color(light-gray);
+    border-radius: 10px;
+}
+
+.trackedEventsArtistPic {
+    width: 12vw;
+    height:16vh;
+    margin-top:8px;
+    border-radius: 5px;
+    margin-bottom: 5px;
 }
 .event-lineup {
     width: 80%;
@@ -50,17 +79,15 @@
 .event-ticket-button {
     width: 80px;
     border-color: color(dark-blue);
-    background: color(cool-white);
+    background: color(dark-gray);
+    color: color(cool-white);
     font-size: 1.5ch;
     outline: none;
     border-radius: 7px;
-    margin-top: 70px;
 }
 .ProfileTrackedBandsDiv {
     height: 100vh;
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
 }
 .trackedEventsTitle {
     font-size:6ch;

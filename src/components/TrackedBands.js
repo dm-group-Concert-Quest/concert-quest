@@ -29,8 +29,13 @@ class TrackedBands extends React.Component {
             )
         })
         return (
-            <div id='tracked-bands' style={{ marginTop: '200px' }}>
-                {trackArtistsMapped}
+            <div>
+                <div className="tb-div">
+                    <h1>Tracked Artists</h1>
+                </div>
+                <div id='tracked-bands'>
+                    {trackArtistsMapped}
+                </div>
             </div>
         )
     }
