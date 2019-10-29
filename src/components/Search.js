@@ -22,7 +22,7 @@ export default class Search extends Component {
 
     clearSearch = e => {
         e.preventDefault();
-        this.setState({ artistSearch: '' });
+        this.setState({ artistSearch: '', city: '' });
         this.setState({ events: [] });
     };
     handleSearch = e => {
@@ -36,20 +36,22 @@ export default class Search extends Component {
             .then(response => {
                 this.setState({ events: response.data });
 
-                if(this.state.city !== '') {
-                    const toCityCase = (str) => {return str.replace(
-                        /\w\S*/g,
-                        function(txt) {
-                            return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-                        }
-                    )}
-                    this.setState({city: toCityCase(this.state.city)});
+                if (this.state.city !== '') {
+                    const toCityCase = (str) => {
+                        return str.replace(
+                            /\w\S*/g,
+                            function (txt) {
+                                return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+                            }
+                        )
+                    }
+                    this.setState({ city: toCityCase(this.state.city) });
                     const result = this.state.events.filter(event => event.venue.city === this.state.city)
-                    if(result) {
-                        this.setState({events: result});
+                    if (result) {
+                        this.setState({ events: result });
                     }
                 }
-                
+
             }).catch(err => {
                 if (this.state.city !== '' && this.state.artist.name !== undefined) {
                     alert(`${this.state.artist.name} has no upcoming shows in ${this.state.city}`)
@@ -90,10 +92,13 @@ export default class Search extends Component {
                             className='search-input'
                             type='text'
                             name='city'
+                            value={this.state.city}
                             onChange={this.handleInput} />
                     </label>
-                    <input className='search-btn' type='submit' value='Search' />
-                    <button className='search-btn' onClick={this.clearSearch}>Clear</button>
+                    <div className="search-buttons-box">
+                        <input className='search-btn' type='submit' value='Search' />
+                        <button className='search-btn' onClick={this.clearSearch}>Clear</button>
+                    </div>
                 </form>
                 <EventList artist={this.state.artist} events={this.state.events} handleSearch={this.handleSearch} />
             </div>

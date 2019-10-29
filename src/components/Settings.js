@@ -56,6 +56,11 @@ class Settings extends Component {
     handleEditUpdate = () => {
         const { username, password, first_name, city, state, email } = this.state;
 
+        const str = city;
+        let formattedCity = str.toLowerCase()
+                .split(' ')
+                .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
+                .join(' ');
         if (username === "") {
             this.setState({ username: this.props.username })
         } else {
@@ -69,19 +74,19 @@ class Settings extends Component {
         };
 
         if (first_name === "") {
-            this.setState({ password: this.props.first_name })
+            this.setState({ first_name: this.props.first_name })
         } else {
             this.props.updateFirstName({ first_name });
         };
 
         if (city === "") {
-            this.setState({ phoneNumber: this.props.city })
+            this.setState({ city: this.props.city })
         } else {
-            this.props.updateCity({ city });
+            this.props.updateCity({ city: formattedCity });
         };
 
         if (state === "") {
-            this.setState({ location: this.props.state })
+            this.setState({ state: this.props.state })
         } else {
             this.props.updateState({ state });
         };
