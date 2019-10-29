@@ -53,10 +53,7 @@ class Register extends Component {
                     <label>Verify password<input required className='register-input' name='passwordAgain' onChange={this.handleInput} /></label>
                     <label>First name<input required className='register-input' name='first_name' onChange={this.handleInput} /></label>
                     <label>Email address<input required className='register-input' name='email' onChange={this.handleInput} /></label>
-                    <div id='reg-location'>
-                        <label>City<input required className='register-input' name='city' onChange={this.handleInput} /></label>
-                        <label>State<input className='register-input' name='myState' onChange={this.handleInput} /></label>
-                    </div>
+                    <label>City<input required className='register-input' name='city' onChange={this.handleInput} /></label>
                     <button id='reg-btn' onClick={this.handleSubmit}>Sign up</button>
                 </form>
             </div>

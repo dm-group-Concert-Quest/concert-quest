@@ -53,10 +53,7 @@ class EventList extends Component {
             );
         });
         return (
-            <div>
-                <div>
-
-                </div>
+            <div className='event-list-container'>
                 <div className='events-list'>
                     {eventsMapped}
                 </div>

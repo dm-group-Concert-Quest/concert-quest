@@ -3,6 +3,7 @@
     justify-content: center;
     height: 100vh;
     background-color: black;
+    text-align: center;
     
     #register-form {
         display: flex;
@@ -11,17 +12,38 @@
         align-items: center;
         height: auto;
         background-color: color(cool-black);
+        color: color(cool-white);
+        font-family: $mont;
+
+        label {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
 
         #reg-title {
             font-size: 7ch;
             font-family: $mont;
+            display: flex;
         }
 
         #reg-btn {
-            height: 50px;
-            width: 200px;
+            height: 40px;
+            width: 150px;
             font-family: $mont;
             font-size: large;
+            background-color: color(dark-gray);
+            color: color(cool-white);
+            border-color: color(light-blue);
+            border-radius: 20px;
+        }
+
+        .register-input {
+            background-color: color(dark-gray);
+            border-color: color(light-gray);
+            border-radius: 8px;
+            width: 150px;
+            height: 15px;
         }
     }
 }
