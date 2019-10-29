@@ -62,19 +62,19 @@ class TrackedEvents extends Component {
                             return (
                                 <div className="trackedEventsDiv" key={i}>
                                     <div className="picAndLineupDiv">
-                                    <img className="trackedEventsArtistPic" alt="artist-img" src={currentImage} />
-                                    <h1 className="trackedEventsLineup">{event.lineup.length > 2 ? <p className="event-lineup">{`${event.lineup[0]}, ${event.lineup[1]}...`}</p> : <p className="event-lineup">{event.lineup.join(', ')}</p>}</h1>
+                                        <img className="trackedEventsArtistPic" alt="artist-img" src={currentImage} />
+                                        <h1 className="trackedEventsLineup">{event.lineup.length > 2 ? <p className="event-lineup">{`${event.lineup[0]}, ${event.lineup[1]}...`}</p> : <p className="event-lineup">{event.lineup.join(', ')}</p>}</h1>
                                     </div>
                                     <div className="venueAndDateDiv">
-                                    <h1 className="trackedEventsVenueName">{event.venue.name}</h1>
-                                    <h1 className="trackedEventsCity">{`${event.venue.city} ${event.venue.region}, ${event.venue.country}`}</h1>
-                                    <h1 className="trackedEventsDate">{date.toLocaleDateString("en-US", options)}</h1>
+                                        <h1 className="trackedEventsVenueName">{event.venue.name}</h1>
+                                        <h1 className="trackedEventsCity">{`${event.venue.city} ${event.venue.region}, ${event.venue.country}`}</h1>
+                                        <h1 className="trackedEventsDate">{date.toLocaleDateString("en-US", options)}</h1>
                                     </div>
                                     <div>
-                                    <a className="trackedEventsButton" target="_blank" rel="noopener noreferrer" href={event.offers[0].url}><button className="event-ticket-button">Tickets</button></a>
+                                        <a className="trackedEventsButton" target="_blank" rel="noopener noreferrer" href={event.offers[0].url}><button className="event-ticket-button">Tickets</button></a>
                                     </div>
                                 </div>
-                                
+
                             )
                         })
                         :
@@ -84,7 +84,7 @@ class TrackedEvents extends Component {
             )
         })
         return (
-            <div style={{ display: 'flex', flexDirection: 'column', margin: '20px' }}>
+            <div className="myEventsMapped">
                 {myEventsMapped}
             </div>
         );

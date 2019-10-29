@@ -4,56 +4,77 @@
     width: 140%;
     height: 22vh;
     display: flex;
-    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
     border-radius: 5px;
     background-color: white;
-    // margin-left: 18px;
-    // margin-right: 18px;
-    margin-bottom: 18px;
-    align-items: flex-start;
     font-size: 1.1rem;
-    border-color:color(dark-blue);
+    border-color: color(dark-blue);
     border-width: 1px;
     border-style: solid;
     border-radius: 11.8px;
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    justify-content: space-evenly;
+    font-family: $mont;
 }
 .trackedEventsArtistPic {
-    width: 12vw;
-    height:16vh;
-    margin-top:8px;
+    width: 10vw;
+    height: 16vh;
+    margin-top: 8px;
     border-radius: 10px;
 }
-.picAndLineupDiv{
+.event-lineup {
+    width: 80%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.picAndLineupDiv {
+    min-width: 30%;
+    max-width: 80%;
     display: flex;
     flex-direction: column;
 }
-.venueAndDateDiv{
+.venueAndDateDiv {
+    min-width: 40%;
+    max-width: 45%;
+    height: 80%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 .trackedEventsVenueName, .trackedEventsCity, .trackedEventsDate{
-    margin-top:23px;
+    margin-top: 23px;
 }
-.event-ticket-button{
+.event-ticket-button {
     width: 80px;
     border-color: color(dark-blue);
     background: color(cool-white);
     font-size: 1.5ch;
     outline: none;
     border-radius: 7px;
-  margin-top:70px;
+    margin-top: 70px;
 }
-.ProfileTrackedBandsDiv{
+.ProfileTrackedBandsDiv {
+    height: 100vh;
     display: flex;
-    // flex-direction: row;
-    // flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
-.trackedEventsTitle{
+.trackedEventsTitle {
     font-size:6ch;
     font-family: 'Montserrat', sans-serif;
-position: relative;
-left:20vw;
+    position: relative;
+    left: 20vw;
+}
+
+.myEventsMapped {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
 }
