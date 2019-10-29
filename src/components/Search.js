@@ -42,7 +42,7 @@ export default class Search extends Component {
                         function(txt) {
                             return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
                         }
-                    );}
+                    )}
                     this.setState({city: toCityCase(this.state.city)});
                     const result = this.state.events.filter(event => event.venue.city === this.state.city)
                     if(result) {
@@ -50,7 +50,6 @@ export default class Search extends Component {
                     }
                 }
                 
-                // this.setState({ images: response.data.})
             }).catch(err => {
                 if (this.state.city !== '' && this.state.artist.name !== undefined) {
                     alert(`${this.state.artist.name} has no upcoming shows in ${this.state.city}`)

@@ -36,7 +36,7 @@ class EventList extends Component {
                     </div>
                     <div className="event-venue-info">
                         <h4>{event.venue.name}</h4>
-                        <h4>{`${event.venue.city}, ${event.venue.region}`}</h4>
+                        <h4>{`${event.venue.city} ${event.venue.region}, ${event.venue.country}`}</h4>
                         <h4>{date.toLocaleDateString("en-US", options)}</h4>
                         <br />
                     </div>
