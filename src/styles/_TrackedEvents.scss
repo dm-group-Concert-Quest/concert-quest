@@ -1,0 +1,59 @@
+@import "./Utilities";
+
+.trackedEventsDiv {
+    width: 140%;
+    height: 22vh;
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+    background-color: white;
+    // margin-left: 18px;
+    // margin-right: 18px;
+    margin-bottom: 18px;
+    align-items: flex-start;
+    font-size: 1.1rem;
+    border-color:color(dark-blue);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 11.8px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    justify-content: space-evenly;
+}
+.trackedEventsArtistPic {
+    width: 12vw;
+    height:16vh;
+    margin-top:8px;
+    border-radius: 10px;
+}
+.picAndLineupDiv{
+    display: flex;
+    flex-direction: column;
+}
+.venueAndDateDiv{
+    display: flex;
+    flex-direction: column;
+}
+.trackedEventsVenueName, .trackedEventsCity, .trackedEventsDate{
+    margin-top:23px;
+}
+.event-ticket-button{
+    width: 80px;
+    border-color: color(dark-blue);
+    background: color(cool-white);
+    font-size: 1.5ch;
+    outline: none;
+    border-radius: 7px;
+  margin-top:70px;
+}
+.ProfileTrackedBandsDiv{
+    display: flex;
+    // flex-direction: row;
+    // flex-direction: column;
+}
+.trackedEventsTitle{
+    font-size:6ch;
+    font-family: 'Montserrat', sans-serif;
+position: relative;
+left:20vw;
+}
