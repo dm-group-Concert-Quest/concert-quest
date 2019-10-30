@@ -5,6 +5,7 @@
 }
 
 #login-container {
+    // margin-top: 140px;
     .open, .closed{
         display: flex;
         flex-direction: column;
@@ -66,9 +67,6 @@
     }
 }
 
-
-
-
 //box arrow
 .open:after, .open:before {
     bottom: 100%;
@@ -118,6 +116,10 @@
 
     .closed {
         animation: slide_down .7s forwards;
+    }
+
+    .open, .closed {
+        margin-top: 85px;
     }
 }
 
