@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import gps_icon from './images/gps-icon.png';
 import band_icon from './images/band-icon.png';
 import ticket_icon from './images/ticket-icon.png';
@@ -11,7 +11,7 @@ class Home extends Component {
     render(props) {
         if (this.props.user_id) {
             return <Redirect to='/home' />
-        }
+        };
         return (
             <div id='gl-bg'>
                 <div id='guest-landing'>
@@ -45,13 +45,13 @@ class Home extends Component {
                 </div>
             </div>
         )
-    }
-}
+    };
+};
 
 const mapStateToProps = reduxState => {
     return {
         user_id: reduxState.userReducer.user_id
-    }
+    };
 };
 
 export default connect(mapStateToProps)(Home);

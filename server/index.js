@@ -3,7 +3,7 @@ const express = require('express');
 const massive = require('massive');
 const session = require('express-session');
 
-const {SERVER_PORT} = process.env
+const { SERVER_PORT } = process.env
 const authController = require("./Controller/authController");
 const postController = require("./Controller/postController");
 
@@ -15,7 +15,7 @@ massive(process.env.CONNECTION_STRING).then(dbInstance => {
     console.log("database connected :D");
 });
 
-app.use(session ({
+app.use(session({
     resave: false,
     saveUninitialized: true,
     secret: process.env.SESSION_SECRET,
@@ -34,7 +34,6 @@ app.put("/auth/settings/username", authController.updateUsername);
 app.put("/auth/settings/password", authController.updatePassword);
 app.put("/auth/settings/first_name", authController.updateFirstName);
 app.put("/auth/settings/city", authController.updateCity);
-app.put("/auth/settings/state", authController.updateState);
 app.put("/auth/settings/email", authController.updateEmail);
 app.delete("/auth/settings/user", authController.deleteUser);
 //posts endpoints

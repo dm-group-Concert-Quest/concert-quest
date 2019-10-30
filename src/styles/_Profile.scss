@@ -4,13 +4,13 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: 128vw;
     height: 90vh;
-    justify-content: space-between;
-    margin-right: 100px;
-    margin-left: 100px;
+    justify-content: space-around;
 
     #title-and-list-container {
         display: flex;
+        text-align: center;
         flex-direction: column;
         align-items: center;
         #profile-title {

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { Redirect, Link } from 'react-router-dom';
 import { loginUser, getSession } from '../redux/reducers/userReducer';
 import { connect } from 'react-redux';
@@ -7,8 +7,8 @@ class Login extends Component {
     constructor() {
         super();
         this.state = {
-            username: 'a',
-            password: 'a'
+            username: 'js_wizard',
+            password: '1234'
         }
     }
 
@@ -17,10 +17,10 @@ class Login extends Component {
     };
 
     componentDidUpdate(prevProps) {
-        if(prevProps.boxStatus !== this.props.boxStatus && this.props.boxStatus === 'closed') {
-            this.setState({username: '', password: ''})
-        }
-    }
+        if (prevProps.boxStatus !== this.props.boxStatus && this.props.boxStatus === 'closed') {
+            this.setState({ username: '', password: '' })
+        };
+    };
 
     handleInput = e => {
         this.setState({ [e.target.name]: e.target.value });
@@ -68,13 +68,13 @@ class Login extends Component {
                 </form>
             </div>
         )
-    }
-}
+    };
+};
 
 const mapStateToProps = reduxState => {
     return {
         user_id: reduxState.userReducer.user_id
-    }
+    };
 };
 
 export default connect(mapStateToProps, { loginUser, getSession })(Login);

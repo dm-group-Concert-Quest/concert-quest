@@ -8,11 +8,11 @@ class TrackedBands extends React.Component {
         this.state = {
             artist: {}
         };
-    }
+    };
 
     componentDidMount() {
         this.props.getTrackedArtist();
-    }
+    };
 
     handleUntrackBand = (band_name) => {
         this.props.untrackArtist(band_name);
@@ -29,12 +29,17 @@ class TrackedBands extends React.Component {
             )
         })
         return (
-            <div id='tracked-bands'>
-                {trackArtistsMapped}
+            <div>
+                <div className="tb-div">
+                    <h1>Tracked Artists</h1>
+                </div>
+                <div id='tracked-bands'>
+                    {trackArtistsMapped}
+                </div>
             </div>
         )
-    }
-}
+    };
+};
 
 const mapStateToProps = reduxState => {
     return {

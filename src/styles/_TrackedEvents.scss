@@ -2,6 +2,7 @@
 
 #tracked-events-container {
     display: flex;
+    width: 70vw;
     flex-direction: column;
     overflow-y: scroll;
     height: 65vh;
@@ -13,10 +14,67 @@
     border-style: inset;
     border-width: thin;
     padding: 30px;
+    // margin-left: 100px;
+}
 
+#tracked-events-container::-webkit-scrollbar {
+    background-color: color(dark-blue);
+    border-radius: 10px;
+}
+
+#tracked-events-container::-webkit-scrollbar-thumb {
+    background-color: color(light-gray);
+    border-radius: 10px;
+}
+
+.trackedEventsArtistPic {
+    max-width: 200px;
+    max-height: 160px;
+    margin-top:8px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+.event-lineup {
+    width: 80%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.picAndLineupDiv {
+    min-width: 30%;
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+.venueAndDateDiv {
+    min-width: 40%;
+    max-width: 45%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.trackedEventsVenueName, .trackedEventsCity, .trackedEventsDate{
+    margin-top: 23px;
+}
+
+.ProfileTrackedBandsDiv{
+
+    display: flex;
+}
+.trackedEventsTitle {
+    font-size:6ch;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    left: 20vw;
+}
+
+@media(min-width: 700px) {
     .trackedEventsDiv {
-        width: 60vw;
         height: 200px;
+        width: 70vw;
         display: flex;
         flex-direction: row;
         border-radius: 5px;
@@ -32,51 +90,34 @@
         align-items: center;
         margin-bottom: 20px;
     }
+    .event-ticket-button{
+        height: 30px;
+        width: 70px;
+        border-color: color(dark-blue);
+        background: color(dark-gray);
+        color: color(cool-white);
+        font-size: 1.2ch;
+        outline: none;
+        border-radius: 20px;
+    }
 }
 
-#tracked-events-container::-webkit-scrollbar {
-    background-color: color(dark-blue);
-    border-radius: 10px;
-}
-
-#tracked-events-container::-webkit-scrollbar-thumb {
-    background-color: color(light-gray);
-    border-radius: 10px;
-}
-
-.trackedEventsArtistPic {
-    width: 12vw;
-    height:16vh;
-    margin-top:8px;
-    border-radius: 5px;
-    margin-bottom: 5px;
-}
-.picAndLineupDiv{
-    display: flex;
-    flex-direction: column;
-}
-.venueAndDateDiv{
-    display: flex;
-    flex-direction: column;
-}
-.trackedEventsVenueName, .trackedEventsCity, .trackedEventsDate{
-    margin-top:23px;
-}
-.event-ticket-button{
-    width: 80px;
-    border-color: color(dark-blue);
-    background: color(dark-gray);
-    color: color(cool-white);
-    font-size: 1.5ch;
-    outline: none;
-    border-radius: 7px;
-}
-.ProfileTrackedBandsDiv{
-    display: flex;
-}
-.trackedEventsTitle{
-    font-size:6ch;
-    font-family: 'Montserrat', sans-serif;
-position: relative;
-left:20vw;
+@media(max-width: 701px) {
+    .trackedEventsDiv {
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .event-ticket-button{
+        height: 40px;
+        width: 80px;
+        border-color: color(dark-blue);
+        background: color(dark-gray);
+        color: color(cool-white);
+        font-size: 2ch;
+        outline: none;
+        border-radius: 20px;
+    }
 }

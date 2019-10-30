@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import EventList from './EventList';
 import axios from 'axios';
 require("dotenv").config();
@@ -25,6 +25,7 @@ export default class Search extends Component {
         this.setState({ artistSearch: '', city: '' });
         this.setState({ events: [] });
     };
+
     handleSearch = e => {
         e.preventDefault();
         const { REACT_APP_BAND_APP_KEY } = process.env;
@@ -50,13 +51,13 @@ export default class Search extends Component {
                     if (result) {
                         this.setState({ events: result });
                     }
-                }
+                };
 
             }).catch(err => {
                 if (this.state.city !== '' && this.state.artist.name !== undefined) {
                     alert(`${this.state.artist.name} has no upcoming shows in ${this.state.city}`)
                 } else if (!this.state.artist.name) {
-                    alert(`${this.state.artistSearch} does not exist in the`)
+                    alert(`${this.state.artistSearch} does not exist in the database.`)
                 } else {
                     alert(`${this.state.artistSearch} has no upcoming shows.`)
                 }

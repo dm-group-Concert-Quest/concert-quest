@@ -7,7 +7,7 @@ const initialState = {
 };
 
 //constants
-const TRACK_ARTIST =  "TRACK_ARTIST";
+const TRACK_ARTIST = "TRACK_ARTIST";
 const UNTRACK_ARTIST = "UNTRACK_ARTIST";
 const GET_TRACKED_ARTIST = "GET _TRACKED_ARTIST";
 
@@ -36,7 +36,7 @@ export function getTrackedArtist() {
 
 //reducer
 export default function reducer(state = initialState, action) {
-    const {type, payload} = action;
+    const { type, payload } = action;
     switch (type) {
         case `${TRACK_ARTIST}_FULFILLED`:
             return {

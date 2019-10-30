@@ -5,44 +5,48 @@ import configureMockStore from "redux-mock-store";
 import { configure } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 configure({ adapter: new Adapter() });
-import Nav from "../components/Nav";
-import Profile from "../components/Profile";
-import Register from "../components/Register";
-import Search from "../components/Search";
-import Settings from "../components/Settings";
+import App from "../App";
+import About from "../components/About";
+import EventList from "../components/EventList";
+import GuestLanding from "../components/GuestLanding";
+import Login from "../components/Login";
 const mockStore = configureMockStore();
 const store = mockStore({ userReducer: {} })
 
-describe("Nav Component", () => {
+it("should render without crashing", () => {
+    shallow(<App />)
+})
+
+it("should render without crashing", () => {
+    shallow(<About />)
+})
+
+describe("EventList Component", () => {
     it("should render without crashing", () => {
         expect(
             shallow(
                 <Provider store={store}>
-                    <Nav />
+                    <EventList />
                 </Provider>).exists()).toBe(true);
     })
 })
-it("should render without crashing", () => {
-    shallow(<Profile />)
-})
-describe("Register Component", () => {
+
+describe("GuestLanding Component", () => {
     it("should render without crashing", () => {
         expect(
             shallow(
                 <Provider store={store}>
-                    <Register />
+                    <GuestLanding />
                 </Provider>).exists()).toBe(true);
     })
 })
-it("should render without crashing", () => {
-    shallow(<Search />)
-})
-describe("Settings Component", () => {
+
+describe("Login Component", () => {
     it("should render without crashing", () => {
         expect(
             shallow(
                 <Provider store={store}>
-                    <Settings />
+                    <Login />
                 </Provider>).exists()).toBe(true);
     })
 })
