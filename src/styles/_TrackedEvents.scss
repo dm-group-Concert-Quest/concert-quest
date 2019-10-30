@@ -2,7 +2,6 @@
 
 #tracked-events-container {
     display: flex;
-    width: 70vw;
     flex-direction: column;
     overflow-y: scroll;
     height: 65vh;
@@ -34,6 +33,11 @@
     border-radius: 5px;
     margin-bottom: 5px;
 }
+.trackedEventsLineup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .event-lineup {
     width: 80%;
     text-align: center;
@@ -47,6 +51,7 @@
     max-width: 80%;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 .venueAndDateDiv {
     min-width: 40%;
@@ -73,7 +78,8 @@
 
 @media(min-width: 700px) {
     .trackedEventsDiv {
-        height: 200px;
+        height: auto;
+        padding-bottom: 5px;
         width: 70vw;
         display: flex;
         flex-direction: row;

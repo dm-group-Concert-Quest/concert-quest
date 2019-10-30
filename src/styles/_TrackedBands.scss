@@ -59,20 +59,28 @@
     border-radius: 10px;
 }
 
-@media(max-width: 1440px) {
+@media(max-width: 768px) {
     #tracked-bands {
         display: none;
     }
     .tb-div h1 {
         display: none;
+    }
+
+    #tracked-events-container {
+        width: 70vw;
     }
 }
 
-@media(max-width: 1439px) {
+@media(max-width: 767px) {
     #tracked-bands {
         display: none;
     }
     .tb-div h1 {
         display: none;
+    }
+
+    #tracked-events-container {
+        width: 90vw;
     }
 }
