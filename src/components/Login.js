@@ -7,10 +7,10 @@ class Login extends Component {
     constructor() {
         super();
         this.state = {
-            username: '',
-            password: ''
-        };
-    };
+            username: 'js_wizard',
+            password: '1234'
+        }
+    }
 
     componentDidMount() {
         this.props.getSession();
