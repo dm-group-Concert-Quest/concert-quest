@@ -65,9 +65,8 @@ class About extends React.Component {
                         <h1 className="madelynTitle">Madelyn</h1>
                         <p className="madelynParagraph">
                             {" "}
-                            swag money swag money. i love swag money swag money. money of the
-                            swag is the swaggiest money that i could dream of. get this bread
-                            swag money!
+                            In my free time I highly enjoy playing video games, watching twitch, listening to music, painting & playing with my dog. Growing up I always had a large fascination with computers and the way they worked.
+                            Coding was always a dream of mine but recently has become my reality. Frontend and backend, there is no quest I am not willing to take on.
             </p>
                         <div className="linksDiv">
                             <a href="https://github.com/madelynarsenault">
