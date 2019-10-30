@@ -18,9 +18,9 @@ describe("TrackedBands Component", () => {
     it("should render without crashing", () => {
         expect(
             shallow(
-            <Provider store={store}>
-                <TrackedBands />
-            </Provider>).exists()).toBe(true);
+                <Provider store={store}>
+                    <TrackedBands />
+                </Provider>).exists()).toBe(true);
     })
 })
 
@@ -28,9 +28,9 @@ describe("TrackedEvents Component", () => {
     it("should render without crashing", () => {
         expect(
             shallow(
-            <Provider store={store}>
-                <TrackedEvents />
-            </Provider>).exists()).toBe(true);
+                <Provider store={store}>
+                    <TrackedEvents />
+                </Provider>).exists()).toBe(true);
     })
 })
 
@@ -38,9 +38,9 @@ describe("UserLanding Component", () => {
     it("should render without crashing", () => {
         expect(
             shallow(
-            <Provider store={store}>
-                <UserLanding />
-            </Provider>).exists()).toBe(true);
+                <Provider store={store}>
+                    <UserLanding />
+                </Provider>).exists()).toBe(true);
     })
 })
 
@@ -54,8 +54,8 @@ describe("Register Component", () => {
     it('should render without throwing an error', () => {
         expect(
             shallow(
-            <Provider store={store}>
-                <Register />
-            </Provider>).find("form.register-form").exists()).toBe(false)
+                <Provider store={store}>
+                    <Register />
+                </Provider>).find("form.register-form").exists()).toBe(false)
     })
 })

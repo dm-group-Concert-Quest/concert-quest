@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import { getSession, updateUsername, updatePassword, updateFirstName, updateCity, updateState, updateEmail, deleteUser } from "../redux/reducers/userReducer";
-
-import "../styles/_Settings.scss";
+import { getSession, updateUsername, updatePassword, updateFirstName, updateCity, updateEmail, deleteUser } from "../redux/reducers/userReducer";
 
 class Settings extends Component {
     constructor() {
@@ -14,7 +12,7 @@ class Settings extends Component {
             city: "",
             state: "",
             email: "",
-            menuOpenStatus:"side-menu",
+            menuOpenStatus: "side-menu",
             editStatus: false
         };
     };
@@ -24,11 +22,11 @@ class Settings extends Component {
     };
 
     handleInputChange = e => {
-        this.setState({ [e.target.name]: e.target.value })
+        this.setState({ [e.target.name]: e.target.value });
     };
 
     handleEditStatus = () => {
-        this.setState({ editStatus: true })
+        this.setState({ editStatus: true });
     };
 
     handleDeleteUser = () => {
@@ -40,67 +38,61 @@ class Settings extends Component {
             this.props.history.push("/");
         };
     };
+
     toggle = () => {
-        
-        if (this.state.menuOpenStatus === "side-menu-close" || this.state.menuOpenStatus === "side-menu"){
-            this.setState({menuOpenStatus: "side-menu-open"});
-        } else if (this.state.menuOpenStatus === "side-menu-open"){
-            this.setState({menuOpenStatus: "side-menu-close"})
-        }
-    }
+        if (this.state.menuOpenStatus === "side-menu-close" || this.state.menuOpenStatus === "side-menu") {
+            this.setState({ menuOpenStatus: "side-menu-open" });
+        } else if (this.state.menuOpenStatus === "side-menu-open") {
+            this.setState({ menuOpenStatus: "side-menu-close" });
+        };
+    };
 
     handleCancelEdit = () => {
         this.setState({ editStatus: false })
     };
 
     handleEditUpdate = () => {
-        const { username, password, first_name, city, state, email } = this.state;
+        const { username, password, first_name, city, email } = this.state;
 
         const str = city;
         let formattedCity = str.toLowerCase()
-                .split(' ')
-                .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
-                .join(' ');
+            .split(' ')
+            .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
+            .join(' ');
         if (username === "") {
-            this.setState({ username: this.props.username })
+            this.setState({ username: this.props.username });
         } else {
-            this.props.updateUsername({ username })
+            this.props.updateUsername({ username });
         };
 
         if (password === "") {
-            this.setState({ password: this.props.password })
+            this.setState({ password: this.props.password });
         } else {
             this.props.updatePassword({ password });
         };
 
         if (first_name === "") {
-            this.setState({ first_name: this.props.first_name })
+            this.setState({ first_name: this.props.first_name });
         } else {
             this.props.updateFirstName({ first_name });
         };
 
         if (city === "") {
-            this.setState({ city: this.props.city })
+            this.setState({ city: this.props.city });
         } else {
             this.props.updateCity({ city: formattedCity });
         };
 
-        if (state === "") {
-            this.setState({ state: this.props.state })
-        } else {
-            this.props.updateState({ state });
-        };
-
         if (email === "") {
-            this.setState({ email: this.props.email })
+            this.setState({ email: this.props.email });
         } else {
             this.props.updateEmail({ email });
         };
-        this.setState({ editStatus: false })
+        this.setState({ editStatus: false });
     };
 
     render() {
-        const { username, password, first_name, city, state, email } = this.props;
+        const { username, password, first_name, city, email } = this.props;
         return (
             <main className="Settings-main-container">
                 <div className="Settings-settings-title">
@@ -213,7 +205,6 @@ export default connect(mapStateToProps,
         updatePassword,
         updateFirstName,
         updateCity,
-        updateState,
         updateEmail,
         deleteUser
     })(Settings);

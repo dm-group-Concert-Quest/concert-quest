@@ -17,9 +17,9 @@ describe("Nav Component", () => {
     it("should render without crashing", () => {
         expect(
             shallow(
-            <Provider store={store}>
-                <Nav />
-            </Provider>).exists()).toBe(true);
+                <Provider store={store}>
+                    <Nav />
+                </Provider>).exists()).toBe(true);
     })
 })
 it("should render without crashing", () => {
@@ -29,9 +29,9 @@ describe("Register Component", () => {
     it("should render without crashing", () => {
         expect(
             shallow(
-            <Provider store={store}>
-                <Register />
-            </Provider>).exists()).toBe(true);
+                <Provider store={store}>
+                    <Register />
+                </Provider>).exists()).toBe(true);
     })
 })
 it("should render without crashing", () => {
@@ -41,8 +41,8 @@ describe("Settings Component", () => {
     it("should render without crashing", () => {
         expect(
             shallow(
-            <Provider store={store}>
-                <Settings />
-            </Provider>).exists()).toBe(true);
+                <Provider store={store}>
+                    <Settings />
+                </Provider>).exists()).toBe(true);
     })
 })

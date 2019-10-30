@@ -7,9 +7,7 @@ const initialState = {
     password: "",
     first_name: "",
     city: "",
-    state: "",
-    email: "",
-    loading: false
+    email: ""
 };
 
 //constants
@@ -21,7 +19,6 @@ const UPDATE_USERNAME = "UPDATE_USERNAME";
 const UPDATE_PASSWORD = "UPDATE_PASSWORD";
 const UPDATE_FIRST_NAME = "UPDATE_FIRST_NAME";
 const UPDATE_CITY = "UPDATE_CITY";
-const UPDATE_STATE = "UPDATE_STATE";
 const UPDATE_EMAIL = "UPDATE_EMAIL";
 const DELETE_USER = "DELETE_USER";
 
@@ -82,13 +79,6 @@ export function updateCity(city) {
     };
 };
 
-export function updateState(state) {
-    return {
-        type: UPDATE_STATE,
-        payload: axios.put("/auth/settings/state", state)
-    };
-};
-
 export function updateEmail(email) {
     return {
         type: UPDATE_EMAIL,
@@ -107,11 +97,6 @@ export function deleteUser() {
 export default function reducer(state = initialState, action) {
     const { type, payload } = action;
     switch (type) {
-        case `${GET_SESSION}_PENDING`:
-            return {
-                ...state,
-                loading: true
-            };
         case `${GET_SESSION}_FULFILLED`:
             return {
                 ...state,
@@ -120,14 +105,7 @@ export default function reducer(state = initialState, action) {
                 password: payload.data.password,
                 first_name: payload.data.first_name,
                 city: payload.data.city,
-                state: payload.data.state,
-                email: payload.data.email,
-                loading: false
-            };
-        case `${REGISTER_USER}_PENDING`:
-            return {
-                ...state,
-                loading: true
+                email: payload.data.email
             };
         case `${REGISTER_USER}_FULFILLED`:
             return {
@@ -137,14 +115,7 @@ export default function reducer(state = initialState, action) {
                 password: payload.data.password,
                 first_name: payload.data.first_name,
                 city: payload.data.city,
-                state: payload.data.state,
-                email: payload.data.email,
-                loading: false
-            };
-        case `${LOGIN_USER}_PENDING`:
-            return {
-                ...state,
-                loading: true
+                email: payload.data.email
             };
         case `${LOGIN_USER}_FULFILLED`:
             return {
@@ -154,14 +125,7 @@ export default function reducer(state = initialState, action) {
                 password: payload.data.password,
                 first_name: payload.data.first_name,
                 city: payload.data.city,
-                state: payload.data.state,
-                email: payload.data.email,
-                loading: false
-            };
-        case `${LOGOUT_USER}_PENDING`:
-            return {
-                ...state,
-                loading: true
+                email: payload.data.email
             };
         case `${LOGOUT_USER}_FULFILLED`:
             return {
@@ -171,75 +135,32 @@ export default function reducer(state = initialState, action) {
                 first_name: "",
                 password: "",
                 city: "",
-                state: "",
-                email: "",
-                loading: false
-            };
-        case `${UPDATE_USERNAME}_PENDING`:
-            return {
-                ...state,
-                loading: true
+                email: ""
             };
         case `${UPDATE_USERNAME}_FULFILLED`:
             return {
                 ...state,
-                username: payload.data.username,
-                loading: false
-            };
-        case `${UPDATE_PASSWORD}_PENDING`:
-            return {
-                ...state,
-                loading: true,
+                username: payload.data.username
             };
         case `${UPDATE_PASSWORD}_FULFILLED`:
             return {
                 ...state,
-                password: payload.data.password,
-                loading: false
-            };
-        case `${UPDATE_FIRST_NAME}_PENDING`:
-            return {
-                ...state,
-                loading: true
+                password: payload.data.password
             };
         case `${UPDATE_FIRST_NAME}_FULFILLED`:
             return {
                 ...state,
-                first_name: payload.data.first_name,
-                loading: false
-            };
-        case `${UPDATE_CITY}_PENDING`:
-            return {
-                ...state,
-                loading: true
+                first_name: payload.data.first_name
             };
         case `${UPDATE_CITY}_FULFILLED`:
             return {
                 ...state,
-                city: payload.data.city,
-                loading: false
-            };
-        case `${UPDATE_STATE}_PENDING`:
-            return {
-                ...state,
-                loading: true
-            };
-        case `${UPDATE_STATE}_FULFILLED`:
-            return {
-                ...state,
-                state: payload.data.state,
-                loading: false
-            };
-        case `${UPDATE_EMAIL}_PENDING`:
-            return {
-                ...state,
-                loading: true
+                city: payload.data.city
             };
         case `${UPDATE_EMAIL}_FULFILLED`:
             return {
                 ...state,
-                email: payload.data.email,
-                loading: false
+                email: payload.data.email
             };
         case `${DELETE_USER}_FULFILLED`:
             return {
@@ -249,10 +170,9 @@ export default function reducer(state = initialState, action) {
                 password: "",
                 first_name: "",
                 city: "",
-                state: "",
                 email: ""
             }
-            default: 
-                return state;
+        default:
+            return state;
     };
 };
