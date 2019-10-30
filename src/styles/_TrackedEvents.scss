@@ -14,6 +14,7 @@
     border-style: inset;
     border-width: thin;
     padding: 30px;
+    // margin-left: 100px;
 }
 
 #tracked-events-container::-webkit-scrollbar {
@@ -102,6 +103,13 @@
 }
 
 @media(max-width: 701px) {
+    .trackedEventsDiv {
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     .event-ticket-button{
         height: 40px;
         width: 80px;
