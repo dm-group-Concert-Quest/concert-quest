@@ -48,32 +48,38 @@ export default function About() {
         </div>
 
         <div className="madelynDiv">
-          <img
-            className="madelynAboutPic"
-            align="top"
-            src={yeet}
-            alt="madelynProfPic"
-          />
-          <h1 className="madelynTitle">Madelyn</h1>
-          <h3 className='member-title'>Style Slinger</h3>
-          <p className="madelynParagraph">
-          </p>
-          <div className="linksDiv">
-            <a href="https://github.com/madelynarsenault">
-              <img className="githubIcon" src={githubIcon} alt="github" />
-            </a>
-            <a href="https://madelyna.com">
-              <img
-                className="portfolioIcon"
-                src={portfolioIcon}
-                alt="portfolio"
-              />
-            </a>
-            <a href="https://www.linkedin.com/in/madelyna/">
-              <img className="linkedinIcon" src={linkedinIcon} alt="linkedin" />
-            </a>
-          </div>
-        </div>
+                        <img
+                            className="madelynAboutPic"
+                            align="top"
+                            src={yeet}
+                            alt="madelynProfPic"
+                        />
+                        <h1 className="madelynTitle">Madelyn</h1>
+                        <p className="madelynParagraph">
+                            {" "}
+                            In my free time I highly enjoy playing video games, watching twitch, listening to music, painting & playing with my dog. Growing up I always had a large fascination with computers and the way they worked.
+                            Coding was always a dream of mine but recently has become my reality. Frontend and backend, there is no quest I am not willing to take on.
+                        </p>
+                        <div className="linksDiv">
+                            <a href="https://github.com/madelynarsenault">
+                                <img className="githubIcon" src={githubIcon} alt="github" />
+                            </a>
+                            <a href="https://madelyna.com">
+                                <img
+                                    className="portfolioIcon"
+                                    src={portfolioIcon}
+                                    alt="portfolio"
+                                />
+                            </a>
+                            <a href="https://www.linkedin.com/in/madelyna/">
+                                <img
+                                    className="linkedinIcon"
+                                    src={linkedinIcon}
+                                    alt="linkedin"
+                                />
+                            </a>
+                        </div>
+                    </div>
         <div className="treyDiv">
           <img className="treyAboutPic" src={treySwag} alt="treyProfPic" />
           <h1 className="treyTitle">Trey</h1>
@@ -105,3 +111,4 @@ export default function About() {
     </section>
   );
 };
+`                                     `
