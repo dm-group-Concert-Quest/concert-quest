@@ -1,4 +1,4 @@
-import {updateFirstName, updateCity, updateState, deleteUser} from '../redux/reducers/userReducer';
+import { updateFirstName, updateCity, updateState, deleteUser } from '../redux/reducers/userReducer';
 
 //unit tests
 test('Test to see type of updateFirstName == "UPDATE_FIRST_NAME" ', () => {

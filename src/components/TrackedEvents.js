@@ -10,9 +10,9 @@ class TrackedEvents extends Component {
         this.state = {
             myEvents: [],
             myArtists: []
-        }
-    }
-
+        };
+    };
+    
     componentDidMount() {
         this.props.getTrackedArtist();
         const { REACT_APP_BAND_APP_KEY } = process.env;
@@ -27,9 +27,9 @@ class TrackedEvents extends Component {
                     let newArr = [...this.state.myEvents, result]
                     this.setState({
                         myEvents: newArr
-                    })
-                })
-        })
+                    });
+                });
+        });
 
         this.props.tracked_artist.map(artist => {
             axios
@@ -41,8 +41,8 @@ class TrackedEvents extends Component {
                     artistArray.push(response.data);
                     this.setState({ myArtists: artistArray });
                 });
-        })
-    }
+        });
+    };
 
     render() {
         const { myArtists } = this.state;
@@ -72,7 +72,6 @@ class TrackedEvents extends Component {
                                     </div>
                                     <a className="trackedEventsButton" target="_blank" rel="noopener noreferrer" href={event.offers[0].url}><button className="event-ticket-button">Tickets</button></a>
                                 </div>
-
                             )
                         })
                         :
@@ -86,14 +85,14 @@ class TrackedEvents extends Component {
                 {myEventsMapped}
             </div>
         );
-    }
-}
+    };
+};
 
 const mapStateToProps = reduxState => {
     return {
         tracked_artist: reduxState.postReducer.tracked_artist,
         city: reduxState.userReducer.city
-    }
-}
+    };
+};
 
 export default connect(mapStateToProps, { getTrackedArtist })(TrackedEvents);

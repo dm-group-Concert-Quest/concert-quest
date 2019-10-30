@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { registerUser } from '../redux/reducers/userReducer';
 import { connect } from 'react-redux';
 
@@ -13,20 +13,21 @@ class Register extends Component {
             email: '',
             city: '',
             myState: ''
-        }
-    }
+        };
+    };
+
     handleInput = e => {
         this.setState({ [e.target.name]: e.target.value });
-    }
+    };
 
     handleSubmit = e => {
         e.preventDefault();
         const { username, password, passwordAgain, first_name, email, city, myState } = this.state;
         const str = city;
         let formattedCity = str.toLowerCase()
-                .split(' ')
-                .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
-                .join(' ');
+            .split(' ')
+            .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
+            .join(' ');
 
         if (password === passwordAgain) {
             this.props.registerUser({ username, password, first_name, email, city: formattedCity, myState });
@@ -39,9 +40,8 @@ class Register extends Component {
                 city: '',
                 myState: ''
             })
-        }
-
-    }
+        };
+    };
 
     render() {
         return (
@@ -58,13 +58,13 @@ class Register extends Component {
                 </form>
             </div>
         )
-    } Í
-}
+    };
+};
 
 const mapStateToProps = reduxState => {
     return {
         user_id: reduxState.userReducer.user_id
-    }
-}
+    };
+};
 
 export default connect(mapStateToProps, { registerUser })(Register);
