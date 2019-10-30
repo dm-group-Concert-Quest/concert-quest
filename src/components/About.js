@@ -21,7 +21,7 @@ export default function About() {
             alt="noelProfPic"
           />
           <h1 className="noelTitle">Noel</h1>
-          <h3 className='member-title'>Gatekeeper Of API</h3>
+          <h3 className='member-title'>Redux Renegade</h3>
           <p className="noelParagraph">
             When not working on a project or not learning another library/framework,
             I like to listen to music, watch YouTube videos of anything that looks
