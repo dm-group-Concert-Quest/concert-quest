@@ -73,6 +73,13 @@
     color: color(cool-white);
 }
 
+.member-title {
+    color: color(light-blue);
+    font-family: $mont;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
 @media(max-width:768px){
     .teamContainer{
         display:flex;
