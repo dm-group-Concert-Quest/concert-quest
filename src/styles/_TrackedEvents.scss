@@ -2,6 +2,7 @@
 
 #tracked-events-container {
     display: flex;
+    width: 70vw;
     flex-direction: column;
     overflow-y: scroll;
     height: 65vh;
@@ -13,25 +14,6 @@
     border-style: inset;
     border-width: thin;
     padding: 30px;
-
-    .trackedEventsDiv {
-        width: 60vw;
-        height: 200px;
-        display: flex;
-        flex-direction: row;
-        border-radius: 5px;
-        background-color: color(cool-black);
-        font-size: 1.1rem;
-        border-color:color(dark-blue);
-        border-width: 1px;
-        border-style: solid;
-        border-radius: 11.8px;
-        text-align: center;
-        font-family: 'Montserrat', sans-serif;
-        justify-content: space-evenly;
-        align-items: center;
-        margin-bottom: 20px;
-    }
 }
 
 #tracked-events-container::-webkit-scrollbar {
@@ -45,8 +27,8 @@
 }
 
 .trackedEventsArtistPic {
-    width: 12vw;
-    height:16vh;
+    max-width: 200px;
+    max-height: 160px;
     margin-top:8px;
     border-radius: 5px;
     margin-bottom: 5px;
@@ -76,17 +58,9 @@
 .trackedEventsVenueName, .trackedEventsCity, .trackedEventsDate{
     margin-top: 23px;
 }
-.event-ticket-button {
-    width: 80px;
-    border-color: color(dark-blue);
-    background: color(dark-gray);
-    color: color(cool-white);
-    font-size: 1.5ch;
-    outline: none;
-    border-radius: 7px;
-}
-.ProfileTrackedBandsDiv {
-    height: 100vh;
+
+.ProfileTrackedBandsDiv{
+
     display: flex;
 }
 .trackedEventsTitle {
@@ -96,12 +70,46 @@
     left: 20vw;
 }
 
-.myEventsMapped {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 100px;
+@media(min-width: 700px) {
+    .trackedEventsDiv {
+        height: 200px;
+        width: 70vw;
+        display: flex;
+        flex-direction: row;
+        border-radius: 5px;
+        background-color: color(cool-black);
+        font-size: 1.1rem;
+        border-color:color(dark-blue);
+        border-width: 1px;
+        border-style: solid;
+        border-radius: 11.8px;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .event-ticket-button{
+        height: 30px;
+        width: 70px;
+        border-color: color(dark-blue);
+        background: color(dark-gray);
+        color: color(cool-white);
+        font-size: 1.2ch;
+        outline: none;
+        border-radius: 20px;
+    }
+}
+
+@media(max-width: 701px) {
+    .event-ticket-button{
+        height: 40px;
+        width: 80px;
+        border-color: color(dark-blue);
+        background: color(dark-gray);
+        color: color(cool-white);
+        font-size: 2ch;
+        outline: none;
+        border-radius: 20px;
+    }
 }

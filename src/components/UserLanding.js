@@ -6,21 +6,15 @@ import Search from './Search';
 import TrackedBands from "./TrackedBands";
 
 class UserLanding extends React.Component {
-    constructor() {
-        super()
-        this.state = {
-
-        }
-    }
     render() {
         if (!this.props.user_id) {
             return <Redirect to='/' />
         }
 
-
         return (
             <div id='profile-bg'>
                 <div id='user-profile'>
+                    <h1 className='ul-title'>Home</h1>
                     <div className='profile-lists'>
                         <Search className='profile-list' />
                         <TrackedBands />

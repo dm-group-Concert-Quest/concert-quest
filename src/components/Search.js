@@ -56,7 +56,7 @@ export default class Search extends Component {
                 if (this.state.city !== '' && this.state.artist.name !== undefined) {
                     alert(`${this.state.artist.name} has no upcoming shows in ${this.state.city}`)
                 } else if (!this.state.artist.name) {
-                    alert(`${this.state.artistSearch} does not exist in the`)
+                    alert(`${this.state.artistSearch} does not exist in the database.`)
                 } else {
                     alert(`${this.state.artistSearch} has no upcoming shows.`)
                 }
