@@ -22,18 +22,18 @@ export default function About() {
           />
           <h1 className="noelTitle">Noel</h1>
           <p className="noelParagraph">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae ab illo inventore veritatis et quasi architecto beatae vitae
-            dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-            eos qui ratione voluptatem sequi nesciunt.
+            When not working on a project or not learning another library/framework,
+            I like to listen to music, watch YouTube videos of anything that looks
+            interesting, play video games, and watch the latest movie showing in theaters.
+            Creating user-friendly, fully functional applications users enjoy makes me love
+            what I do and motivates me to be better. Please click on the links to learn more
+            about myself and feel free to reach out to me anytime!
           </p>
           <div className="linksDiv">
             <a href="https://github.com/noelncontreras">
               <img className="githubIcon" src={githubIcon} alt="github" />
             </a>
-            <a href="https://madelyna.com">
+            <a href="https://noelncontrerasportfolio.space">
               <img
                 className="portfolioIcon"
                 src={portfolioIcon}
