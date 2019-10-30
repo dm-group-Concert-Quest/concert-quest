@@ -55,6 +55,7 @@ export default function About() {
                             alt="madelynProfPic"
                         />
                         <h1 className="madelynTitle">Madelyn</h1>
+                        <h3 className='member-title'>Style Slinger</h3>
                         <p className="madelynParagraph">
                             {" "}
                             In my free time I highly enjoy playing video games, watching twitch, listening to music, painting & playing with my dog. Growing up I always had a large fascination with computers and the way they worked.
@@ -111,4 +112,3 @@ export default function About() {
     </section>
   );
 };
-`                                     `

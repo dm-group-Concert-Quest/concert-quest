@@ -89,14 +89,14 @@
     width: 100vw;
     height: 200px;
     top: -120px;
-    background-color: color(light-gray);
+    background-color: color(dark-gray);
     z-index: 1;
     font-family: $mont;
     font-size: large;
 
     .nav-menu-item {
         text-decoration: none;
-        color: color(cool-black)
+        color: color(cool-white);
     }
 }
 
