@@ -12,12 +12,11 @@ class Nav extends Component {
         this.state = {
             boxStatus: 'none',
             menuStatus: 'none'
-        }
-    }
+        };
+    };
 
     componentDidMount() {
         this.props.getSession();
-        // this.setState({boxStatus: 'none'})
     };
 
     componentWillMount() {
@@ -35,13 +34,13 @@ class Nav extends Component {
     };
 
     closeOnButtonClick = () => {
-        this.setState({boxStatus: 'none'})
-    }
+        this.setState({ boxStatus: 'none' })
+    };
 
     toggle = () => {
         if (this.state.boxStatus === 'closed' || 'none') {
             this.setState({ boxStatus: 'open' });
-        } else if(this.state.boxStatus === 'open') {
+        } else if (this.state.boxStatus === 'open') {
             this.setState({ boxStatus: 'closed' });
         };
     };
@@ -51,8 +50,8 @@ class Nav extends Component {
             this.setState({ menuStatus: 'show-menu' });
         } else {
             this.setState({ menuStatus: 'hide-menu' });
-        }
-    }
+        };
+    };
 
     handleLogout = () => {
         this.props.logoutUser();
@@ -65,7 +64,7 @@ class Nav extends Component {
         return (
             <>
                 <nav className="Nav-nav-container">
-                <Link to="/" className="Nav-CQ"><h1>CQ</h1></Link>
+                    <Link to="/" className="Nav-CQ"><h1>CQ</h1></Link>
                     {!user_id ?
                         <>
                             <ul className="Nav-nav-links-logout hidden-by-default">
@@ -101,18 +100,18 @@ class Nav extends Component {
                 <div ref={node => this.node = node}>
                     <Login
                         boxStatus={this.state.boxStatus}
-                        toggle={this.toggle} 
-                        closeOnButtonClick={this.closeOnButtonClick}/>
+                        toggle={this.toggle}
+                        closeOnButtonClick={this.closeOnButtonClick} />
                 </div>
             </>
         )
-    }
-}
+    };
+};
 
 const mapStateToProps = reduxState => {
     return {
         user_id: reduxState.userReducer.user_id
-    }
-}
+    };
+};
 
 export default withRouter(connect(mapStateToProps, { getSession, logoutUser })(Nav));

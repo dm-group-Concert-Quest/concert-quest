@@ -6,7 +6,7 @@ import githubIcon from "./images/githubIcon.png";
 import linkedinIcon from "./images/linkedinIcon.jpg";
 import portfolioIcon from "./images/portfolioIcon.png";
 
-function About() {
+export default function About() {
   return (
     <section>
       <div className="theTeamContainer">
@@ -114,6 +114,4 @@ function About() {
       </div>
     </section>
   );
-}
-
-export default About;
+};

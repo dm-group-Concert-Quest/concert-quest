@@ -1,6 +1,6 @@
 import React from 'react';
-import {create} from "react-test-renderer";
-import {logoutUser, updateUsername, updatePassword, updateEmail} from "../redux/reducers/userReducer";
+import { create } from "react-test-renderer";
+import { logoutUser, updateUsername, updatePassword, updateEmail } from "../redux/reducers/userReducer";
 import EventList from "../components/EventList";
 
 // unit tests :)

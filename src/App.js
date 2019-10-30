@@ -9,8 +9,8 @@ function App() {
     <div>
       <Nav />
       {routes}
-    </div> 
-    );
+    </div>
+  );
 }
 
 export default App;

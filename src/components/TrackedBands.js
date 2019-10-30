@@ -8,11 +8,11 @@ class TrackedBands extends React.Component {
         this.state = {
             artist: {}
         };
-    }
+    };
 
     componentDidMount() {
         this.props.getTrackedArtist();
-    }
+    };
 
     handleUntrackBand = (band_name) => {
         this.props.untrackArtist(band_name);
@@ -38,8 +38,8 @@ class TrackedBands extends React.Component {
                 </div>
             </div>
         )
-    }
-}
+    };
+};
 
 const mapStateToProps = reduxState => {
     return {

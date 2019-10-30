@@ -9,14 +9,14 @@ class EventList extends Component {
             events: [],
             artist: {}
         };
-    }
-    
+    };
+
     handleTrackBand = () => {
         const { image_url, name } = this.props.artist;
 
         const artistInfo = { band_name: name, image_url };
         this.props.trackArtist(artistInfo);
-    }
+    };
 
     render() {
         const { artist, events } = this.props;
@@ -59,13 +59,13 @@ class EventList extends Component {
                 </div>
             </div>
         )
-    }
-}
+    };
+};
 
 const mapStateToProps = reduxState => {
     return {
         user_id: reduxState.userReducer.user_id
-    }
+    };
 };
 
 export default connect(mapStateToProps, { trackArtist })(EventList);
