@@ -5,11 +5,6 @@
 * [Features](#features)
 * [Authors](#authors)
 
-# Concert Quest
-Group project by Madelyn, Noel, and Trey (DevMountain students).
-
-Concert Quest is a user-friendly concert searching website where concert-goers can search and track their favorite artist, find their favorite artist's shows in their city, and purchase tickets.
-
 ## Technologies
 In our project, we used the following technologies:
 
@@ -28,9 +23,9 @@ We also used BandsInTown API to gather artist data and their events based on the
 ## Setup
 To run this project, install it locally using npm:
 
-$ git clone - project clone url
-$ cd into project and open it in your code editor
-$ npm start/yarn start to open into your browser in localhost
+* $ git clone - project clone url
+* $ cd into project and open it in your code editor
+* $ npm start/yarn start to open into your browser in localhost
 
 ## Features
 * Search and Track your favorite bands/artists by location
@@ -40,14 +35,17 @@ $ npm start/yarn start to open into your browser in localhost
 * Dark Mode theme
 
 ## Authors
-###### Madelyn Arsenault
+##### Madelyn Arsenault
 
 * GitHub Link: https://github.com/madelynarsenault
+* LinkedIn Link: https://www.linkedin.com/in/madelyna/
 
-###### Trey Waller
+##### Trey Waller
 
 * GitHub Link: https://github.com/Tlwaller
+LinkedIn Link: https://www.linkedin.com/in/trey-waller-07a69a17a/
 
-###### Noel Contreras
+##### Noel Contreras
 
 * GitHub Link: https://github.com/noelncontreras
+* LinkedIn Link: https://www.linkedin.com/in/noelncontreras/
