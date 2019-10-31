@@ -1,3 +1,8 @@
+# Concert Quest
+Group project by Madelyn, Noel, and Trey (DevMountain students).
+
+Concert Quest is a user-friendly concert searching website where concert-goers can search and track their favorite artist, find their favorite artist's shows in their city, and purchase tickets.
+
 ## Table of Contents
 * [Concert Quest](#concert-quest)
 * [Technologies](#technologies)
@@ -5,10 +10,10 @@
 * [Features](#features)
 * [Authors](#authors)
 
-# Concert Quest
+<!-- # Concert Quest
 Group project by Madelyn, Noel, and Trey (DevMountain students).
 
-Concert Quest is a user-friendly concert searching website where concert-goers can search and track their favorite artist, find their favorite artist's shows in their city, and purchase tickets.
+Concert Quest is a user-friendly concert searching website where concert-goers can search and track their favorite artist, find their favorite artist's shows in their city, and purchase tickets. -->
 
 ## Technologies
 In our project, we used the following technologies:
