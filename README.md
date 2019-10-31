@@ -43,11 +43,14 @@ To run this project, install it locally using npm:
 ##### Madelyn Arsenault
 
 * GitHub Link: https://github.com/madelynarsenault
+* LinkedIn Link: https://www.linkedin.com/in/madelyna/
 
 ##### Trey Waller
 
 * GitHub Link: https://github.com/Tlwaller
+* LinkedIn Link: https://www.linkedin.com/in/trey-waller-07a69a17a/
 
 ##### Noel Contreras
 
 * GitHub Link: https://github.com/noelncontreras
+* LinkedIn Link: https://www.linkedin.com/in/noelncontreras/
