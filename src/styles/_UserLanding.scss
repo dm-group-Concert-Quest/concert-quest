@@ -6,6 +6,7 @@
     justify-content: center;
     height: 96.8vh;
     background-color: color(cool-black);
+    margin-top: -20px;
 
     #user-profile {
         display: flex;
@@ -21,7 +22,8 @@
             font-size: 11ch;
             color: color(cool-white);
             text-align: center;
-            margin-bottom: 50px;
+            margin-top: 20px;
+            margin-bottom: 50px ;
         }
 
         .profile-title {
@@ -77,21 +79,15 @@
     }
 }
 
-@media(min-width: 985px) {
+@media(min-width: 1440px) {
     .profile-lists {
         flex-direction: row;
     }
 }
 
-@media(max-width: 985px) {
-    #profile-bg {
-        padding-bottom: 300px;
-        #user-profile {
-            padding-top: 300px;
-            .profile-lists {
-                flex-direction: column;
-            }
-        }
+@media(max-width: 1439px) {
+    .profile-lists {
+        flex-direction: column;
     }
 }
 
@@ -99,10 +95,8 @@
     #user-profile {
         width: 100vw;
 
-        .profile-title {
-            width: 100%;
-            text-align: center;
-            font-size: 88px;
+        .ul-title {
+            padding-top: 200px;
         }
     }
 }
@@ -120,7 +114,7 @@
 }
 
 @media(max-width: 375px) {
-    .profile-title {
+    .ul-title {
         padding-top: 70px;
     }
 }

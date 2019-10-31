@@ -9,6 +9,7 @@ const postController = require("./Controller/postController");
 
 const app = express();
 app.use(express.json());
+app.use( express.static( `${__dirname}/../build` ) );
 
 massive(process.env.CONNECTION_STRING).then(dbInstance => {
     app.set('db', dbInstance);
@@ -23,6 +24,7 @@ app.use(session({
         maxAge: 1000 * 60 * 60 * 24 * 3
     }
 }));
+
 
 //authentication endpoints
 app.get("/auth/user", authController.getUser);

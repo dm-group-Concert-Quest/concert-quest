@@ -9,8 +9,8 @@ class Login extends Component {
         this.state = {
             username: '',
             password: ''
-        };
-    };
+        }
+    }
 
     componentDidMount() {
         this.props.getSession();

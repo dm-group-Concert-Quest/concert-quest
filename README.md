@@ -1,3 +1,8 @@
+# Concert Quest
+Group project by Madelyn, Noel, and Trey (DevMountain students).
+
+Concert Quest is a user-friendly concert searching website where concert-goers can search and track their favorite artist, find their favorite artist's shows in their city, and purchase tickets.
+
 ## Table of Contents
 * [Concert Quest](#concert-quest)
 * [Technologies](#technologies)
@@ -43,7 +48,7 @@ To run this project, install it locally using npm:
 ##### Trey Waller
 
 * GitHub Link: https://github.com/Tlwaller
-LinkedIn Link: https://www.linkedin.com/in/trey-waller-07a69a17a/
+* LinkedIn Link: https://www.linkedin.com/in/trey-waller-07a69a17a/
 
 ##### Noel Contreras
 

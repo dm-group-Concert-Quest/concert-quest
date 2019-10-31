@@ -6,7 +6,7 @@ import "./styles/Main.scss";
 
 function App() {
   return (
-    <div>
+    <div id='app'>
       <Nav />
       {routes}
     </div>

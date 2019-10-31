@@ -4,16 +4,16 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: 100vw;
     height: 90vh;
     justify-content: space-around;
-    // margin-right: 10vw;
-    // margin-left: 10vw;
 
     #title-and-list-container {
         display: flex;
         text-align: center;
         flex-direction: column;
         align-items: center;
+
         #profile-title {
             display: flex;
             font-family: 'Poiret One', cursive;

@@ -2,7 +2,6 @@
 
 #tracked-events-container {
     display: flex;
-    width: 70vw;
     flex-direction: column;
     overflow-y: scroll;
     height: 65vh;
@@ -14,6 +13,8 @@
     border-style: inset;
     border-width: thin;
     padding: 30px;
+    min-width: 50vw;
+    // margin-left: 100px;
 }
 
 #tracked-events-container::-webkit-scrollbar {
@@ -33,6 +34,11 @@
     border-radius: 5px;
     margin-bottom: 5px;
 }
+.trackedEventsLineup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .event-lineup {
     width: 80%;
     text-align: center;
@@ -46,6 +52,7 @@
     max-width: 80%;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 .venueAndDateDiv {
     min-width: 40%;
@@ -72,7 +79,8 @@
 
 @media(min-width: 700px) {
     .trackedEventsDiv {
-        height: 200px;
+        height: auto;
+        padding-bottom: 5px;
         width: 70vw;
         display: flex;
         flex-direction: row;
@@ -102,6 +110,13 @@
 }
 
 @media(max-width: 701px) {
+    .trackedEventsDiv {
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     .event-ticket-button{
         height: 40px;
         width: 80px;
