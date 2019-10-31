@@ -1,6 +1,1647 @@
+.theTeamContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #262626;
+}
+
+.theTeam {
+  font-size: 16ch;
+  font-family: 'Poiret One', cursive;
+  color: #EBEDF3;
+}
+
 .teamContainer {
-  background-color: black;
+  background-color: #262626;
   height: 90ch;
-  width: 90ch;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.madelynAboutPic, .noelAboutPic, .treyAboutPic {
+  width: auto;
+  max-width: 60ch;
+  height: auto;
+  max-height: 40ch;
+  border-radius: 50%;
+  position: relative;
+}
+
+.madelynTitle, .treyTitle, .noelTitle {
+  color: #026AA7;
+  font-size: 5.5ch;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.linksDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 200px;
+}
+
+.noelParagraph, .madelynParagraph, .treyParagraph {
+  text-align: center;
+  width: 20vw;
+  line-height: 3ch;
+  font-size: 2.5ch;
+  font-family: 'Forum', cursive;
+}
+
+.githubIcon {
+  height: 40px;
+}
+
+.linkedinIcon {
+  height: 34px;
+  position: relative;
+  top: 5px;
+}
+
+.portfolioIcon {
+  height: 35px;
+  position: relative;
+  top: 3px;
+  -webkit-filter: invert(45%);
+          filter: invert(45%);
+}
+
+.noelDiv, .madelynDiv, .treyDiv {
+  position: relative;
+  top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #262626;
+  color: #EBEDF3;
+}
+
+.member-title {
+  color: #03A9F4;
+  font-family: "Montserrat";
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  .teamContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 90vw;
+    height: 60vh;
+    margin-left: 20px;
+  }
+  .theTeam {
+    width: 90vw;
+    position: relative;
+    text-align: center;
+    font-size: 13ch;
+  }
+  .noelParagraph, .madelynParagraph, .treyParagraph {
+    width: 90vw;
+  }
+  .madelynAboutPic, .noelAboutPic, .treyAboutPic {
+    position: relative;
+  }
+  .madelynDiv {
+    position: relative;
+    top: 50px;
+  }
+  .treyDiv {
+    position: relative;
+    margin-top: 80px;
+  }
+}
+
+#gl-bg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 195.6vh;
+  background-color: black;
+  margin-top: -100px;
+}
+
+#gl-bg #guest-landing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 185vh;
+  background-color: #262626;
+  padding-top: 100px;
+}
+
+#gl-bg #guest-landing .gl-welcome {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80vw;
+  height: 100vh;
+  background-color: #262626;
+}
+
+#gl-bg #guest-landing .gl-welcome #gl-title {
+  width: 100%;
+  text-align: center;
+  font-family: 'Modak', cursive;
+  color: #EBEDF3;
+}
+
+#gl-bg #guest-landing .gl-welcome .gl-banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 90%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Montserrat";
+  background-color: #3D4044;
+  color: #EBEDF3;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#gl-bg #guest-landing .gl-welcome .gl-banner figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#gl-bg #guest-landing .gl-welcome .gl-banner figure img {
+  padding-bottom: 10px;
+  max-width: 80%;
+  max-height: 25vh;
+}
+
+#gl-bg #guest-landing .gl-welcome .arrow {
+  margin-top: 60px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#gl-bg #guest-landing .gl-welcome .arrow span {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-bottom: 5px solid #03A9F4;
+  border-right: 5px solid #06A8FF;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin: -10px;
+  -webkit-animation: scroll_down 2s infinite;
+          animation: scroll_down 2s infinite;
+}
+
+#gl-bg #guest-landing .gl-welcome .arrow span:nth-child(2) {
+  -webkit-animation-delay: -0.2s;
+          animation-delay: -0.2s;
+}
+
+#gl-bg #guest-landing .gl-welcome .arrow span:nth-child(3) {
+  -webkit-animation-delay: -0.4s;
+          animation-delay: -0.4s;
+}
+
+@media (min-width: 660px) {
+  #gl-title {
+    font-size: 9em;
+  }
+  .gl-banner {
+    height: 250px;
+  }
+}
+
+@media (min-width: 768px) {
+  #gl-bg {
+    background-image: url("http://myeventnation.com/wp-content/uploads/2017/02/crowd-at-concert-2.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  #gl-bg #guest-landing {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 660px) {
+  #gl-title {
+    font-size: 5em;
+  }
+}
+
+@media (max-width: 768px) {
+  #guest-landing {
+    width: 100vw;
+  }
+}
+
+@-webkit-keyframes scroll_down {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotate(45deg) translate(-20px, -20px);
+            transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: rotate(45deg) translate(20px, 20px);
+            transform: rotate(45deg) translate(20px, 20px);
+  }
+}
+
+@keyframes scroll_down {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotate(45deg) translate(-20px, -20px);
+            transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: rotate(45deg) translate(20px, 20px);
+            transform: rotate(45deg) translate(20px, 20px);
+  }
+}
+
+.hidden-by-default {
+  display: none;
+}
+
+#login-container .open, #login-container .closed {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  position: fixed;
+  height: 300px;
+  border-radius: 7px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #03A9F4;
+  -webkit-box-shadow: -3px 3px 3px #3D4044;
+          box-shadow: -3px 3px 3px #3D4044;
+  background-color: #262626;
+  color: #EBEDF3;
+  z-index: 100;
+}
+
+#login-container .open #login-header, #login-container .closed #login-header {
+  font-family: "Montserrat";
+  font-size: 4ch;
+}
+
+#login-container .open .login-label, #login-container .closed .login-label {
+  font-family: "Montserrat";
+}
+
+#login-container .open .login-label .login-input, #login-container .closed .login-label .login-input {
+  height: 30px;
+  width: 100%;
+  border-radius: 5px;
+  font-size: large;
+  background-color: #3D4044;
+  border-color: #3D4044;
+  color: #EBEDF3;
+}
+
+#login-container .open .login-btn, #login-container .closed .login-btn {
+  height: 10%;
+  width: 20%;
+  border-radius: 5px;
+  background-color: #03A9F4;
+  color: #EBEDF3;
+  outline: none;
+}
+
+#login-container .open .login-btn:hover, #login-container .closed .login-btn:hover {
+  background-color: #026AA7;
+  cursor: pointer;
+}
+
+#login-container .open h4, #login-container .closed h4 {
+  font-family: "Montserrat";
+  text-align: center;
+}
+
+#login-container .open #login-register, #login-container .closed #login-register {
+  text-decoration: none;
+  color: #03A9F4;
+  cursor: pointer;
+  font-family: "Montserrat";
+}
+
+.open:after, .open:before {
+  bottom: 100%;
+  left: 50%;
+  border: solid;
+  content: " ";
+  position: absolute;
+}
+
+.open:after {
+  border-color: rgba(136, 183, 213, 0);
+  border-bottom-color: #262626;
+  border-width: 15px;
+  margin-left: -15px;
+}
+
+.open:before {
+  border-color: rgba(194, 225, 245, 0);
+  border-bottom-color: #03A9F4;
+  border-width: 21px;
+  margin-left: -21px;
+}
+
+@-webkit-keyframes slide_up {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide_up {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slide_down {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+}
+
+@keyframes slide_down {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+}
+
+@media (min-width: 625px) {
+  .open, .closed {
+    -webkit-animation: slide_up .7s 1;
+            animation: slide_up .7s 1;
+    width: 350px;
+    right: 100px;
+  }
+  .closed {
+    -webkit-animation: slide_down .7s forwards;
+            animation: slide_down .7s forwards;
+  }
+  .open, .closed {
+    margin-top: 85px;
+  }
+}
+
+@media (max-width: 625px) {
+  #login-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .open, .closed {
+    -webkit-animation: slide_up .7s 1;
+            animation: slide_up .7s 1;
+    width: 315px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-top: 155px;
+  }
+  .closed {
+    -webkit-animation: slide_down .7s forwards;
+            animation: slide_down .7s forwards;
+  }
+}
+
+#reg-bg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  background-color: black;
+  text-align: center;
+}
+
+#reg-bg .register-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: auto;
+  background-color: #262626;
+  color: #EBEDF3;
+  font-family: "Montserrat";
+}
+
+#reg-bg .register-form label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+#reg-bg .register-form #reg-title {
+  font-size: 7ch;
+  font-family: "Montserrat";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#reg-bg .register-form #reg-btn {
+  height: 40px;
+  width: 150px;
+  font-family: "Montserrat";
+  font-size: large;
+  background-color: #3D4044;
+  color: #EBEDF3;
+  border-color: #03A9F4;
+  border-radius: 20px;
+}
+
+#reg-bg .register-form .register-input {
+  background-color: #3D4044;
+  color: #EBEDF3;
+  border-color: #BDBDBD;
+  border-radius: 8px;
+  width: 150px;
+  height: 15px;
+}
+
+@media (min-width: 768px) {
+  #reg-bg {
+    background-image: url("http://myeventnation.com/wp-content/uploads/2017/02/crowd-at-concert-2.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  #reg-bg #register-form {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 768px) {
+  #register-form {
+    width: 100vw;
+  }
+}
+
+.Settings-main-container {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #262626;
+}
+
+.Settings-main-container .Settings-settings-title {
+  width: 100vw;
+  height: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Poiret One', cursive;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 8.5rem;
+  color: #EBEDF3;
+}
+
+.Settings-main-container .Settings-input-fields {
+  width: 60%;
+  height: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #262626;
+  border-width: 6px;
+  border-color: #026AA7;
+  border-style: solid;
+  border-radius: 60px;
+  margin-top: 20px;
+}
+
+.Settings-main-container .Settings-input-fields .Settings-input-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #EBEDF3;
+}
+
+.setting-titles {
+  font-family: "Montserrat";
+  font-size: 4ch;
+  color: #EBEDF3;
+}
+
+.setting-credentials {
+  font-family: "Montserrat";
+}
+
+.settings-text-input-fields {
+  background-color: #3D4044;
+  color: #EBEDF3;
+  border-color: #BDBDBD;
+  border-radius: 5px;
+  width: 150px;
+  height: 20px;
+  font-size: 1.5ch;
+}
+
+.settings-editButton, .event-list-container .events-list .event-container .event-ticket-box .event-ticket-button, .event-list-container .events-list .event-container .event-ticket-box .trackArtistButton, .settings-deleteButton {
+  height: 25px;
+  width: 70px;
+  margin-top: 7px;
+  border-radius: 15px;
+  border-width: 1px;
+  border-color: #026AA7;
+  background-color: #3D4044;
+  border-color: #03A9F4;
+  color: #EBEDF3;
+  font-family: "Montserrat";
+  font-size: 1.7ch;
+  outline: none;
+}
+
+@media (max-width: 450px) {
+  .main-settings-title {
+    font-size: .76ch;
+  }
+}
+
+.Nav-nav-container {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 10ch;
+  background: #026AA7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #EBEDF3;
+  z-index: 2;
+}
+
+.Nav-nav-container .Nav-CQ, .Nav-nav-container .Nav-nav-title-logout {
+  width: 5ch;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 5rem;
+  font-family: 'Modak', cursive;
+  text-decoration: none;
+}
+
+.Nav-nav-container .Nav-CQ h1, .Nav-nav-container .Nav-nav-title-logout h1 {
+  color: #EBEDF3;
+}
+
+.Nav-nav-container .Nav-link {
+  text-decoration: none;
+  color: #EBEDF3;
+  cursor: pointer;
+  font-family: "Montserrat";
+}
+
+.Nav-nav-container .Nav-link:hover {
+  text-decoration: underline;
+}
+
+.Nav-nav-container .Nav-nav-title-logout h1 {
+  color: #EBEDF3;
+}
+
+.Nav-nav-container .Nav-nav-links-logout {
+  width: 40ch;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
+.Nav-nav-container .Nav-nav-links-logout h2 {
+  color: #EBEDF3;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.Nav-nav-container .Nav-nav-title-login {
+  width: 5ch;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 5rem;
+  font-family: 'Modak', cursive;
+  text-decoration: none;
+}
+
+.Nav-nav-container .Nav-nav-title-login h1 {
+  color: #EBEDF3;
+}
+
+.Nav-nav-container .Nav-nav-links-login {
+  width: 100ch;
+  height: 100%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
+.Nav-nav-container .Nav-nav-links-login h2 {
+  color: #EBEDF3;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.show-menu, .hide-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  width: 100vw;
+  height: 200px;
+  top: -120px;
+  background-color: #3D4044;
+  z-index: 1;
+  font-family: "Montserrat";
+  font-size: large;
+}
+
+.show-menu .nav-menu-item, .hide-menu .nav-menu-item {
+  text-decoration: none;
+  color: #EBEDF3;
+}
+
+.show-menu {
+  -webkit-animation: slide_menu_down forwards .7s 1;
+          animation: slide_menu_down forwards .7s 1;
+}
+
+.hide-menu {
+  -webkit-animation: slide_menu_up forwards .7s 1;
+          animation: slide_menu_up forwards .7s 1;
+}
+
+@-webkit-keyframes slide_menu_down {
+  0% {
+  }
+  100% {
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+  }
+}
+
+@keyframes slide_menu_down {
+  0% {
+  }
+  100% {
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+  }
+}
+
+@-webkit-keyframes slide_menu_up {
+  0% {
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+  }
+}
+
+@keyframes slide_menu_up {
+  0% {
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+  }
+}
+
+@media (max-width: 767px) {
+  .nav-menu-btn {
+    display: block;
+    cursor: pointer;
+    height: 65px;
+    width: 80px;
+  }
+  .show-menu {
+    position: fixed;
+  }
+  .Nav-nav-links-login {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .show-menu, .hide-menu {
+    display: none;
+  }
+  .Nav-nav-links-login {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+#profile-bg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 96.8vh;
+  background-color: #262626;
+  margin-top: -20px;
+}
+
+#profile-bg #user-profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #262626;
+  height: auto;
+  padding-bottom: 50px;
+}
+
+#profile-bg #user-profile .ul-title {
+  font-family: 'Poiret One', cursive;
+  font-size: 11ch;
+  color: #EBEDF3;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+#profile-bg #user-profile .profile-title {
+  font-family: 'Poiret One', cursive;
+}
+
+#profile-bg #user-profile .profile-lists {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#profile-bg #user-profile .profile-lists .profile-list-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 500px;
+  background-color: #262626;
+  font-family: "Montserrat";
+  font-size: 2.7ch;
+}
+
+#profile-bg #user-profile .profile-lists .profile-list {
+  border-style: inset;
+  border-width: 2px;
+  border-radius: 7px;
+  height: 450px;
+  background-color: #EBEDF3;
+  overflow-y: auto;
+}
+
+@media (min-width: 768px) {
+  #profile-bg {
+    height: 100%;
+    background-image: url("http://myeventnation.com/wp-content/uploads/2017/02/crowd-at-concert-2.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  #profile-bg #user-profile {
+    width: 80vw;
+  }
+  #profile-bg #user-profile .profile-title {
+    font-size: 120px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .profile-lists {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media (max-width: 1439px) {
+  .profile-lists {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  #user-profile {
+    width: 100vw;
+  }
+  #user-profile .ul-title {
+    padding-top: 200px;
+  }
+}
+
+@media (max-width: 320px) {
+  .profile-list {
+    width: 270px;
+  }
+}
+
+@media (min-width: 321px) {
+  .profile-list {
+    width: 350px;
+  }
+}
+
+@media (max-width: 375px) {
+  .ul-title {
+    padding-top: 70px;
+  }
+}
+
+.event-list-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.event-list-container .events-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 70vh;
+  width: 50vw;
+  min-width: 30vw;
+  background-color: #3D4044;
+  border-style: inset;
+  border-width: 2px;
+  border-radius: 5px;
+  border-color: #3D4044;
+  overflow-y: auto;
+  overflow-x: none;
+  margin-bottom: 15px;
+  scroll-behavior: smooth;
+}
+
+.event-list-container .events-list .event-container {
+  width: 100%;
+  height: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-radius: 5px;
+  background-color: white;
+  margin-left: 18px;
+  margin-right: 18px;
+  margin-bottom: 18px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: 1.1rem;
+  border-color: #026AA7;
+  background-color: #262626;
+  color: #EBEDF3;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 11.8px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.event-list-container .events-list .event-container .event-header {
+  max-width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.event-list-container .events-list .event-container .event-header .event-lineup {
+  max-width: 90%;
+  margin-top: 10px;
+}
+
+.event-list-container .events-list .event-container .event-image {
+  max-width: 63%;
+  border-radius: 10px;
+}
+
+.event-list-container .events-list .event-container .event-venue-info, .event-list-container .events-list .event-container .event-ticket-box {
+  width: 75%;
+  height: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 15px;
+  font-size: 1rem;
+  position: relative;
+}
+
+.event-list-container .events-list .event-container .event-ticket-box {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  border: none;
+  background-color: transparent;
+}
+
+.event-list-container .events-list .event-container .event-ticket-box .event-ticket-button, .event-list-container .events-list .event-container .event-ticket-box .trackArtistButton {
+  width: 90px;
+  height: 30px;
+  border-color: #026AA7;
+  background-color: #3D4044;
+  color: #EBEDF3;
+  font-size: 1.2ch;
+  outline: none;
+}
+
+.trackArtistButton {
+  width: 80px;
+  height: 21px;
+  border-color: #026AA7;
+  background-color: #262626;
+  font-size: 1ch;
+  outline: none;
+  border-radius: 7px;
+}
+
+.events-list::-webkit-scrollbar {
+  background-color: #026AA7;
+  border-radius: 10px;
+}
+
+.events-list::-webkit-scrollbar-thumb {
+  background-color: #BDBDBD;
+  border-radius: 10px;
+}
+
+@media (min-width: 1440px) {
+  .event-container {
+    width: 245px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .event-container {
+    height: 150px;
+    width: 145px;
+  }
+}
+
+@media (max-width: 390px) {
+  .event-image {
+    width: 100%;
+  }
+}
+
+.search-form {
+  text-align: center;
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #EBEDF3;
+}
+
+.search-form .search-title {
+  font-family: "Montserrat";
+  font-size: xx-large;
+  margin-bottom: 20px;
+}
+
+.search-form .search-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Montserrat";
+  font-size: large;
+}
+
+.search-form .search-label .search-input {
+  width: 300px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: #3D4044;
+  border-color: #3D4044;
+  color: #EBEDF3;
+}
+
+.search-form .search-buttons-box {
+  width: 200px;
+  height: 4vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.search-form .search-buttons-box .search-btn {
+  background-color: #3D4044;
+  color: #EBEDF3;
+  border-color: #026AA7;
+  border-radius: 20px;
+  height: 30px;
+  width: 70px;
+}
+
+#tracked-bands {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-height: 67vh;
+  min-height: 30vh;
+  width: 150px;
+  overflow-y: scroll;
+  padding: 10px;
+  border-style: solid;
+  border-color: #03A9F4;
+  border-radius: 10px;
+  border-width: 3px;
+  scroll-behavior: smooth;
+  margin-top: 60px;
+}
+
+#tracked-bands .tracked-band {
+  width: 100%;
+  height: 15vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin-bottom: 10px;
+  font-family: "Montserrat";
+  color: #EBEDF3;
+}
+
+#tracked-bands .tracked-band .tb-btn {
+  background-color: #3D4044;
+  color: #EBEDF3;
+  border-radius: 20px;
+  height: 30px;
+  width: 100px;
+  font-size: medium;
+  border-color: #03A9F4;
+}
+
+#tracked-bands .tracked-band .tb-pic {
+  max-width: 80px;
+}
+
+.tb-div {
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: "Montserrat";
+}
+
+#tracked-bands::-webkit-scrollbar {
+  background-color: #026AA7;
+  border-radius: 10px;
+}
+
+#tracked-bands::-webkit-scrollbar-thumb {
+  background-color: #BDBDBD;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  #tracked-bands {
+    display: none;
+  }
+  .tb-div h1 {
+    display: none;
+  }
+  #tracked-events-container {
+    width: 70vw;
+  }
+}
+
+@media (max-width: 767px) {
+  #tracked-bands {
+    display: none;
+  }
+  .tb-div h1 {
+    display: none;
+  }
+  #tracked-events-container {
+    width: 90vw;
+  }
+}
+
+#tracked-events-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow-y: scroll;
+  height: 65vh;
+  color: #EBEDF3;
+  background-color: #3D4044;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+  border-color: #3D4044;
+  border-style: inset;
+  border-width: thin;
+  padding: 30px;
+  min-width: 50vw;
+}
+
+#tracked-events-container::-webkit-scrollbar {
+  background-color: #026AA7;
+  border-radius: 10px;
+}
+
+#tracked-events-container::-webkit-scrollbar-thumb {
+  background-color: #BDBDBD;
+  border-radius: 10px;
+}
+
+.trackedEventsArtistPic {
+  max-width: 200px;
+  max-height: 160px;
+  margin-top: 8px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.trackedEventsLineup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.event-lineup {
+  width: 80%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+}
+
+.picAndLineupDiv {
+  min-width: 30%;
+  max-width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.venueAndDateDiv {
+  min-width: 40%;
+  max-width: 45%;
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.trackedEventsVenueName, .trackedEventsCity, .trackedEventsDate {
+  margin-top: 23px;
+}
+
+.ProfileTrackedBandsDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.trackedEventsTitle {
+  font-size: 6ch;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  left: 20vw;
+}
+
+@media (min-width: 700px) {
+  .trackedEventsDiv {
+    height: auto;
+    padding-bottom: 5px;
+    width: 70vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    border-radius: 5px;
+    background-color: #262626;
+    font-size: 1.1rem;
+    border-color: #026AA7;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 11.8px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 20px;
+  }
+  .event-ticket-button, .trackArtistButton {
+    height: 30px;
+    width: 70px;
+    border-color: #026AA7;
+    background: #3D4044;
+    color: #EBEDF3;
+    font-size: 1.2ch;
+    outline: none;
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 701px) {
+  .trackedEventsDiv {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .event-ticket-button, .trackArtistButton {
+    height: 40px;
+    width: 80px;
+    border-color: #026AA7;
+    background: #3D4044;
+    color: #EBEDF3;
+    font-size: 2ch;
+    outline: none;
+    border-radius: 20px;
+  }
+}
+
+#profile-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 90vh;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#profile-page #title-and-list-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#profile-page #title-and-list-container #profile-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Poiret One', cursive;
+  font-size: 4.5rem;
+  color: #EBEDF3;
 }
 /*# sourceMappingURL=Main.css.map */
