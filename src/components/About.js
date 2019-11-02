@@ -31,79 +31,79 @@ export default function About() {
             about myself and feel free to reach out to me anytime!
           </p>
           <div className="linksDiv">
-            <a href="https://github.com/noelncontreras">
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/noelncontreras">
               <img className="githubIcon" src={githubIcon} alt="github" />
             </a>
-            <a href="https://noelncontrerasportfolio.space">
+            <a target="_blank" rel="noopener noreferrer" href="https://noelncontrerasportfolio.space">
               <img
                 className="portfolioIcon"
                 src={portfolioIcon}
                 alt="portfolio"
               />
             </a>
-            <a href="https://www.linkedin.com/in/noelncontreras/">
+            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/noelncontreras/">
               <img className="linkedinIcon" src={linkedinIcon} alt="linkedin" />
             </a>
           </div>
         </div>
 
         <div className="madelynDiv">
-                        <img
-                            className="madelynAboutPic"
-                            align="top"
-                            src={yeet}
-                            alt="madelynProfPic"
-                        />
-                        <h1 className="madelynTitle">Madelyn</h1>
-                        <h3 className='member-title'>Style Slinger</h3>
-                        <p className="madelynParagraph">
-                            {" "}
-                            In my free time I highly enjoy playing video games, watching twitch, listening to music, painting & playing with my dog. Growing up I always had a large fascination with computers and the way they worked.
-                            Coding was always a dream of mine but recently has become my reality. Frontend and backend, there is no quest I am not willing to take on.
+          <img
+            className="madelynAboutPic"
+            align="top"
+            src={yeet}
+            alt="madelynProfPic"
+          />
+          <h1 className="madelynTitle">Madelyn</h1>
+          <h3 className='member-title'>Style Slinger</h3>
+          <p className="madelynParagraph">
+            {" "}
+            In my free time I highly enjoy playing video games, watching twitch, listening to music, painting & playing with my dog. Growing up I always had a large fascination with computers and the way they worked.
+            Coding was always a dream of mine but recently has become my reality. Frontend and backend, there is no quest I am not willing to take on.
                         </p>
-                        <div className="linksDiv">
-                            <a href="https://github.com/madelynarsenault">
-                                <img className="githubIcon" src={githubIcon} alt="github" />
-                            </a>
-                            <a href="https://madelyna.com">
-                                <img
-                                    className="portfolioIcon"
-                                    src={portfolioIcon}
-                                    alt="portfolio"
-                                />
-                            </a>
-                            <a href="https://www.linkedin.com/in/madelyna/">
-                                <img
-                                    className="linkedinIcon"
-                                    src={linkedinIcon}
-                                    alt="linkedin"
-                                />
-                            </a>
-                        </div>
-                    </div>
-        <div className="treyDiv">
-          <img className="treyAboutPic" src={treySwag} alt="treyProfPic" />
-          <h1 className="treyTitle">Trey</h1>
-          <h3 className='member-title'>Javascript Wizard</h3>
-          <p className="treyParagraph">
-            I'm very passionate about programming, music, skateboarding and video games. 
-            When I'm not doing one of those things, I'm more than likely doing the other.
-            My favorite language so far is Javascript, I love exploring new genres of music and new artists, but I mainly 
-            listen to a lot of different kinds of punk rock,
-            I mostly enjoy skating ramps and bowls, and my favorite game of all time is Fallout 3.
-          </p>
           <div className="linksDiv">
-            <a href="https://github.com/Tlwaller">
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/madelynarsenault">
               <img className="githubIcon" src={githubIcon} alt="github" />
             </a>
-            <a href="https://madelyna.com">
+            <a target="_blank" rel="noopener noreferrer" href="https://madelyna.com">
               <img
                 className="portfolioIcon"
                 src={portfolioIcon}
                 alt="portfolio"
               />
             </a>
-            <a href="https://www.linkedin.com/in/trey-waller-07a69a17a/">
+            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/madelyna/">
+              <img
+                className="linkedinIcon"
+                src={linkedinIcon}
+                alt="linkedin"
+              />
+            </a>
+          </div>
+        </div>
+        <div className="treyDiv">
+          <img className="treyAboutPic" src={treySwag} alt="treyProfPic" />
+          <h1 className="treyTitle">Trey</h1>
+          <h3 className='member-title'>Javascript Wizard</h3>
+          <p className="treyParagraph">
+            I'm very passionate about programming, music, skateboarding and video games.
+            When I'm not doing one of those things, I'm more than likely doing the other.
+            My favorite language so far is Javascript, I love exploring new genres of music and new artists, but I mainly
+            listen to a lot of different kinds of punk rock,
+            I mostly enjoy skating ramps and bowls, and my favorite game of all time is Fallout 3.
+          </p>
+          <div className="linksDiv">
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/Tlwaller">
+              <img className="githubIcon" src={githubIcon} alt="github" />
+            </a>
+            <a target="_blank" rel="noopener noreferrer" href="https://madelyna.com">
+              <img
+                className="portfolioIcon"
+                src={portfolioIcon}
+                alt="portfolio"
+              />
+            </a>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/trey-waller-07a69a17a/">
               <img className="linkedinIcon" src={linkedinIcon} alt="linkedin" />
             </a>
           </div>

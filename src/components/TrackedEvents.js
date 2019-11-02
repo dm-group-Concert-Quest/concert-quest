@@ -12,7 +12,7 @@ class TrackedEvents extends Component {
             myArtists: []
         };
     };
-    
+
     componentDidMount() {
         this.props.getTrackedArtist();
         const { REACT_APP_BAND_APP_KEY } = process.env;
